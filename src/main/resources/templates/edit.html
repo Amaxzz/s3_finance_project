@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/doc.min.css">
-	<link rel="stylesheet" href="ztree/zTreeStyle.css">
 	<style>
 	.tree li {
         list-style-type: none;
@@ -25,14 +24,14 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-           <div><a class="navbar-brand" style="font-size:32px;" href="#">金融e平台 - 许可维护</a></div>
+            <div><a class="navbar-brand" style="font-size:32px;" href="user.html">金融e平台 - 用户维护</a></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li style="padding-top:8px;">
 				<div class="btn-group">
 				  <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
-					<i class="glyphicon glyphicon-user" th:text="${session.uName}"></i><span class="caret"></span>
+					<i class="glyphicon glyphicon-user"></i> 张三 <span class="caret"></span>
 				  </button>
 					  <ul class="dropdown-menu" role="menu">
 						<li><a href="#"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
@@ -126,11 +125,32 @@
             </div>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-
+				<ol class="breadcrumb">
+				  <li><a href="#">首页</a></li>
+				  <li><a href="#">数据列表</a></li>
+				  <li class="active">修改</li>
+				</ol>
 			<div class="panel panel-default">
-              <div class="panel-heading"><i class="glyphicon glyphicon-th-list"></i> 权限菜单列表 <div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
+              <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
 			  <div class="panel-body">
-                  <ul id="treeDemo" class="ztree"></ul>
+				<form role="form" action="updateUser">
+				  <div class="form-group">
+					<label for="userName">登陆账号</label>
+                      <input type="hidden" name="userId" th:value="${user.userId}">
+					<input type="text" class="form-control" id="userName" name="userName" th:value="${user.userName}">
+				  </div>
+				  <div class="form-group">
+					<label for="userCall">用户名称</label>
+					<input type="text" class="form-control" id="userCall" name="userCall" th:value="${user.userCall}">
+				  </div>
+				  <div class="form-group">
+					<label for="userEmail">邮箱地址</label>
+					<input type="email" class="form-control" id="userEmail" name="userEmail" th:value="${user.userEmail}">
+					<p class="help-block label label-warning">请输入合法的邮箱地址, 格式为： xxxx@xxxx.com</p>
+				  </div>
+				  <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-edit"></i> 修改</button>
+				  <button type="reset" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
+				</form>
 			  </div>
 			</div>
         </div>
@@ -145,12 +165,12 @@
 		  </div>
 		  <div class="modal-body">
 			<div class="bs-callout bs-callout-info">
-				<h4>没有默认类</h4>
-				<p>警告框没有默认类，只有基类和修饰类。默认的灰色警告框并没有多少意义。所以您要使用一种有意义的警告类。目前提供了成功、消息、警告或危险。</p>
+				<h4>测试标题1</h4>
+				<p>测试内容1，测试内容1，测试内容1，测试内容1，测试内容1，测试内容1</p>
 			  </div>
 			<div class="bs-callout bs-callout-info">
-				<h4>没有默认类</h4>
-				<p>警告框没有默认类，只有基类和修饰类。默认的灰色警告框并没有多少意义。所以您要使用一种有意义的警告类。目前提供了成功、消息、警告或危险。</p>
+				<h4>测试标题2</h4>
+				<p>测试内容2，测试内容2，测试内容2，测试内容2，测试内容2，测试内容2</p>
 			  </div>
 		  </div>
 		  <!--
@@ -165,7 +185,6 @@
     <script src="jquery/jquery-2.1.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="script/docs.min.js"></script>
-	<script src="ztree/jquery.ztree.all-3.5.min.js"></script>
         <script type="text/javascript">
             $(function () {
 			    $(".list-group-item").click(function(){
@@ -178,65 +197,6 @@
 						}
 					}
 				});
-				
-				var setting = {
-					view: {
-						selectedMulti: false,
-						addDiyDom: function(treeId, treeNode){
-							var icoObj = $("#" + treeNode.tId + "_ico"); // tId = permissionTree_1, $("#permissionTree_1_ico")
-							if ( treeNode.icon ) {
-								icoObj.removeClass("button ico_docu ico_open").addClass("fa fa-fw " + treeNode.icon).css("background","");
-							}
-                            
-						},
-						addHoverDom: function(treeId, treeNode){  
-                        //   <a><span></span></a>
-							var aObj = $("#" + treeNode.tId + "_a"); // tId = permissionTree_1, ==> $("#permissionTree_1_a")
-							aObj.attr("href", "javascript:;");
-							if (treeNode.editNameFlag || $("#btnGroup"+treeNode.tId).length>0) return;
-							var s = '<span id="btnGroup'+treeNode.tId+'">';
-							if ( treeNode.level == 0 ) {
-								s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;" href="#" >&nbsp;&nbsp;<i class="fa fa-fw fa-plus rbg "></i></a>';
-							} else if ( treeNode.level == 1 ) {
-								s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;"  href="#" title="修改权限信息">&nbsp;&nbsp;<i class="fa fa-fw fa-edit rbg "></i></a>';
-								if (treeNode.children.length == 0) {
-									s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;" href="#" >&nbsp;&nbsp;<i class="fa fa-fw fa-times rbg "></i></a>';
-								}
-								s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;" href="#" >&nbsp;&nbsp;<i class="fa fa-fw fa-plus rbg "></i></a>';
-							} else if ( treeNode.level == 2 ) {
-								s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;"  href="#" title="修改权限信息">&nbsp;&nbsp;<i class="fa fa-fw fa-edit rbg "></i></a>';
-								s += '<a class="btn btn-info dropdown-toggle btn-xs" style="margin-left:10px;padding-top:0px;" href="#">&nbsp;&nbsp;<i class="fa fa-fw fa-times rbg "></i></a>';
-							}
-			
-							s += '</span>';
-							aObj.after(s);
-						},
-						removeHoverDom: function(treeId, treeNode){
-							$("#btnGroup"+treeNode.tId).remove();
-						}
-					},
-					async: {
-						enable: true,
-						url:"loadPermAll",
-						autoParam:["id"]
-					},
-					callback: {
-						onClick : function(event, treeId, json) {
-
-						}
-					},
-					data:{
-					    simpleData:{
-					        enable:true,
-					        idKey:"id",
-                            pidKey:"pId",
-                        },
-						key:{
-							name:"pname"
-						}
-					}
-				};
-				$.fn.zTree.init($("#treeDemo"), setting); //异步访问数据
             });
         </script>
   </body>

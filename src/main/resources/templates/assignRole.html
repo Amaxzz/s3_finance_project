@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +63,7 @@
 						<a href="mainview"><i class="glyphicon glyphicon-dashboard"></i> 控制面板</a>
 					</li>
 					<li class="list-group-item">
-						<span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge" style="float:right">3</span></span>
+						<span><i class="glyphicon glyphicon glyphicon-tasks"></i> 权限管理 <span class="badge" style="float:right">3</span></span> 
 						<ul style="margin-top:10px;">
 							<li style="height:30px;">
 								<a href="userall" style="color:red;"><i class="glyphicon glyphicon-user"></i> 用户维护</a>
@@ -77,47 +77,47 @@
 						</ul>
 					</li>
 					<li class="list-group-item tree-closed">
-						<span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span>
+						<span><i class="glyphicon glyphicon-ok"></i> 业务审核 <span class="badge" style="float:right">3</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a>
+								<a href="../../../../../s3_spb_shiro_ssm/src/main/resources/templates/auth_cert.html"><i class="glyphicon glyphicon-check"></i> 实名认证审核</a>
 							</li>
 							<li style="height:30px;">
-								<a href="auth_adv.html"><i class="glyphicon glyphicon-check"></i> 广告审核</a>
+								<a href="../../../../../s3_spb_shiro_ssm/src/main/resources/templates/auth_adv.html"><i class="glyphicon glyphicon-check"></i> 广告审核</a>
 							</li>
 							<li style="height:30px;">
-								<a href="auth_project.html"><i class="glyphicon glyphicon-check"></i> 项目审核</a>
+								<a href="../../../../../s3_spb_shiro_ssm/src/main/resources/templates/auth_project.html"><i class="glyphicon glyphicon-check"></i> 项目审核</a>
 							</li>
 						</ul>
 					</li>
 					<li class="list-group-item tree-closed">
-						<span><i class="glyphicon glyphicon-th-large"></i> 业务管理 <span class="badge" style="float:right">7</span></span>
+						<span><i class="glyphicon glyphicon-th-large"></i> 业务管理 <span class="badge" style="float:right">7</span></span> 
 						<ul style="margin-top:10px;display:none;">
 							<li style="height:30px;">
-								<a href="cert.html"><i class="glyphicon glyphicon-picture"></i> 资质维护</a>
+								<a href="cert.html"><i class="glyphicon glyphicon-picture"></i> 资质维护</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="type.html"><i class="glyphicon glyphicon-equalizer"></i> 分类管理</a>
+								<a href="type.html"><i class="glyphicon glyphicon-equalizer"></i> 分类管理</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="process.html"><i class="glyphicon glyphicon-random"></i> 流程管理</a>
+								<a href="process.html"><i class="glyphicon glyphicon-random"></i> 流程管理</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="advertisement.html"><i class="glyphicon glyphicon-hdd"></i> 广告管理</a>
+								<a href="advertisement.html"><i class="glyphicon glyphicon-hdd"></i> 广告管理</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="message.html"><i class="glyphicon glyphicon-comment"></i> 消息模板</a>
+								<a href="message.html"><i class="glyphicon glyphicon-comment"></i> 消息模板</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="project_type.html"><i class="glyphicon glyphicon-list"></i> 项目分类</a>
+								<a href="project_type.html"><i class="glyphicon glyphicon-list"></i> 项目分类</a> 
 							</li>
 							<li style="height:30px;">
-								<a href="tag.html"><i class="glyphicon glyphicon-tags"></i> 项目标签</a>
+								<a href="tag.html"><i class="glyphicon glyphicon-tags"></i> 项目标签</a> 
 							</li>
 						</ul>
 					</li>
 					<li class="list-group-item tree-closed" >
-						<a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a>
+						<a href="param.html"><i class="glyphicon glyphicon-list-alt"></i> 参数管理</a> 
 					</li>
 				</ul>
 			</div>
@@ -126,27 +126,35 @@
 				<ol class="breadcrumb">
 				  <li><a href="#">首页</a></li>
 				  <li><a href="#">数据列表</a></li>
-				  <li class="active">新增</li>
+				  <li class="active">分配角色</li>
 				</ol>
 			<div class="panel panel-default">
-              <div class="panel-heading">表单数据<div style="float:right;cursor:pointer;" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-question-sign"></i></div></div>
 			  <div class="panel-body">
-				<form role="form" action="addUser">
+				<form role="form" class="form-inline">
 				  <div class="form-group">
-					<label for="userName">登陆账号</label>
-					<input type="text" class="form-control" id="userName" name="userName" placeholder="请输入登陆账号">
+					<label for="select1">未分配角色列表</label><br>
+                      <input type="hidden" id="userId" name="userId" th:value="${userId}">
+					<select id="select1" class="form-control" multiple size="10" style="width:100px;overflow-y:auto;">
+                        <div  th:each="role1:${roleList1}">
+                        <option th:value="${role1.roleId}" th:text="${role1.roleTab}"></option>
+                        </div>
+                    </select>
 				  </div>
 				  <div class="form-group">
-					<label for="userCall">用户名称</label>
-					<input type="text" class="form-control" id="userCall" name="userCall" placeholder="请输入用户名称">
+                        <ul>
+                            <li id="right" class="btn btn-default glyphicon glyphicon-chevron-right"></li>
+                            <br>
+                            <li id="left" class="btn btn-default glyphicon glyphicon-chevron-left" style="margin-top:20px;"></li>
+                        </ul>
 				  </div>
-				  <div class="form-group">
-					<label for="userEmail">邮箱地址</label>
-					<input type="email" class="form-control" id="userEmail" name="userEmail" placeholder="请输入邮箱地址">
-					<p class="help-block label label-warning">请输入合法的邮箱地址, 格式为： xxxx@xxxx.com</p>
+				  <div class="form-group" style="margin-left:40px;">
+					<label for="select2">已分配角色列表</label><br>
+					<select id="select2" class="form-control" multiple size="10" style="width:100px;overflow-y:auto;">
+                        <div  th:each="role2:${roleList2}">
+                        <option th:value="${role2.roleId}" th:text="${role2.roleTab}"></option>
+                        </div>
+                    </select>
 				  </div>
-				  <button type="submit" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> 新增</button>
-				  <button type="reset" class="btn btn-danger"><i class="glyphicon glyphicon-refresh"></i> 重置</button>
 				</form>
 			  </div>
 			</div>
@@ -194,6 +202,47 @@
 						}
 					}
 				});
+
+			    $("#right").click(function () {
+                    var ops=$("#select1").val();
+                    var uid=$("#userId").val();
+                    window.location.href="addRoleId?userId="+uid+"&list="+ops;
+                });
+
+                $("#left").click(function () {
+                    var ops=$("#select2").val();
+                    var uid=$("#userId").val();
+                    window.location.href="deleteRoleId?userId="+uid+"&list="+ops;
+                });
+
+                /*多行增删,异步*/
+			    /*$("#right").click(function () {
+			        var ops=$("#select1").val()
+                    $.post("addRoleId",{"userId":$("#userId").val(),"roleIds":ops},function (data) {
+                        if(data){
+                            for(var i=0;i<ops.length;i++){
+                                var op=$("<option>");
+                                op.text(ops[i]);
+                                $("#select2").append(op);
+                            }
+                            $(":selected").remove();
+                        }
+                    });
+                });
+			    
+			    $("#left").click(function () {
+			        var ops=$("#select2").val();
+                    $.post("deleteRoleId",{"userId":$("#userId").val(),"roleIds":ops},function (data) {
+                        if(data){
+                            for(var i=0;i<ops,length;i++){
+                                var op=$("<option>");
+                                op.text(ops[i]);
+                                $("#select1").append(op);
+                            }
+                            $(":selected").remove();
+                        }
+                    });
+                });*/
             });
         </script>
   </body>

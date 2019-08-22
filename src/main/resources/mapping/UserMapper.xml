@@ -6,12 +6,12 @@
         <id column="uid" property="userId"></id>
         <result column="uname" property="userName"></result>
         <result column="upwd" property="userPwd"></result>
-        <result column="upwd" property="userEmail"></result>
+        <result column="email" property="userEmail"></result>
         <result column="creattime" property="createTime"></result>
         <result column="nickname" property="nickName"></result>
         <result column="cardnum" property="cardNum"></result>
         <result column="tel" property="userTel"></result>
-        <result column="email" property="userStatus"></result>
+        <result column="status" property="userStatus"></result>
    </resultMap>
     <select id="findUserByUserName" resultMap="userResult" parameterType="string">
         select * from tb_users where uname=#{userName}
