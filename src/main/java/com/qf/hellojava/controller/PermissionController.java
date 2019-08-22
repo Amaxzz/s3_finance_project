@@ -2,6 +2,7 @@ package com.qf.hellojava.controller;
 
 import com.qf.hellojava.pojo.Permission;
 import com.qf.hellojava.service.IPermissionService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,12 +16,14 @@ public class PermissionController {
     private IPermissionService permissionService;
 
     @ResponseBody
+    @RequiresPermissions(value = {"权限管理"})
     @RequestMapping("loadPermAll")
     public List<Permission> loadPermAll(){
         return permissionService.loadAll();
     }
 
     @ResponseBody
+    @RequiresPermissions(value = {"权限管理"})
     @RequestMapping("loadPermByRoleId")
     public  List<Permission> loadPermByRoleId(int roleId){
         List<Permission> allList=permissionService.loadAll();
