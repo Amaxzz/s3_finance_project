@@ -10,7 +10,7 @@ public class User {
     private  String userName;
     private  String userPwd;
     private Date createTime;
-    private String nikeName;
+    private String nickName;
     private String cardNum;
     private String userTel;
     private String userEmail;

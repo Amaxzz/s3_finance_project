@@ -5,7 +5,7 @@
     <resultMap id="userResult" type="user">
         <id column="uid" property="userId"></id>
         <result column="uname" property="userName"></result>
-        <result column="upwd" property="userCall"></result>
+        <result column="upwd" property="userPwd"></result>
         <result column="upwd" property="userEmail"></result>
         <result column="creattime" property="createTime"></result>
         <result column="nickname" property="nickName"></result>
@@ -37,9 +37,9 @@
     <select id="getTotalCounts" resultType="int" parameterType="string">
         select count(uid) from tb_users where uname like '%' #{cont} '%'
     </select>
-    <insert id="addUser" parameterType="user">
+<!--    <insert id="addUser" parameterType="user">
         insert into tb_users values (default,#{userName},default,#{userCall},#{userEmail})
-    </insert>
+    </insert>-->
     <delete id="delUserRole" parameterType="int">
         delete from tb_uid_rid where uid=#{userId}
     </delete>
