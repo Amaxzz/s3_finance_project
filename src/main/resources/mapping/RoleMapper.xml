@@ -4,43 +4,43 @@
 
 <mapper namespace="com.qf.hellojava.mapper.IRoleMapper">
     <resultMap id="roleResult" type="role">
-        <id column="roleId" property="roleId"></id>
-        <result column="roleName" property="roleName"></result>
+        <id column="rid" property="roleId"></id>
+        <result column="rname" property="roleName"></result>
     </resultMap>
     <select id="loadRoleById" resultMap="roleResult" parameterType="int">
-        select * from roles where roleId=#{roleId}
+        select * from tb_roles where roleId=#{roleId}
     </select>
     <select id="loadAllRole" resultMap="roleResult">
-        select * from roles
+        select * from tb_roles
     </select>
     <select id="getTotalCount" resultType="int">
-        select count(roleId) from roles
+        select count(roleId) from tb_roles
     </select>
     <insert id="addRole" parameterType="role">
-        insert into roles values (default,#{roleName})
+        insert into tb_roles values (default,#{roleName})
     </insert>
     <delete id="deleteRoleById" parameterType="int">
-        delete from roles where roleId=#{roleId}
+        delete from tb_roles where rId=#{roleId}
     </delete>
     <delete id="deleteRole" parameterType="String">
-        delete from roles
+        delete from tb_roles
         <where>
-            roleId in
+            rId in
             <foreach collection="array" item="rId" separator="," open="(" close=")">
                 #{rId}
             </foreach>
         </where>
     </delete>
     <delete id="delRolePerm" parameterType="int">
-        delete from role_permission_mapping where rid=#{roleId}
+        delete from tb_rid_pid where rid=#{roleId}
     </delete>
     <delete id="delRolePerms" parameterType="String">
-        delete from role_permission_mapping where rid in
+        delete from tb_rid_pid where rid in
         <foreach collection="array" item="rId" separator="," open="(" close=")">
             #{rId}
         </foreach>
     </delete>
     <update id="updateRole" parameterType="role">
-        update roles set roleName=#{roleName} where roleId=#{roleId}
+        update tb_roles set rName=#{roleName} where rId=#{roleId}
     </update>
 </mapper>

@@ -3,13 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.qf.hellojava.mapper.IPermissionMapper">
-    <select id="findPermByUserName" resultType="com.qf.hellojava.pojo.Permission" parameterType="string">
-        select pname from tb_premission where pid in(SELECT pid from tb_rid_pid where rid in(select rid from tb_u))
+    <resultMap id="permMap" type="com.qf.hellojava.pojo.Permission">
+        <id property="permId" column="pid"/>
+        <result property="permName" column="pname"/>
+    </resultMap>
+    <select id="findPermByUserName" resultMap="permMap" parameterType="string">
+        select pname from tb_premission where pid in(SELECT pid from tb_rid_pid where rid in(select rid from tb_uid_rid where uid=(select uid from tb_users where uname=#{uname})))
     </select>
-    <select id="loadAll" resultType="permission">
+    <select id="loadAll" resultMap="permMap">
             select * from tb_permission
         </select>
-    <select id="loadByRoleId" resultType="permission" parameterType="int">
+    <select id="loadByRoleId" resultMap="permMap" parameterType="int">
             select * from tb_permission where id in(select pid from tb_rid_pid where rid=#{roleId})
         </select>
     <delete id="delRolePerm" parameterType="int" >
