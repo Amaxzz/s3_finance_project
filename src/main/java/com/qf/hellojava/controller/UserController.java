@@ -6,6 +6,7 @@ import com.qf.hellojava.service.IUserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -43,6 +44,7 @@ public class UserController {
             UsernamePasswordToken token = new UsernamePasswordToken(userName, userPwd);
             subject.login(token);
             session.setAttribute("uName",userName);
+
             if (subject.isAuthenticated()){
                 System.out.println("login is successful");
                 if (userName.equals("admin")) {
@@ -50,8 +52,6 @@ public class UserController {
                 } else {
                     return "member";
                 }
-            }else {
-                return "error";
             }
         } catch (AuthenticationException e) {
             e.printStackTrace();
@@ -154,4 +154,9 @@ public class UserController {
         boolean bool=userService.deleteRoleId(userId,list);
         return bool?"redirect:assignRoleHandler?userId="+userId:"error";
     }
+    /*@RequiresPermissions(value={"user_forbidden"})//直接写在方法前有才能进
+    @RequestMapping("/user")
+    public String two(){
+        return "add";
+    }*/
 }
