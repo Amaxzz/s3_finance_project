@@ -80,6 +80,7 @@ public class UserController {
         model.addAttribute("user",u);
         return u!=null?"edit":"error";
     }
+    @RequiresPermissions(value = {"用户管理"})
     @RequestMapping("userall")
     public String loadAllUser(@RequestParam(required = false,defaultValue = "1")int page,
                               @RequestParam(required = false,defaultValue = "3")int rows,
@@ -129,6 +130,7 @@ public class UserController {
         boolean bool=userService.deleteUser(ids);
         return bool?"redirect:userall":"error";
     }
+
     @RequestMapping("loadreg")
     public String loadReg(User user){
         boolean bool=userService.loadReg(user);

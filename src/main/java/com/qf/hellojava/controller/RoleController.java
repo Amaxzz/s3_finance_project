@@ -2,6 +2,7 @@ package com.qf.hellojava.controller;
 
 import com.qf.hellojava.pojo.Role;
 import com.qf.hellojava.service.IRoleService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,13 +16,14 @@ import java.util.List;
 public class RoleController {
     @Autowired
     private IRoleService roleService;
-
+    @RequiresPermissions(value = {"角色管理"})
     @RequestMapping("loadRoleById")
     public String loadRoleById(int roleId,Model model){
         Role u=roleService.loadRoleById(roleId);
         model.addAttribute("role",u);
         return u!=null?"edit":"error";
     }
+    @RequiresPermissions(value = {"角色管理"})
     @RequestMapping("roleall")
     public String loadAllRole(@RequestParam(required = false,defaultValue = "1")int page,
                               @RequestParam(required = false,defaultValue = "5")int rows,

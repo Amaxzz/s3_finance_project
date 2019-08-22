@@ -38,6 +38,7 @@ public class MyRealm extends AuthorizingRealm {
             for(Permission perm:permList){
                 String menu_url=perm.getPermName();
                 perms.add(menu_url);
+                System.out.println(menu_url);
             }
             SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
             //授权
