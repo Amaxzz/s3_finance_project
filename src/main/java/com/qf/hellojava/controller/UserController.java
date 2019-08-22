@@ -80,6 +80,7 @@ public class UserController {
         model.addAttribute("user",u);
         return u!=null?"edit":"error";
     }
+    @RequiresPermissions(value = {"业务审核"})
     @RequestMapping("userall")
     public String loadAllUser(@RequestParam(required = false,defaultValue = "1")int page,
                               @RequestParam(required = false,defaultValue = "3")int rows,
