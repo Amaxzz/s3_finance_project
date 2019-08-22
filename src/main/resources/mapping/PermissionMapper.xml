@@ -3,26 +3,20 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.qf.hellojava.mapper.IPermissionMapper">
-    <select id="findPermByUserName" resultType="permission" parameterType="string">
-        select p.*
-        from users_copy u,roles r,permission p,user_role_mapping ur,role_permission_mapping rp
-        where u.userId=ur.uid
-            and ur.rid=r.roleId
-            and r.roleId=rp.pid
-            and rp.pid=p.id
-            and u.userName=#{userName}
+    <select id="findPermByUserName" resultType="com.qf.hellojava.pojo.Permission" parameterType="string">
+        select pname from tb_premission where pid in(SELECT pid from tb_rid_pid where rid in(select rid from tb_u))
     </select>
     <select id="loadAll" resultType="permission">
-            select * from permission
+            select * from tb_permission
         </select>
     <select id="loadByRoleId" resultType="permission" parameterType="int">
-            select * from permission where id in(select pid from role_permission_mapping where rid=#{roleId})
+            select * from tb_permission where id in(select pid from tb_rid_pid where rid=#{roleId})
         </select>
     <delete id="delRolePerm" parameterType="int" >
-            delete from role_permission_mapping where rid=#{roleId}
+            delete from tb_rid_pid where rid=#{roleId}
         </delete>
     <insert id="addRolePerm">
-        insert into role_permission_mapping values
+        insert into tb_rid_pid values
         <foreach collection="array" item="pid" separator=",">
             (#{roleId},#{pid})
         </foreach>
