@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qf.hellojava.mapper.IPermissionMapper">
+    <select id="findPermByUserName" resultType="permission" parameterType="string">
+        select p.*
+        from users_copy u,roles r,permission p,user_role_mapping ur,role_permission_mapping rp
+        where u.userId=ur.uid
+            and ur.rid=r.roleId
+            and r.roleId=rp.pid
+            and rp.pid=p.id
+            and u.userName=#{userName}
+    </select>
+    <select id="loadAll" resultType="permission">
+            select * from permission
+        </select>
+    <select id="loadByRoleId" resultType="permission" parameterType="int">
+            select * from permission where id in(select pid from role_permission_mapping where rid=#{roleId})
+        </select>
+    <delete id="delRolePerm" parameterType="int" >
+            delete from role_permission_mapping where rid=#{roleId}
+        </delete>
+    <insert id="addRolePerm">
+        insert into role_permission_mapping values
+        <foreach collection="array" item="pid" separator=",">
+            (#{roleId},#{pid})
+        </foreach>
+    </insert>
+</mapper>

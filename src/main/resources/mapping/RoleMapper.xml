@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qf.hellojava.mapper.IRoleMapper">
+    <resultMap id="roleResult" type="role">
+        <id column="roleId" property="roleId"></id>
+        <result column="roleName" property="roleName"></result>
+    </resultMap>
+    <select id="loadRoleById" resultMap="roleResult" parameterType="int">
+        select * from roles where roleId=#{roleId}
+    </select>
+    <select id="loadAllRole" resultMap="roleResult">
+        select * from roles
+    </select>
+    <select id="getTotalCount" resultType="int">
+        select count(roleId) from roles
+    </select>
+    <insert id="addRole" parameterType="role">
+        insert into roles values (default,#{roleName})
+    </insert>
+    <delete id="deleteRoleById" parameterType="int">
+        delete from roles where roleId=#{roleId}
+    </delete>
+    <delete id="deleteRole" parameterType="String">
+        delete from roles
+        <where>
+            roleId in
+            <foreach collection="array" item="rId" separator="," open="(" close=")">
+                #{rId}
+            </foreach>
+        </where>
+    </delete>
+    <delete id="delRolePerm" parameterType="int">
+        delete from role_permission_mapping where rid=#{roleId}
+    </delete>
+    <delete id="delRolePerms" parameterType="String">
+        delete from role_permission_mapping where rid in
+        <foreach collection="array" item="rId" separator="," open="(" close=")">
+            #{rId}
+        </foreach>
+    </delete>
+    <update id="updateRole" parameterType="role">
+        update roles set roleName=#{roleName} where roleId=#{roleId}
+    </update>
+</mapper>

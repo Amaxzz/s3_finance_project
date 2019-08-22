@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/money?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password:
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.qf.hellojava.pojo
+
