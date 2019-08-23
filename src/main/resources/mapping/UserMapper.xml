@@ -64,8 +64,6 @@
     <update id="updateUser" parameterType="user">
         update tb_users set uname=#{userName},nickname=#{userCall},email=#{userEmail} where uiserId=#{userId}
     </update>
-
-
     <delete id="deleteRoleId">
         delete from tb_uid_rid where uid=#{userId} and rid in
             <foreach collection="list" item="rid" separator="," open="(" close=")">
