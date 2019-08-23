@@ -2,10 +2,11 @@ package com.qf.hellojava.pojo;
 
 import lombok.Data;
 
+import java.util.Date;
+
 @Data
 public class Account {
     private int accId;
-    private double accMoney;
-    private double accLoan;
+    private String accTime;
     private  String accDetailed;
 }

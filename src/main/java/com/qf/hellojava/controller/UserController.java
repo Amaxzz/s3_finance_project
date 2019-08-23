@@ -44,10 +44,11 @@ public class UserController {
             UsernamePasswordToken token = new UsernamePasswordToken(userName, userPwd);
             subject.login(token);
             session.setAttribute("uName",userName);
+            int status=userService.loadStatusByLoginName(userName);
 
             if (subject.isAuthenticated()){
                 System.out.println("login is successful");
-                if (userName.equals("admin")) {
+                if (status>5) {
                     return "main";
                 } else {
                     return "member";
@@ -148,9 +149,12 @@ public class UserController {
         boolean bool=userService.deleteRoleId(userId,list);
         return bool?"redirect:assignRoleHandler?userId="+userId:"error";
     }
-    /*@RequiresPermissions(value={"user_forbidden"})//直接写在方法前有才能进
-    @RequestMapping("/user")
-    public String two(){
-        return "add";
-    }*/
+    @RequestMapping("/loadUserAllByUid")
+    public String loadUserAllByUid(int userId,Model model){
+        User user=userService.loadUserById(userId);
+        model.addAttribute("user",user);
+        return user!=null?"xiangXinXi":"error";
+
+    }
+
 }

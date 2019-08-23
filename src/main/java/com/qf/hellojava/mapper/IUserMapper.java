@@ -27,7 +27,8 @@ public interface IUserMapper {
     public int updateUser(User user);
     public int loadReg(User user);
     public List<User> searchUser(String context);
-
+    public int getMaxByUid();
     public int addRoleId(@Param("userId") int userId, @Param("list") List<Integer> list);
     public int deleteRoleId(@Param("userId") int userId, @Param("list") List<Integer> list);
+    public int loadStatusByLoginName(String loginName);
 }

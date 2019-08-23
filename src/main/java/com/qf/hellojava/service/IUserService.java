@@ -23,4 +23,5 @@ public interface IUserService {
 
     public boolean addRoleId(int userId, List<Integer> list);
     public boolean deleteRoleId(int userId, List<Integer> list);
+    public int loadStatusByLoginName(String loginName);
 }

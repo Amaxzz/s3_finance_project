@@ -12,12 +12,14 @@
         <result column="cardnum" property="cardNum"></result>
         <result column="tel" property="userTel"></result>
         <result column="status" property="userStatus"></result>
+        <result column="money" property="userMoney"></result>
+        <result column="load" property="userLoad"></result>
    </resultMap>
     <select id="findUserByUserName" resultMap="userResult" parameterType="string">
         select * from tb_users where uname=#{userName}
     </select>
     <insert id="loadReg" parameterType="user">
-        insert into tb_users (uname,upwd,email) values (#{userName},(#{userPwd}),#{userEmail})
+        insert into tb_users (uid,uname,upwd,email) values (#{userId},#{userName},(#{userPwd}),#{userEmail})
     </insert>
     <select id="loadUser" resultType="user" parameterType="user">
         select * from tb_users where uname=#{userName} and upwd=md5(#{userPwd})
@@ -37,9 +39,12 @@
     <select id="getTotalCounts" resultType="int" parameterType="string">
         select count(uid) from tb_users where uname like '%' #{cont} '%'
     </select>
-<!--    <insert id="addUser" parameterType="user">
-        insert into tb_users values (default,#{userName},default,#{userCall},#{userEmail})
-    </insert>-->
+    <select id="getMaxId" resultType="int">
+        select max(uid) from tb_users
+    </select>
+   <insert id="addUser" parameterType="user">
+        insert into tb_users (uid,uname,upwd,nickname,strtus) values (#{userId},#{userName},#{userPwd},#{nickName},#{userStatus})
+    </insert>
     <delete id="delUserRole" parameterType="int">
         delete from tb_uid_rid where uid=#{userId}
     </delete>
@@ -78,5 +83,8 @@
             (#{userId},#{rid})
         </foreach>
     </insert>
+    <select id="loadStatusByLoginName" parameterType="string" resultType="int">
+        select status from tb_users where uname=#{uname}
+    </select>
 
 </mapper>

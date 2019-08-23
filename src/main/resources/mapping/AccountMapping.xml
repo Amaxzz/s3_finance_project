@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.hellojava.mapper.IAccountMapper">
+    <resultMap id="AccountMap" type="com.qf.hellojava.pojo.Account">
+        <id column="uid" property="accId"/>
+        <result column="acctime" property="accTime"/>
+        <result column="detailed" property="accDetailed"/>
+    </resultMap>
+    <select id="loadAccountByUid" resultMap="AccountMap" parameterType="int">
+        select * from account where uid=#{uid}
+    </select>
+    <insert id="addAccountByUid" parameterType="account">
+        insert into account values (#{accId},#{accDetailed},#{accTime})
+    </insert>
+</mapper>

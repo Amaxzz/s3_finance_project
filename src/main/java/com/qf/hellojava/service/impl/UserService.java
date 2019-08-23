@@ -57,6 +57,10 @@ public class UserService implements IUserService {
 
     @Override
     public boolean addUser(User user) {
+        int maxId=userMapper.getMaxByUid();
+        user.setUserId(maxId);
+        user.setUserPwd("123456");
+        user.setUserStatus(9);
         int count=userMapper.addUser(user);
         return count>0?true:false;
     }
@@ -83,6 +87,8 @@ public class UserService implements IUserService {
 
     @Override
     public boolean loadReg(User user) {
+        int maxId=userMapper.getMaxByUid();
+        user.setUserId(maxId);
         int count=userMapper.loadReg(user);
         return count>0?true:false;
     }
@@ -99,6 +105,11 @@ public class UserService implements IUserService {
     public boolean deleteRoleId(int userId, List<Integer> list) {
         int count=userMapper.deleteRoleId(userId,list);
         return count>0?true:false;
+    }
+
+    @Override
+    public int loadStatusByLoginName(String loginName) {
+        return userMapper.loadStatusByLoginName(loginName);
     }
 
 
