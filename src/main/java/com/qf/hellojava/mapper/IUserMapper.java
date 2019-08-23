@@ -27,8 +27,7 @@ public interface IUserMapper {
     public int updateUser(User user);
     public int loadReg(User user);
     public List<User> searchUser(String context);
-    public List<Role> getRole1(int userId);
-    public List<Role> getRole2(int userId);
+
     public int addRoleId(@Param("userId") int userId, @Param("list") List<Integer> list);
     public int deleteRoleId(@Param("userId") int userId, @Param("list") List<Integer> list);
 }

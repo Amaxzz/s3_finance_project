@@ -159,7 +159,7 @@
                   </thead>
                   <tbody>
                     <tr th:each="u:${userList}">
-                      <td th:text="${u.userId}">${u.userId}</td>
+                      <td th:text="${u.userId}"></td>
                       <td><input type="checkbox" name="ids" th:value="${u.userId}"></td>
                       <td th:text="${u.userName}"></td>
                       <td th:text="${u.nickName}"></td>

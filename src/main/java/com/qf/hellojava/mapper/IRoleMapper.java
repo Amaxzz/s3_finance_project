@@ -19,5 +19,6 @@ public interface IRoleMapper {
     public int delRolePerms(String[] ids);
     public int updateRole(Role role);
     public int getTotalCount();
-
+    public List<Role> getRole1(int userId);
+    public List<Role> getRole2(int userId);
 }

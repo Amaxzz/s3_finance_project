@@ -54,5 +54,14 @@ public class RoleService implements IRoleService {
         int count=roleMapper.updateRole(role);
         return count>0?true:false;
     }
+    @Override
+    public List<Role> getRole1(int userId) {
+        return roleMapper.getRole1(userId);
+    }
+
+    @Override
+    public List<Role> getRole2(int userId) {
+        return roleMapper.getRole2(userId);
+    }
 
 }

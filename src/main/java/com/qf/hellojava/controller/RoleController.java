@@ -44,6 +44,17 @@ public class RoleController {
         model.addAttribute("maxPage",maxPage);
         return roleList!=null?"role":"error";
     }
+    @RequestMapping("assignRoleHandler")
+    public String assignRole(int userId,Model model){
+        List<Role> roleList1=roleService.getRole1(userId);
+        List<Role> roleList2=roleService.getRole2(userId);
+        model.addAttribute("roleList1",roleList1);
+        model.addAttribute("roleList2",roleList2);
+        model.addAttribute("userId",userId);
+        System.out.println(roleList1);
+        return "assignRole";
+    }
+
     @RequestMapping("addRole")
     public String addRole(Role role){
         boolean bool=roleService.addRole(role);

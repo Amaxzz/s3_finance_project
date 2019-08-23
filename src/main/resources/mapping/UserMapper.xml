@@ -64,12 +64,7 @@
     <update id="updateUser" parameterType="user">
         update tb_users set uname=#{userName},nickname=#{userCall},email=#{userEmail} where uiserId=#{userId}
     </update>
-    <select id="getRole1" resultType="role" parameterType="int">
-        select * from tb_roles where roleId not in(select rId from tb_uid_rid where uid=#{userId})
-    </select>
-    <select id="getRole2" resultType="role" parameterType="int">
-        select * from tb_roles where roleId in(select rId from tb_uid_rid where uid=#{userId})
-    </select>
+
 
     <delete id="deleteRoleId">
         delete from tb_uid_rid where uid=#{userId} and rid in

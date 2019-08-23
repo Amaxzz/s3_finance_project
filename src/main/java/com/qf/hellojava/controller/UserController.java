@@ -136,15 +136,7 @@ public class UserController {
         boolean bool=userService.loadReg(user);
         return bool?"redirect:loginview":"error";
     }
-    @RequestMapping("assignRoleHandler")
-    public String assignRole(int userId,Model model){
-        List<Role> roleList1=userService.getRole1(userId);
-        List<Role> roleList2=userService.getRole2(userId);
-        model.addAttribute("roleList1",roleList1);
-        model.addAttribute("roleList2",roleList2);
-        model.addAttribute("userId",userId);
-        return "assignRole";
-    }
+
 
     @RequestMapping("addRoleId")
     public String addRoleId(int userId,@RequestParam(required = false) List<Integer> list){

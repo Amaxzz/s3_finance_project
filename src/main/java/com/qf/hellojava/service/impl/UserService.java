@@ -87,15 +87,7 @@ public class UserService implements IUserService {
         return count>0?true:false;
     }
 
-    @Override
-    public List<Role> getRole1(int userId) {
-        return userMapper.getRole1(userId);
-    }
 
-    @Override
-    public List<Role> getRole2(int userId) {
-        return userMapper.getRole2(userId);
-    }
 
     @Override
     public boolean addRoleId(int userId, List<Integer> list) {

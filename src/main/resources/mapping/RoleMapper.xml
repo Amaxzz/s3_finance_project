@@ -43,4 +43,10 @@
     <update id="updateRole" parameterType="role">
         update tb_roles set rname=#{roleName} where rid=#{roleId}
     </update>
+    <select id="getRole1" resultMap="roleResult" parameterType="int">
+        select * from tb_roles where rId not in(select rId from tb_uid_rid where uid=#{userId})
+    </select>
+    <select id="getRole2" resultMap="roleResult" parameterType="int">
+        select * from tb_roles where rId in(select rId from tb_uid_rid where uid=#{userId})
+    </select>
 </mapper>

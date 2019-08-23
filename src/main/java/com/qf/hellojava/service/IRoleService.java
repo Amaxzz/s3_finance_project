@@ -13,4 +13,6 @@ public interface IRoleService {
     public boolean deleteRoleById(int roleId);
     public boolean deleteRole(String[] ids);
     public boolean updateRole(Role role);
+    public List<Role> getRole1(int userId);
+    public List<Role> getRole2(int userId);
 }

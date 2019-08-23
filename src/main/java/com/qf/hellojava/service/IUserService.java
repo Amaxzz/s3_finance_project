@@ -20,8 +20,7 @@ public interface IUserService {
     public boolean deleteUser(String[] ids);
     public boolean updateUser(User user);
     public boolean loadReg(User user);
-    public List<Role> getRole1(int userId);
-    public List<Role> getRole2(int userId);
+
     public boolean addRoleId(int userId, List<Integer> list);
     public boolean deleteRoleId(int userId, List<Integer> list);
 }
