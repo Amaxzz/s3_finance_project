@@ -8,19 +8,19 @@
         <result column="rname" property="roleName"></result>
     </resultMap>
     <select id="loadRoleById" resultMap="roleResult" parameterType="int">
-        select * from tb_roles where roleId=#{roleId}
+        select * from tb_roles where rid=#{roleId}
     </select>
     <select id="loadAllRole" resultMap="roleResult">
         select * from tb_roles
     </select>
     <select id="getTotalCount" resultType="int">
-        select count(roleId) from tb_roles
+        select count(rid) from tb_roles
     </select>
     <insert id="addRole" parameterType="role">
         insert into tb_roles values (default,#{roleName})
     </insert>
     <delete id="deleteRoleById" parameterType="int">
-        delete from tb_roles where rId=#{roleId}
+        delete from tb_roles where rid=#{roleId}
     </delete>
     <delete id="deleteRole" parameterType="String">
         delete from tb_roles
@@ -41,6 +41,6 @@
         </foreach>
     </delete>
     <update id="updateRole" parameterType="role">
-        update tb_roles set rName=#{roleName} where rId=#{roleId}
+        update tb_roles set rname=#{roleName} where rid=#{roleId}
     </update>
 </mapper>

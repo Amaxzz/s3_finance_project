@@ -16,20 +16,23 @@ import java.util.List;
 public class RoleController {
     @Autowired
     private IRoleService roleService;
-    @RequiresPermissions(value = {"角色管理"})
+
+    //@RequiresPermissions(value = {"角色管理"})
     @RequestMapping("loadRoleById")
     public String loadRoleById(int roleId,Model model){
         Role u=roleService.loadRoleById(roleId);
         model.addAttribute("role",u);
+        System.out.println(u);
         return u!=null?"edit":"error";
     }
-    @RequiresPermissions(value = {"角色管理"})
+    //@RequiresPermissions(value = {"角色管理"})
     @RequestMapping("roleall")
     public String loadAllRole(@RequestParam(required = false,defaultValue = "1")int page,
                               @RequestParam(required = false,defaultValue = "5")int rows,
                               Model model){
         int maxPage=roleService.calcMaxPage(rows);
         List<Role> roleList=roleService.loadAllRole(page,rows);
+        System.out.println(roleList);
         if(page<1){
             page=1;
         }

@@ -136,7 +136,7 @@
                       <input type="hidden" id="userId" name="userId" th:value="${userId}">
 					<select id="select1" class="form-control" multiple size="10" style="width:100px;overflow-y:auto;">
                         <div  th:each="role1:${roleList1}">
-                        <option th:value="${role1.roleId}" th:text="${role1.roleTab}"></option>
+                        <option th:value="${role1.roleId}" th:text="${role1.roleName}"></option>
                         </div>
                     </select>
 				  </div>
@@ -151,7 +151,7 @@
 					<label for="select2">已分配角色列表</label><br>
 					<select id="select2" class="form-control" multiple size="10" style="width:100px;overflow-y:auto;">
                         <div  th:each="role2:${roleList2}">
-                        <option th:value="${role2.roleId}" th:text="${role2.roleTab}"></option>
+                        <option th:value="${role2.roleId}" th:text="${role2.roleName}"></option>
                         </div>
                     </select>
 				  </div>
