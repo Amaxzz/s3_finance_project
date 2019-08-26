@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>详细信息</title>
 </head>
 <body>
 <h2>详细信息</h2>
+<div>
+    <table>
+        <tr >
+            <td >编号</td>
+            <td th:text="${user.userId}"></td>
+        </tr>
+        <tr>
+            <td >用户名</td>
+            <td th:text="${user.userName}"></td>
+
+        </tr>
+        <tr>
+            <td >真实姓名</td>
+            <td th:text="${user.nickName}"></td>
+
+        </tr>
+        <tr>
+            <td >电话号码</td>
+            <td th:text="${user.userTel}"></td>
+
+        </tr>
+        <tr>
+            <td >邮箱地址</td>
+            <td th:text="${user.userEmail}"></td>
+
+        </tr>
+        <tr>
+            <td >身份证号码</td>
+            <td th:text="${user.cardNum}"></td>
+
+        </tr>
+        <tr>
+            <td>注册时间</td>
+            <td th:text="${user.createTime}"></td>
+
+        </tr>
+        <tr>
+            <td>照片</td>
+            <td><img th:src="${user.userImg}"></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

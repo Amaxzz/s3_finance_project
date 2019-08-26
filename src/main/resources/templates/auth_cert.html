@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -145,7 +145,7 @@
           <div class="table-responsive">
             <table class="table  table-bordered">
               <thead>
-                <tr >
+                <tr>
                   <th width="30">编号</th>
                   <th>用户名</th>
                   <th>身份证号</th>
@@ -155,15 +155,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>啊</td>
-                  <td>123456789456124568</td>
-                  <td>19902586348</td>
-                  <td><a href="loadUserAllByUid?userId=2">详细信息</a></td>
+                <tr th:each="user:${userList}">
+                  <td th:text="${user.userId}"1></td>
+                  <td th:text="${user.userName}"></td>
+                  <td th:text="${user.cardNum}"></td>
+                  <td th:text="${user.userTel}"></td>
+                  <td><a th:href="@{loadUserAllByUid(userId=${user.userId})}">详细信息</a></td>
                   <td>
-                      <button type="button" class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button>
-				      <button type="button" class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button>
+                      <a th:href="@{identifyYes(userId=${user.userId})}"><button class="btn btn-success btn-xs"><i class=" glyphicon glyphicon-check"></i></button></a>
+					  <a th:href="@{identifyNo(userId=${user.userId})}"><button class="btn btn-danger btn-xs"><i class=" glyphicon glyphicon-remove"></i></button></a>
 				  </td>
                 </tr>
 

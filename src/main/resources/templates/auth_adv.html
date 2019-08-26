@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -131,14 +131,14 @@
 				<h3 class="panel-title"><i class="glyphicon glyphicon-th"></i> 数据列表</h3>
 			  </div>
 			  <div class="panel-body">
-<form class="form-inline" role="form" style="float:left;">
+<form action="loadUserByLike" class="form-inline" role="form" style="float:left;">
   <div class="form-group has-feedback">
     <div class="input-group">
       <div class="input-group-addon">查询条件</div>
-      <input class="form-control has-success" type="text" placeholder="请输入查询条件">
+      <input class="form-control has-success" type="text" likehtml="请输入查询条件">
     </div>
   </div>
-  <button type="button" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询</button>
+  <button type="submit" class="btn btn-warning"><i class="glyphicon glyphicon-search"></i> 查询</button>
 </form>
 <br>
  <hr style="clear:both;">
@@ -148,18 +148,16 @@
                 <tr >
                   <th width="30">编号</th>
                   <th>用户名</th>
-                  <th>是否实名</th>
 				  <th>查看流水</th>
                   <th width="100">修改额度</th>
 					<th>操作</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>亲</td>
-                  <td>已实名</td>
-                  <td><a href="loadAccountByUid?userId=2">用户流水</a></td>
+                <tr th:each="user:${userList}">
+                  <td th:text="${user.userId}"></td>
+                  <td th:text="${user.userName}"></td>
+                  <td><a th:href="@{loadAccountByUid(userId=${user.userId})}">用户流水</a></td>
 				  <td><input type="text" value="1000"></td>
 				  <td><button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button></td>
                 </tr>

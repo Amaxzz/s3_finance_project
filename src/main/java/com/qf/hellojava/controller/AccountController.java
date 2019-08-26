@@ -19,7 +19,7 @@ public class AccountController {
     @RequestMapping("/loadAccountByUid")
     public String  loadAccountByUid(int userId, Model model){
         List<Account> accountList=accountService.loadAccountByUid(userId);
-        model.addAttribute("account",accountList);
+        model.addAttribute("accounts",accountList);
         return accountList!=null?"account":"error";
     }
     @RequestMapping("/addAccountByUid")

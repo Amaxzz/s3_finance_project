@@ -14,7 +14,8 @@ public class User {
     private String cardNum;
     private String userTel;
     private String userEmail;
-    private int userStatus;
+    private int userStatus=0;
+    private String userImg;
     private double userMoney;
     private double userLoan;
 }
