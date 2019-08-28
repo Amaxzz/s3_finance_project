@@ -17,7 +17,7 @@ public class RoleController {
     @Autowired
     private IRoleService roleService;
 
-    //@RequiresPermissions(value = {"角色管理"})
+    @RequiresPermissions(value = {"角色管理"})
     @RequestMapping("loadRoleById")
     public String loadRoleById(int roleId,Model model){
         Role u=roleService.loadRoleById(roleId);
@@ -25,7 +25,7 @@ public class RoleController {
         System.out.println(u);
         return u!=null?"edit":"error";
     }
-    //@RequiresPermissions(value = {"角色管理"})
+    @RequiresPermissions(value = {"角色管理"})
     @RequestMapping("roleall")
     public String loadAllRole(@RequestParam(required = false,defaultValue = "1")int page,
                               @RequestParam(required = false,defaultValue = "5")int rows,
@@ -44,6 +44,7 @@ public class RoleController {
         model.addAttribute("maxPage",maxPage);
         return roleList!=null?"role":"error";
     }
+    @RequiresPermissions(value = ("角色管理"))
     @RequestMapping("assignRoleHandler")
     public String assignRole(int userId,Model model){
         List<Role> roleList1=roleService.getRole1(userId);

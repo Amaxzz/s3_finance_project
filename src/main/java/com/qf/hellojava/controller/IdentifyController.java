@@ -5,6 +5,7 @@ import com.qf.hellojava.service.IIdentifyService;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
 import org.apache.ibatis.annotations.Param;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,6 +32,7 @@ public class IdentifyController {
     private IIdentifyService identifyService;
     @Autowired
     private HttpSession session;
+    @RequiresPermissions(value = {"业务审核"})
     @RequestMapping("/loadAllIdentify")
     public String loadAllIdentify(Model model){
         List<User> userList=new ArrayList<>();

@@ -104,6 +104,10 @@ public class ViewController {
     public String apply3view() {
         return "apply-3";
     }
+    @RequestMapping("/unOauth")
+    public String unOauth(){
+        return "unOauth";
+    }
 
 }
 

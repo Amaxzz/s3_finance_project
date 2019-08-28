@@ -10,6 +10,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Controller
 public class ShiroConfig {
@@ -19,7 +22,13 @@ public class ShiroConfig {
             @Qualifier("defaultWebSecurityManager") DefaultWebSecurityManager defaultWebSecurityManager){
         ShiroFilterFactoryBean filterFactoryBean = new ShiroFilterFactoryBean();
         filterFactoryBean.setSecurityManager(defaultWebSecurityManager);
-
+        Map<String,String> map  = new HashMap<>();
+//        定义过滤规则
+        map.put("/main","authc");//需要登录之后才可访问的资源
+        map.put("/member","authc");
+        filterFactoryBean.setFilterChainDefinitionMap(map);//需要过滤连的定义
+        filterFactoryBean.setLoginUrl("/login");//设置默认的登录页，
+        filterFactoryBean.setUnauthorizedUrl("/unOauth");//权限不足时显示的页面
         return filterFactoryBean;
     }
 
