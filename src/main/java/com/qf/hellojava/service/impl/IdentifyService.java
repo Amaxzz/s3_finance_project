@@ -35,6 +35,17 @@ public class IdentifyService implements IIdentifyService {
         List<User> userList=identifyMapper.loadUserByLike(like);
         return userList;
     }
+
+    @Override
+    public User loadUserByName(String userName) {
+        return identifyMapper.loadUserByName(userName);
+    }
+
+    @Override
+    public int addRealUser(User realUser) {
+        return identifyMapper.addRealUser(realUser);
+    }
+
     public int loadMaxPage(int rows,String like){
         int a=identifyMapper.loadCountId(like);
         int maxPage=a%rows==0?a/rows:a/rows+1;

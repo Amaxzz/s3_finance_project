@@ -10,5 +10,7 @@ public interface IIdentifyService {
     public int identifyNo(int uid);
     public int loadMaxPage(int rows,String like);
     public List<User> loadUserByLike(String like,int page,int rows);
+    public User loadUserByName(String userName);
+    public int addRealUser(User realUser);
 
 }

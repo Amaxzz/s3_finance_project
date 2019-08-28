@@ -58,7 +58,7 @@ public class UserService implements IUserService {
     @Override
     public boolean addUser(User user) {
         int maxId=userMapper.getMaxByUid();
-        user.setUserId(maxId);
+        user.setUserId(maxId+1);
         user.setUserPwd("123456");
         user.setUserStatus(9);
         int count=userMapper.addUser(user);
@@ -88,7 +88,8 @@ public class UserService implements IUserService {
     @Override
     public boolean loadReg(User user) {
         int maxId=userMapper.getMaxByUid();
-        user.setUserId(maxId);
+        user.setUserId(maxId+1);
+        user.setUserStatus(0);
         int count=userMapper.loadReg(user);
         return count>0?true:false;
     }

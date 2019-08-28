@@ -14,6 +14,7 @@
         <result column="status" property="userStatus"></result>
         <result column="money" property="userMoney"></result>
         <result column="load" property="userLoad"></result>
+        <result column="img" property="userImg"></result>
     </resultMap>
 
     <select id="loadAllIdentify" resultMap="userResult">
@@ -31,4 +32,12 @@
     <select id="loadCountId" resultType="int" parameterType="string">
         select count(uid) from tb_users where uname like '%' #{uname} '%'
     </select>
+    <select id="loadUserByName" parameterType="string" resultMap="userResult">
+        select * from tb_users where uname=#{uname}
+    </select>
+    <update id="addRealUser" parameterType="user">
+        update tb_users set
+        status=1,nickName=#{nickName},tel=#{userTel},cardnum=#{cardNum},email=#{userEmail},img=#{userImg}
+        where uname=#{userName}
+    </update>
 </mapper>
