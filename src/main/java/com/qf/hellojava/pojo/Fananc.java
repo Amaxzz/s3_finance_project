@@ -11,5 +11,7 @@ public class Fananc {
     private String fanacIntroduce;
     private String fanacImg;
     private String fanacClassss;
+    private String createTime;
+    private Double fanacMoney;
 
 }
