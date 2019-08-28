@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="UTF-8" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,12 +29,12 @@
             <div id="navbar" class="navbar-collapse collapse" style="float:right;">
               <ul class="nav navbar-nav">
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i> 张三<span class="caret"></span></a>
+                <i class="glyphicon glyphicon-user" th:text="${session.uName}"></i> <span class="caret"></span>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="member"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    <li><a href="index"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
                   </ul>
                 </li>
               </ul>
@@ -52,22 +52,22 @@
 
 		<ul class="nav nav-tabs" role="tablist">
 		  <li role="presentation" ><a href="apply"><span class="badge">1</span> 基本信息</a></li>
-		  <li role="presentation" ><a href="uploadImg"><span class="badge">2</span> 资质文件上传</a></li>
+		  <li role="presentation" ><a href="loadApply1"><span class="badge">2</span> 资质文件上传</a></li>
 		  <li role="presentation" class="active"><a href="apply2"><span class="badge">3</span> 邮箱确认</a></li>
-		  <li role="presentation"><a href="apply3"><span class="badge">4</span> 申请确认</a></li>
 		</ul>
         
 		<form role="form" style="margin-top:20px;">
 		  <div class="form-group">
 			<label for="exampleInputEmail1">邮箱地址</label>
 			<input type="text" class="form-control" id="exampleInputEmail1" name="email" placeholder="请输入用于接收验证码的邮箱地址">
-              <button id="email">发送验证码</button>
+              <button type="button" id="email11">发送验证码</button>
+<!--              <button type="button" onclick="aaaa()">发送验证码</button>-->
 		  </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">验证码</label>
+                <label for="exampleInputTrl">验证码</label>
                 <input type="text" class="form-control" id="exampleInputTrl" placeholder="请输入验证码">
             </div>
-          <button type="button" onclick="window.location.href='loadApply1'" class="btn btn-default">上一步</button>
+          <button type="button"  class="btn btn-default">上一步</button>
 		  <button type="button" id="addfinsh"  class="btn btn-success">确认完成</button>
 		</form>
 		<hr>
@@ -95,21 +95,38 @@
           e.preventDefault()
           $(this).tab('show')
         });
-        $('#email').click(function () {
-            var email=$('#exampleInputEmail1').text;
-            $.post("email",{"email":email},function (data) {
-
+        // 可以用  要注意button的type属性 不同的浏览器有不同的默认属性
+        // function aaaa(){
+        //     var email=$('#exampleInputEmail1').val();
+        //     //alert(email);
+        //     $.post("emailHander",{"email":email},function (data) {
+        //         alert(data);
+        //         if (data=="ok"){
+        //             alert("验证码获取成功");
+        //         }
+        //     })
+        // }
+        $('#email11').click(function () {
+            var email=$('#exampleInputEmail1').val();
+            alert(email);
+            $.post("emailHander",{"email":email},function (data) {
+                alert(data);
+                if (data=="ok"){
+                    alert("验证码获取成功");
+                }
             })
-        })
+        });
         $("#addfinsh").click(function () {
-            var num=$('#exampleInputTrl').text;
-            var email=$('#exampleInputEmail1').text;
+            var num=$('#exampleInputTrl').val();
+            var email=$('#exampleInputEmail1').val();
             $.post("addRealUser",{"num":num,"email":email},function (data) {
-                if (data){
-                    alert("提交成功，等待审核")
+                if (data==1){
+                    alert("提交成功，等待审核");
                     location.href="member";
-                } else {
+                } else if(data==0){
                     alert("提交失败，请重试或询问客服");
+                }else if(data==2){
+                    alert("验证码错误，请重试");
                 }
             })
         })

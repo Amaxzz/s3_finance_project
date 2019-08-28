@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Random;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

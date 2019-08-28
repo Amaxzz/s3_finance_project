@@ -2,6 +2,9 @@ package com.qf.hellojava.controller;
 
 import com.qf.hellojava.pojo.User;
 import com.qf.hellojava.service.IIdentifyService;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.HtmlEmail;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +22,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
+
 @Controller
 public class IdentifyController {
 
@@ -114,52 +119,102 @@ public class IdentifyController {
         model.addAttribute("img",img);
         return "apply1";
     }
-
     @RequestMapping("/uploadImg")
     public String uploadImg(MultipartFile img, HttpServletRequest request){
         String path=request.getServletContext().getRealPath("/upload");
         File upfile=new File(path);
-        if (!upfile.exists()){
-            upfile.mkdirs();
-        }
-        try {
-            System.out.println("1111111111"+img);
-            InputStream inputStream=img.getInputStream();
-            FileOutputStream fileOutputStream=new FileOutputStream(upfile+"/"+img.getOriginalFilename());
-            byte[] bytes=new byte[1024];
-            int len=0;
-            while ((len=inputStream.read(bytes))!=-1){
-                fileOutputStream.write(bytes,0,len);
-                fileOutputStream.flush();
+        System.out.println("99999999999999999999999999999999999999");
+        if (img!=null) {
+            if (!upfile.exists()) {
+                upfile.mkdirs();
             }
-            fileOutputStream.close();
-            inputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+            try {
+                InputStream inputStream = img.getInputStream();
+                FileOutputStream fileOutputStream = new FileOutputStream(upfile + "/" + img.getOriginalFilename());
+                byte[] bytes = new byte[1024];
+                int len = 0;
+                while ((len = inputStream.read(bytes)) != -1) {
+                    fileOutputStream.write(bytes, 0, len);
+                    fileOutputStream.flush();
+                }
+                fileOutputStream.close();
+                inputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String imgname = "upload/" + img.getOriginalFilename();
+            User realUser = (User) session.getAttribute("realUser");
+            realUser.setUserImg(imgname);
+            System.out.println(realUser + "---------img");
+            session.setAttribute("realUser", realUser);
         }
-        String imgname="upload/"+img.getOriginalFilename();
-        User realUser=(User) session.getAttribute("realUser");
-        realUser.setUserImg(imgname);
-        System.out.println(realUser+"---------img");
-        session.setAttribute("realUser",realUser);
+        return "apply2";
+    }
+
+    @RequestMapping("/apply2")
+    public String apply2(){
+        System.out.println("apple2");
         return "apply2";
     }
 
     @ResponseBody
     @RequestMapping("/addRealUser")
-    public Boolean addRealUser(String email,String num){
+    public int addRealUser(String email,String num){
+        int a=0;
         User realUser=(User) session.getAttribute("realUser");
         String userName=(String)session.getAttribute("uName");
         realUser.setUserName(userName);
         realUser.setUserEmail(email);
         realUser.setUserStatus(1);
+        String code=(String)session.getAttribute("code");
         System.out.println(realUser+"========finsh");
-        int a=identifyService.addRealUser(realUser);
-        return a>0?true:false;
+        a=identifyService.addRealUser(realUser);
+        if(num==null){
+            a=2;
+            return a;
+        }
+        if (code.equals(num)&&a!=0){
+            a=1;
+        }else {
+            a=2;
+            return a;
+        }
+        return a;
     }
-    @RequestMapping("/email")//发送邮件验证码
-    public void email(String email){
-
-
+    @ResponseBody
+    @RequestMapping("/emailHander")//发送邮件验证码
+    public String emailHander(String email){
+        System.out.println(email+"564555555555555555");
+        Random random=new Random();
+        String code="";
+        for (int i = 0; i <6 ; i++) {
+            int a=random.nextInt(10);
+            code=code+a;
+        }
+        session.setAttribute("code",code);
+        String emailContext="验证码："+code+"如果不是您本人操作请勿理睬";
+        //邮件发送的类(Commons-email 核心的类)
+        HtmlEmail htmlEmail=new HtmlEmail();
+        //设置发送邮件的服务器(发件人邮箱的服务器地址)
+        htmlEmail.setHostName("smtp.163.com");
+        //设置发送邮件的用户和密码(发件人的用户名和密码)
+        htmlEmail.setAuthentication("18391700970@163.com","413125687yn");
+        htmlEmail.setCharset("UTF-8");
+        //主题
+        htmlEmail.setSubject("测试邮件");
+        try {
+            //设置发送邮件的地址和昵称
+            htmlEmail.setFrom("18391700970@163.com", "e金融客服");
+            //内容
+            htmlEmail.setHtmlMsg(emailContext);
+            //设置邮件收件人地址
+            htmlEmail.addTo(email);
+            //发送
+            htmlEmail.send();
+        }catch (EmailException e){
+            e.printStackTrace();
+            return "error";
+        }
+        return "ok";
     }
 }
