@@ -7,6 +7,7 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
+import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -51,7 +54,7 @@ public class UserController {
                 if (status>5) {
                     return "main";
                 } else {
-                    return "member";
+                    return "redirect:member";
                 }
             }
         } catch (AuthenticationException e) {
@@ -134,6 +137,13 @@ public class UserController {
 
     @RequestMapping("loadreg")
     public String loadReg(User user){
+        Md5Hash md5Hash2 = new Md5Hash(user.getUserPwd(), user.getUserName(), 1024);
+        String mima=md5Hash2.toHex();
+        user.setUserPwd(mima);
+        Date now = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
+        String time = dateFormat.format( now );
+        user.setCreateTime(time);
         boolean bool=userService.loadReg(user);
         return bool?"redirect:loginview":"error";
     }

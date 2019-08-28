@@ -12,4 +12,6 @@ public interface IdentifyMapper {
     public int identifyNo(int uid);
     public int loadCountId(String like);
     public List<User> loadUserByLike(String like);
+    public User loadUserByName(String userName);
+    public int addRealUser(User realUser);
 }
