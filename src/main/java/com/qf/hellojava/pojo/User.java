@@ -17,5 +17,5 @@ public class User {
     private int userStatus=0;
     private String userImg;
     private double userMoney;
-    private double userLoan;
+    private double userLoad;
 }

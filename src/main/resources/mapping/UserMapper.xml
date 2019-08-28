@@ -13,7 +13,7 @@
         <result column="tel" property="userTel"></result>
         <result column="status" property="userStatus"></result>
         <result column="money" property="userMoney"></result>
-        <result column="load" property="userLoad"></result>
+        <result column="uload" property="userLoad"></result>
         <result column="img" property="userImg"></result>
    </resultMap>
     <select id="findUserByUserName" resultMap="userResult" parameterType="string">
@@ -68,7 +68,7 @@
         </where>
     </delete>
     <update id="updateUser" parameterType="user">
-        update tb_users set uname=#{userName},nickname=#{userCall},email=#{userEmail} where uiserId=#{userId}
+        update tb_users set uname=#{userName},nickname=#{userCall},email=#{userEmail} where uId=#{userId}
     </update>
     <delete id="deleteRoleId">
         delete from tb_uid_rid where uid=#{userId} and rid in

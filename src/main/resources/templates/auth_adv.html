@@ -155,11 +155,11 @@
               </thead>
               <tbody>
                 <tr th:each="user:${userList}">
-                  <td th:text="${user.userId}"></td>
+                  <td><input type="text" id="userId" th:value="${user.userId}"></td>
                   <td th:text="${user.userName}"></td>
                   <td><a th:href="@{loadAccountByUid(userId=${user.userId})}">用户流水</a></td>
-				  <td><input type="text" value="1000"></td>
-				  <td><button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button></td>
+				  <td><input type="text" id="money" th:value="${user.userLoad}"></td>
+				  <td><button type="button" id="ok" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button></td>
                 </tr>
 
               </tbody>
@@ -199,6 +199,20 @@
 					}
 				});
             });
+            $('#ok').click(function () {
+				var money=$('#money').val();
+				var userId=$('#userId').val();
+				$.post("updateLoad",{"load":money,"userId":userId},function (data) {
+
+						if(data=="true"){
+							alert("修改成功")
+							location.href="loadUserByLike"
+						}else {
+							alert("修改失败")
+						};
+
+				})
+			})
         </script>
   </body>
 </html>

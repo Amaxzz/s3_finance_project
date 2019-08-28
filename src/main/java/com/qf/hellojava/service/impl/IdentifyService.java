@@ -51,6 +51,10 @@ public class IdentifyService implements IIdentifyService {
         int maxPage=a%rows==0?a/rows:a/rows+1;
         return maxPage;
     }
+    @Override
+    public int updateLoad(int userId,Double load) {
+        return identifyMapper.updateLoad(userId,load);
+    }
 
 
 }

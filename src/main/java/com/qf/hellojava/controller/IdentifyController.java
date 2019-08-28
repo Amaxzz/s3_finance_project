@@ -219,4 +219,11 @@ public class IdentifyController {
         }
         return "ok";
     }
+    @ResponseBody
+    @RequestMapping("/updateLoad")
+    public String updateLoad(int userId,Double load){
+        int a=identifyService.updateLoad(userId,load);
+
+        return a>0?"true":"false";
+    }
 }

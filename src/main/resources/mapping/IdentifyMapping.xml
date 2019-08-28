@@ -13,7 +13,7 @@
         <result column="tel" property="userTel"></result>
         <result column="status" property="userStatus"></result>
         <result column="money" property="userMoney"></result>
-        <result column="load" property="userLoad"></result>
+        <result column="uload" property="userLoad"></result>
         <result column="img" property="userImg"></result>
     </resultMap>
 
@@ -39,5 +39,8 @@
         update tb_users set
         status=1,nickName=#{nickName},tel=#{userTel},cardnum=#{cardNum},email=#{userEmail},img=#{userImg}
         where uname=#{userName}
+    </update>
+    <update id="updateLoad">
+        update tb_users set uload=#{load} where uid=#{userId}
     </update>
 </mapper>

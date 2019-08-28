@@ -2,6 +2,7 @@ package com.qf.hellojava.mapper;
 
 import com.qf.hellojava.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface IdentifyMapper {
     public List<User> loadUserByLike(String like);
     public User loadUserByName(String userName);
     public int addRealUser(User realUser);
+    public int updateLoad(@Param("userId") int userId, @Param("load") Double load);
+
 }
