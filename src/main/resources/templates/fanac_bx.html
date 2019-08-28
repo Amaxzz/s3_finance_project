@@ -147,8 +147,8 @@
                             <thead>
                             <tr >
                                 <th width="30">#</th>
-                                <th>项目名称</th>
-                                <th>发起人</th>
+                                <th>产品名称</th>
+                                <th>收益率</th>
                                 <th>起购金额（元）</th>
                                 <th>周期(天)</th>
                                 <th>创建时间</th>
@@ -156,37 +156,23 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>XXXXXXXXXXXX项目</td>
-                                <td>XXXXXXXXXXXX公司</td>
-                                <td>1000000.00</td>
-                                <td>30</td>
-                                <td>2017-06-01 19:00:00</td>
+                            <tr th:each="f:${fanacList}">
+                                <td th:text="${f.fanacId}"></td>
+                                <td th:text="${f.fanacName}"></td>
+                                <td th:text="${f.fanacRates}"></td>
+                                <td th:text="${f.fanacMoney}"></td>
+                                <td th:text="${f.fanacCycle}"></td>
+                                <td th:text="${f.createTime}"></td>
                                 <td>
-                                    <button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>XXXXXXXXXXXX项目</td>
-                                <td>XXXXXXXXXXXX公司</td>
-                                <td>1000000.00</td>
-                                <td>30</td>
-                                <td>2017-06-01 19:00:00</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>XXXXXXXXXXXX项目</td>
-                                <td>XXXXXXXXXXXX公司</td>
-                                <td>1000000.00</td>
-                                <td>30</td>
-                                <td>2017-06-01 19:00:00</td>
-                                <td>
-                                    <button type="button" class="btn btn-success btn-xs"><i class="glyphicon glyphicon-eye-open"></i></button>
+                                    <a >
+                                        <button type="button" class="btn btn-success btn-xs" ><i class=" glyphicon glyphicon-check"></i></button>
+                                    </a>
+                                    <a >
+                                        <button type="button" class="btn btn-primary btn-xs" ><i class=" glyphicon glyphicon-pencil"></i></button>
+                                    </a>
+                                    <a >
+                                        <button type="button" class="btn btn-danger btn-xs" ><i class=" glyphicon glyphicon-remove"></i></button>
+                                    </a>
                                 </td>
                             </tr>
                             </tbody>

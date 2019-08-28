@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ViewController {
+
     @RequestMapping("loginview")
     public String loginView() {
         return "login";
@@ -57,6 +58,7 @@ public class ViewController {
     public String fanac_jshView(){ return "fanac_jsh";}
     @RequestMapping("fanac_gjsview")
     public String fanac_gjsView(){ return "fanac_gjs";}
+
 
     //财务管理
     @RequestMapping("money_bbview")
