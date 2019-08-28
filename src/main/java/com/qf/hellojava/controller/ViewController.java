@@ -46,6 +46,23 @@ public class ViewController {
         model.addAttribute("roleId", roleId);
         return "assignPermission";
     }
+    //理财管理
+    @RequestMapping("fanac_syview")
+    public String fanac_syView(){ return "fanac_sy";}
+    @RequestMapping("fanac_bxview")
+    public String fanac_bxView(){ return "fanac_bx";}
+    @RequestMapping("fanac_jjview")
+    public String fanac_jjView(){ return "fanac_jj";}
+    @RequestMapping("fanac_jshview")
+    public String fanac_jshView(){ return "fanac_jsh";}
+    @RequestMapping("fanac_gjsview")
+    public String fanac_gjsView(){ return "fanac_gjs";}
+
+    //财务管理
+    @RequestMapping("money_bbview")
+    public String money_bbView(){ return "money_bb";}
+    @RequestMapping("money_tjview")
+    public String money_tjView(){ return "money_tj";}
 
 
     @RequestMapping("auth_advview")
