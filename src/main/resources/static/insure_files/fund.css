@@ -1,0 +1,462 @@
+.crumbs .cMain a{display: inline-block}
+.notice_lb{width: auto}
+.notice_lb .localize {color:#999999;}
+.notice_lb p{padding-left: 0;font-size: 14px;cursor: pointer}
+/*主题基金*/
+.fund{height: 1200px;width: 100%;background-color:#ffffff }
+.fund-icon-m{padding-top:0!important;}
+.fund-icon-m .more a{background:url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/more_2.png") no-repeat right }
+.fund .action_Y_tit{background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/action_Y_tit.png") no-repeat;width: 368px;height: 59px;margin: 0 auto;position: relative;top:-12px;z-index: 1}
+.fund_Y_text{padding-top:27px;}
+.fund_Y_text span{width:6px ;height:24px ;display: block;background-color:#c7000b;position: absolute }
+.fund_Y_text p{padding-left: 14px;font-size:24px;color:#0d131a;height: 24px;line-height: 24px;}
+.fund_Y_text:hover p{color: #D00F1B}
+.fund_Y_di{width: 100%;height:7px;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/action_di.png") center top repeat-x;position: relative;top:8px  }
+.fund_Y_main{width: 101.5%;padding-top:30px }
+.fund_Y_main .fund_tit{padding-bottom:16px;padding-top: 16px }
+.fund_Y_main .fund_tit em{width: 6px;height: 6px;background: #c7000b;display: block;position: absolute;top:8px;left: 1px}
+.fund_Y_main .fund_tit h1{font-size: 16px;color:#0d131a;width: auto;padding-right:10px ;display: inline-block;padding-left: 15px;position: relative}
+.fund_Y_main .fund_tit:hover h1{color: #D00F1B}
+.fund_Y_main .fund_tit p{font-size: 14px;color:#999999;width: 450px;display: inline-block}
+.fund_Y_main ul{height:180px;}
+.fund_Y_main .img_text{position: absolute;top:100px;left:16px;}
+.fund_Y_main .img_text h1{color: white;font-size: 18px;text-align: left;line-height: 1.5}
+.fund_Y_main2,.fund_Y_main3,.fund_Y_main4{margin-top:40px }
+.fund_Y_main ul li{float: left;width:323px;height:178px;border:1px solid #e5e5e5;margin-right:12px;position: relative }
+.fund_Y_main img{cursor: pointer}
+.fund_Y_main .li2{text-align: center;line-height: 1.5;cursor: pointer}
+.fund_Y_main .li3{cursor: pointer}
+.fund_Y_main .li3 dl{margin-top: 25px}
+.fund_Y_main .li2 h2{font-size: 16px;color:#0d131a;padding-top:25px;position: relative }
+.fund_Y_main .li2:hover h2{color: #D00F1B}
+.fund_Y_main .li2 p{font-size: 14px;color:#999999;position: relative}
+.fund_Y_main .li2 h3{font-size: 16px;color:#d00f1b;position: relative}
+.fund_Y_main .li2 .btn{position:relative;width:110px ;height:25px;color: white;line-height: 25px;background: #c7000b;margin: 15px auto;font-size: 14px;cursor: pointer}
+.fund_Y_main .li2 .btn a{color: white}
+.fund_Y_main .li3 dd{height: 60px}
+.fund_Y_main .li3 h1{padding-bottom: 10px;position: relative;font-size:18px;color: #0d131a;padding-left:20px;margin-top: 18px;border-bottom:1px solid #e6e6e6;width:280px;left: 10px }
+.fund_Y_main .li3 h1 span{width: 4px;height:16px ;background:#c7000b;display: block;position: absolute;left:8px;top:5px }
+.fund_Y_main .li3 h2{padding-top: 5px;position: relative;font-size:14px;color: #0d131a;padding-left: 30px;width:270px;cursor: pointer;line-height: 2}
+.fund_Y_main .li3 h2:hover{color:#d00f1b }
+.fund_Y_main .li3 h2 span{width: 6px;height:6px ;background:#c7000b;display: block;position: absolute;left:18px;top:16px }
+.fund_Y_main .li3 i{font-size: 14px;color: #999999;position: absolute;top:32px;left: 206px;width: auto;font-style: normal}
+.yyin{position: absolute;top:-12px;left: -15px;opacity: 0; display: none\9; -moz-transition: all .6s ease;-o-transition: all .6s ease;-webkit-transition: all .6s ease;transition: all .6s ease;}
+.fund_Y_main li:hover .yyin{opacity: 1;display: block\9}
+.fund-theme .funTools .tzlc{top:0px}
+.fund-theme .funTools .tzlc .funT-child .day-show{padding-left: 344px}
+/*要闻*/
+.information-all{padding-top: 40px}
+.information-main{width: 64.7%;min-height:640px}
+.inf-title{border-bottom: 1px solid #e5e5e5;padding-top: 15px}
+.inf-title h1{font-size: 26px;color: #0d131a;text-align: center;width: 600px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.inf-title p{font-size: 14px;color: #0d131a;text-align: center;padding-top: 27px;padding-bottom: 20px}
+.inf-title p em{color:#999999 }
+.palette-btn{position: relative}
+.information-main .font-btn{width: 100px;height: 22px;position: absolute;right:165px;top:10px  }
+.information-main .a-text{width: 22px;height: 22px;display: inline-block }
+.information-main .font-btn ul{width: 73px;height: 22px;display: inline-block}
+.information-main .font-btn li{float: left;font-size: 14px;color: #999999;line-height: 22px;margin-left: 9px;cursor: pointer}
+.information-main .font-btn li.on{color: #d00f1b}
+.information-main .main-share{width: 145px;height: 22px;position: absolute;right: 0;top:10px}
+.share-text{font-size:14px ;color:#0d131a;line-height: 22px;display: inline-block}
+.main-share ul{width: 88px;float: right;display: inline-block}
+.main-share li{float: left;width:22px ;height:22px;margin-left: 5px;cursor: pointer}
+.main-share .m{width:22px ;height:22px;}
+.main-share .w{width:22px ;height:22px;}
+.main-share .s{width:22px ;height:22px;}
+.inf-main{padding-top: 34px;padding-bottom: 40px}
+.inf-main p{font-size: 16px;color: #0d131a;line-height: 1.6;text-indent:35px}
+.inf-main h1{font-size: 16px;color: #0d131a;line-height: 1.6;font-weight: bolder;text-indent:35px}
+.inf-main .close{float: right;font-weight: bolder;color: #0d131a;cursor: pointer}
+.inf-main dd{padding-top: 40px}
+.information-other{width: 32.3%;}
+.information-other1{width: 100%;height: 408px;border: 1px solid #e5e5e5}
+.hot_more{border-bottom: 1px solid #e6e6e6;margin-left: 9px;width: 306px;}
+.hot_more h1 {position: relative;font-size:18px ;color:#0d131a;padding-left:24px;padding-bottom:10px;margin-top: 20px}
+.hot_more h1 span{position: absolute;top:5px;left:12px;width: 4px;height: 16px;background: #ff6200;display: block}
+.information-other1 h2{font-size: 16px;color:#0d131a;padding-top:30px;text-align: center}
+.information-other1:hover h2{color: #D00F1B}
+.information-other1 p{font-size: 16px;color:#999999;text-align: center;padding-top:12px}
+.information-other1 h3{font-size: 28px;color:#ff6200;text-align: center}
+.information-other1 h4{text-align: center;font-size: 14px;color:#0d131a;width: 216px;margin: 0 auto;padding-top: 15px}
+.information-other1 .btn{margin: 38px auto;text-align: center;width: 180px;height:38px;color: white;background: #ff6200;font-size:18px;line-height: 38px;cursor: pointer }
+.information-other1 .btn a{color: white}
+.information-other2{width: 100%;height: 452px;border: 1px solid #e5e5e5;margin-top: 20px}
+.txt_more{border-bottom: 1px solid #e6e6e6;margin-left: 9px;width: 306px;}
+.txt_more h1 {display: inline-block;position: relative;font-size:18px ;color:#0d131a;padding-left:24px;padding-bottom:10px;margin-top: 20px}
+.txt_more h1 span{position: absolute;top:5px;left:12px;width: 4px;height: 16px;background: #c7000b;display: block}
+.txt_more .more-btn{top:23px;right: 20px;float: right;display: inline-block;font-size:14px;color: #0d131a;position: relative;width:65px ;height:18px;line-height: 18px;cursor: pointer}
+.txt_more .more-btn a{width: 60px;height: 18px;display: inline-block;position: absolute;right: 0;top:0;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/more_2.png") no-repeat right ;}
+.information-other2  .txt_main dl dd {margin-top: 15px}
+.information-other2 .txt_main dl dd h1{position: relative;font-size: 14px;color: #0d131a;padding-left:14px;left:20px ;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width:265px  }
+.information-other2 .txt_main dl dd h1:hover a{color:#d00f1b  }
+.information-other2  .txt_main dl dd h1 span{width: 6px;height:6px ;background: #c7000b;display: block;position: absolute;left: 0;top:8px}
+.information-other2  .txt_main dl dd p{font-size:14px ;color:#999999;padding-left: 36px;padding-top:10px }
+.information-other3{width: 100%;height: 245px;border: 1px solid #e5e5e5;margin-top: 20px}
+.information-other3  .txt_more{border: none;}
+.information-other3  .txt_more_img{width:303px ;height:180px;overflow: hidden;border: 1px solid #e5e5e5;margin:0 9px 0 9px  }
+.information-other1,.information-other2,.information-other3{cursor: pointer}
+/*基金首页*/
+.box{border: 1px solid #e5e5e5}
+.fund-search{width: 1000px!important;height: auto;margin: 0 auto;margin-bottom: 40px}
+.fund-search .funTti{ padding-top: 40px; margin-bottom: 0;}
+.fund-search .funTti i.default{ background: #ff6200;}
+.fund-search .top{height: 98px;width: 100%}
+.fund-search .middle{height:400px ;width: 100%}
+.fund-search .top_main_btn{width: auto;padding-top: 33px;}
+.fund-search  .top_main_btn .btn_ul li{margin-left: 6px}
+.fund-search  .top_main_btn  .l-main{margin-right: 10px}
+.fund-search .box-1{width: 323px;height: 368px;margin-top: 8px}
+.fund-search .box-1 .tzlc_main{border: none!important;  }
+.fund-search .box-1 .tzlc_main .timeEnd{ font: 14px/22px "微软雅黑"; color: #999999; text-align: center; margin-bottom: 0;}
+.fund-search .box-1 .tzlc_main p{ line-height: 28px;}
+.middle .r ul{width: 663px;height:370px;margin-top: 8px }
+.middle .r li{width:323px;height: 178px;float: left;margin-bottom: 10px;overflow: hidden}
+.fund-search .box-2,.fund-search  .box-4,.fund-search  .box-6,.fund-search .box-7{margin-right: 13px;}
+.fund-search .box-si dl {padding:36px 30px 0 30px }
+.fund-search .box-si dl:hover h4{color: #d00f1b}
+.fund-search .box-si dl dd{width: 100%;padding-bottom: 0px; text-align: center;}
+.fund-search .box-si dl dd.timeEnd{ font: 14px/22px "微软雅黑"; color: #999999; text-align: center; margin-bottom: 0;}
+.fund-search .box-si h4{color: #0d131a;font-size:16px;}
+.fund-search .box-si p{color: #999999;font-size:14px; line-height: 28px;}
+.fund-search .box-si h2{color: #ff6200;font-size:16px;}
+.fund-search .box-si a{width: 110px;height: 26px;background:#ff6200; color:#fff;font-size:14px;line-height: 26px;display: block;text-align: center;margin: 10px auto;cursor: pointer;}
+.fund-search .box-si a:hover{background:#ff6200;color: #fff}
+.fund-search .box-si .mb20{ margin-bottom: 20px;}
+.fund-search .box-sa{position: relative}
+.fund-search .box-sa dl {padding:30px 0 0 30px;position: absolute;top:0px }
+.fund-search .box-sa dl dd{width: 100%;padding-bottom: 5px}
+.fund-search .box-sa h4{color: #0d131a;font-size:32px;text-align: left }
+.fund-search .box-sa p{color: #999999;font-size:14px;text-align: left }
+.fund-search .box-sa h2{color: #b09067;font-size:16px;text-align: left }
+.recent-b{width: 85px;height: 25px;background:#ff6200;position: relative;float: right;top:-1px;right: -1px }
+.fund-search .box .recent-b p{color: #fff;font-size: 14px;line-height: 25px;text-align: center}
+.fund-search .bottom ul{width: 1001px;height: 418px;margin-top: 30px}
+.fund-search .bottom li{width:323px;height: auto;float: left;overflow: hidden;cursor: pointer}
+.fund-search .bottom li:hover img{-moz-transition: all .3s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease;transition: all .5s ease;}
+.fund-search .bottom li:hover img{-moz-transform:scale(1.1);-ms-transform:scale(1.1);-webkit-transform:scale(1.1);transform:scale(1.1);}
+/*基金首页-主题基金*/
+.fund-theme{width: 100%;background:#f2f2f2;height:auto;padding-bottom: 40px}
+.fund-theme .w-center{height:auto}
+.fund-theme .action_Y_text{padding-top: 40px}
+.fund-theme .top ul{width: 100%;height:290px;margin-top: 30px }
+.fund-theme .top li{width:493px;height: 138px;float: left;margin-bottom: 10px;overflow: hidden}
+.fund-theme .box-1,.fund-theme .box-3{ margin-right: 10px}
+.bottom .funT-l,.bottom  .funT-r{height:448px;background: white }
+.funTools{height: auto!important}
+.fund-theme .bottom{margin-top: 10px}
+.fund-theme .box-pa{position: relative}
+.fund-theme .box-pa dl {padding:40px 0 0 30px;position: absolute;top:-5px;left:0 }
+.fund-theme .box-pa dl dd{width: 100%;padding-bottom: 20px}
+.fund-theme .box-pa h4{color: #ffffff;font-size:16px;text-align: left }
+.fund-theme .box-pa p{color: #ffffff;font-size:16px;text-align: left }
+/*基金产品*/
+.fund-products{width: 1000px;height:auto ;margin: 0 auto}
+.fund-products .action_Y_text .more a{background:url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/more_2.png") no-repeat right }
+.fund-products .funType a{min-width: 35px}
+.fund-products .top_main_two{margin-top: 0;width: 190px;height: 27px;padding-top: 0px}
+.fund-products .top_main_two .JJselect{height: 27px}
+.fund-products .top_main_two .JJbtn{padding: 0}
+.fund-products .funCont ul.lTit li{ position: relative; box-sizing: border-box; min-height: 40px;}
+.fund-products .funCont ul.lTit li.sort1{ text-align: left; width: 185px;}
+.fund-products .funCont ul.lTit li.sort2{ width: 115px;}
+.fund-products .funCont ul.lTit li.sort3{ width: 70px;}
+.fund-products .funCont ul.lList li.sort1{ text-align: left;width: 185px;}
+.fund-products .funCont ul.lList li.sort2{ width: 115px;}
+.fund-db {width: 70px; margin-left:38px;overflow: hidden;padding-top: 17px;}
+.fund-db span{width: 11px;height:11px ;border:1px solid #e5e5e5;display: inline-block;position: absolute;top:1px;cursor: pointer}
+.fund-db span.on{background: url(../images/fund/search.ele.png) no-repeat 9999px 9999px;background-position: -1px -107px;height: 11px;width: 11px;border: 1px solid #c7000b;}
+.fund-db p{color:#005aa0 ;font-size:14px ;line-height:14px!important;position: relative; cursor: pointer;}
+.fund-products .page{padding:20px }
+.fund-contrast{width:1000px ;height:166px;position: relative;overflow: hidden }
+.fund-contrast-bg{position: absolute;top:44px;left:40px}
+.fund-contrast-head{width: 100%;height: 34px;background: #c7000b}
+.fund-contrast-head p{color: white;line-height: 34px;padding-left:12px;padding-right:12px;font-size: 16px  }
+.fund-contrast-head  .contrast-hide{cursor: pointer}
+.fund-contrast ul{overflow: hidden;width: 880px;position: absolute;left: 0;z-index: 2}
+.fund-contrast li{width:185px;height: 111px;margin: 15px;float: left;background: white;}
+.fund-contrast dl{margin-top: 10px}
+.fund-contrast dd{padding-top: 10px}
+.fund-contrast h1{font-size: 16px;color:#0d131a }
+.fund-contrast h2{font-size: 16px;color:#ff6200}
+.fund-contrast dd p{font-size: 12px;color:#999999}
+.fund-contrast-clear{margin-right: 20px;margin-top: 20px;position: absolute;right: 0;top:30px}
+.fund-contrast-clear a{width: 75px;height: 25px;background:#d00f1b;color: white;line-height: 25px;font-size: 14px;display: block ;text-align: center;cursor: pointer}
+/*基金资讯*/
+.fund-message{width: 100%;background:#f2f2f2;height:320px}
+.fund-message #texttBox{width: 470px;left: 0px!important;top:0px}
+.fund-message .action_M_main.r dl{left: 50px!important;}
+.fund-me-list{width: 1000px}
+.fund-message .action_M_main i{color:#999999;font-size: 16px;font-style:normal;position: absolute;right: 10px}
+.fund-message .action_M_main.r{left: 64px!important;}
+/*基金公司*/
+.fund-company{width: 1000px;height:390px ;margin: 0 auto}
+.fund-company .action_Y_text .more a{background:url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/more_2.png") no-repeat right }
+.fund-company .company-more ul{width: 100%;margin-top: 40px}
+.fund-company .company-more ul li{width: 22%;float: left}
+.company-1,.company-2,.company-3{margin-right:40px }
+.fund-company .company-more ul li .picBox{ position: relative; overflow: hidden;  border: 1px solid #e5e5e5; width:220px ;height:145px; display: block;}
+.fund-company .company-more ul li .picBox img{position: absolute;top: 0px;left: 0px;width: 100%;height: 100%;display: block;}
+.fund-company .company-more dd{margin-top: 12px}
+.fund-company .company-more h1{font-size:16px ;color:#0d131a ;text-align: center}
+.fund-company .company-more h2{font-size:14px ;color:#999999 ;text-align: center}
+.fund-company .company-more h3{font-size:16px ;color:#ff6200 ;text-align: center}
+.fund-company .company-more a:hover h1,
+.fund-company .company-more a:hover h2{ color: #C7000B;}
+.fund-company .company-more ul li .picBox img{-moz-transition: all .3s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease;transition: all .5s ease;}
+.fund-company .company-more ul li .picBox.on img{position: absolute;top: -6.5px;left: -10px;width: 240px;height: 158px;}
+/*基金公告*/
+.fund-affiche {width: 100%;height:auto;padding-bottom: 40px}
+.fund-affiche .action_M_text .more_h a{background:url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/more.png") no-repeat right }
+.fund-affiche .l.ll #texttBox{height: auto;position: inherit!important;margin-top: 30px}
+.fund-affiche .w-center{height:auto;}
+.fund-affiche.action_M .l.ll{width:565px }
+.fund-affiche.action_M .r.rr{width:380px }
+.fund-affiche.action_M i{color:#999999;font-size: 16px;font-style:normal;position: absolute;right: 10px}
+.fund-affiche .tzlc{width: 380px;position: inherit!important;margin-top: 30px}
+.fund-affiche .tab_t{width: 380px;height: 37px}
+.fund-affiche .tab_t li{float: left;height: 36px;line-height: 36px;width:90px;text-align: center;font-size: 16px;cursor: pointer;margin-left: 10px;color: #0d131a;}
+.fund-affiche .tab_t li.on p {border-bottom: 3px #c7000b solid;}
+.fund-affiche .l.ll #texttBox dd h1{line-height: 38px}
+.fund-affiche .action_M_main dd{position: relative}
+.fund-affiche .action_M_main em {display: block;width: 6px;height: 6px;background-color: #c7000b;position: absolute;top: 13px;}
+.fund-affiche .action_M_main h1 {font-size: 16px;color: #0d131a;line-height: 32px;cursor: pointer;padding-left: 14px;}
+.fund-affiche .action_M_main a h1{color: #0D131A;}
+.fund-affiche .action_M_main a:hover h1{color: #d00f1b;}
+.fund-affiche .l.ll #texttBox{left: 0px!important;}
+.fund-affiche .r.rr .action_M_main{top:8px!important;left: 1px}
+.affiche-btn1 a{width:368px ;height:46px;line-height:46px;display: block;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/affiche-btn.png") no-repeat;text-align: center;color: white;font-size: 16px;margin-bottom: 5px;cursor: pointer }
+/*新增样式*/
+.middle .mLeft{width: 325px;}
+.middle .mCenter{width: 325px;margin: 0 12.5px;padding-top: 28px;}
+.middle .mCenter li{height: 178px;margin-bottom: 10px;}
+.middle .mRight{width: 325px;}
+.middle .mRight .tzlc{width: auto;top: 0;padding-top: 30px;}
+.middle .mRight .tab_t{width: auto; height: 37px; margin: 0 5px;border-bottom: 1px solid #e6e6e6;clear: both;}
+.middle .mRight .tab_t li{ float: left; height: 36px; line-height: 36px;width:62.6px;text-align: center;font-size: 16px;cursor: pointer; color: #0d131a;}
+.middle .mRight .tab_t li.on p {border-bottom: 3px #ff6200 solid;}
+.middle .mRight .tab_c{ width: auto; height: auto;margin: 0 10px;}
+.middle .mRight .tab_c p.num{color: #ff6200;}
+.middle .mRight .tab_c a{color: #FFFFFF;background: #ff6200;}
+.middle .mRight .tab_c .day-show{clear: both;padding: 0 15px;text-align: right;}
+.middle .mRight .tab_c .hide{display: none;}
+.middle .mRight .tab_c table th,
+.middle .mRight .tab_c table td{height: 45px; line-height: 45px;}
+.middle .mRight .tab_c table th.th-3 p{padding-left: 0;}
+.middle .mRight .tab_c table th.th-3 p i{ margin-left: 5px;}
+i.icon_sort{background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/icon_sort.png);width: 8px;height: 8px;display: inline-block;}
+.middle .mRight .tab_c .th-3{position: relative;cursor: pointer;}
+.middle .mRight .tab_c .selBox{ width: 98px;height: auto;background: #FFFFFF;border: 1px solid #e5e5e5;padding: 10px 0;position: absolute;top: 45px;left: 0;z-index: 9;display: none;}
+.middle .mRight .tab_c .selBox li{ font: 14px/30px "微软雅黑";color: #0d131a;text-align: left;padding: 0 8px;cursor: pointer;}
+.middle .mRight .tab_c .selBox li:hover{background:#f2f2f2;color: #d00f1b }
+
+.funT-child.noIng{padding-top: 45px}
+.funT-child .th-3{position: relative;cursor: pointer;}
+.funT-child .selBox{ width: 98px;height: auto;background: #FFFFFF;border: 1px solid #e5e5e5;padding: 10px 0;position: absolute;top: 45px;left: 30px;z-index: 9;display: none;}
+.funT-child .selBox li{ font: 14px/30px "微软雅黑";color: #0d131a;text-align: left;padding: 0 8px;cursor: pointer;}
+.funT-child .selBox li:hover{background:#f2f2f2;color: #d00f1b }
+.funT-r .funT-child .selBox{left: 18px}
+.fund-search .bottom ul{height: 250px;}
+.fund-search .bottom li img{ -moz-transition: all .3s ease;-o-transition: all .5s ease;-webkit-transition: all .5s ease;transition: all .5s ease;}
+.crumbs .cMain a{display: inline-block}
+.funMain{ width: 1000px; height: auto; margin: 0 auto; padding: 33px 0;}
+.funTti{ width: auto; height: 47px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/action_di.png) repeat-x left bottom; margin-bottom: 30px;}
+.funTti h3{ font: 24px/40px "微软雅黑"; color: #221f1f; text-align: left;}
+.funTti h3 i{ width: 6px; height: 24px; background: #c7000b; float: left; display: block; margin: 8px;}
+.funTti2{ width: auto; height: 47px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/action_di.png) repeat-x left bottom; margin-bottom: 30px;}
+.funTti2 h3{ font: 24px/40px "微软雅黑"; color: #221f1f; text-align: left;}
+.funTti2 h3 i{ width: 6px; height: 24px; background: #ff6200; float: left; display: block; margin: 8px;}
+.funMain #tab_t{width:455px}
+.funMain #tab_t li{width: 50px;font-size: 14px;float: right}
+.funMain #tab_t li.on p{border-bottom: 3px #c7000b solid}
+.funMain .tzlc{top:-20px}
+/*筛选*/
+.funScreen{ width: auto; height: auto; clear: both; margin-bottom: 110px;border:1px solid #e5e5e5;border-bottom: none;position: relative }
+.funScreen .sLeft{ float: left; padding: 15px 20px;width: 245px}
+.funScreen .sLeft .JJselect{line-height: 28px;width: 201px}
+.funScreen .sLeft .select_main{ top: 16px; left: 181px; width: 117px;}
+.funScreen .sLeft .select_main span,.funScreen .sLeft .select_main select{ width: 100%;}
+.funScreen .sLeft .JJbtn{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/icon_search_btn.png);}
+.funScreen .sRight{ float: right; width: auto; padding: 17px 20px;}
+.funScreen .sRight li{ background: #FFFFFF !important; margin-left: 5px;}
+.funScreen .sRight li:first-child{ background: #f2f2f2 !important; margin-right: 5px;}
+.funScreen .sRight li a{ color: #221f1f;}
+/*基金类型*/
+.funType{ width: auto; height: 29px; clear: both; overflow: hidden; margin-bottom: 20px;}
+.funType a{ width: auto; min-width: 70px; height: 27px; font: 14px/27px "微软雅黑"; color: #999999; text-align: center; padding: 0 10px; border: 1px solid #e5e5e5; background: #ffffff; display: inline-block;}
+.funType a.cur,.funType a.cur:hover{ background: #C7000B; border-color: #C7000B; color: #FFFFFF;}
+.funType a:hover{ background: #f1f1f1;}
+/*基金列表内容*/
+.funCont{ width: auto; height: auto; clear: both; position: relative;}
+.funCont ul{ list-style: none; overflow: hidden;}
+.funCont li{ float: left; padding: 11px 0; font: 14px/22px "微软雅黑";}
+.funCont ul.lTit{ background: #f2f2f2; text-align: center;}
+.funCont ul.lTit li{ position: relative; box-sizing: border-box; min-height: 78px;}
+.funCont ul.lTit li.sort1{ text-align: left; width: 129px;}
+.funCont ul.lTit li.sort2{ width: 85px;}
+.funCont ul.lTit li.sort3{ width: 70px;}
+.funCont ul.lTit li.sort3-1{ width: 110px;}
+.funCont ul.lTit li.sort3-2{ width: 40px;}
+.funCont ul.lTit li.sort3-3{ width: 80px;}
+.funCont ul.lTit li.sort3-4{ width: 60px;}
+.funCont ul.lTit li.sort4{ width: 85px;}
+.funCont ul.lTit li.sort4-1{ width: 100px;}
+.funCont ul.lTit li.sort5{ width: 120px;}
+.funCont ul.lTit li.sort1 h3{ padding-left: 15px;}
+.funCont ul.lTit li.sort1 span{ padding-left: 0px;}
+.funCont ul.lTit h3{ font: 14px/22px "微软雅黑"; color: #0d131a;}
+.funCont ul.lTit span{ font: 12px/22px "微软雅黑"; color: #686868;}
+.funCont ul.lList{ background: #FFFFFF; height: 66px; overflow: hidden; border-bottom: 1px solid #e6e6e6; text-align: center;}
+.funCont ul.lList li{ box-sizing: border-box;}
+.funCont ul.lList li.sort1{ text-align: left; width: 129px;}
+.funCont ul.lList li.sort1-1{ text-align: left; width: 166px;}
+.funCont ul.lList li.sort2{ width: 85px;}
+.funCont ul.lList li.sort3{ width: 70px;}
+.funCont ul.lList li.sort3-1{ width: 110px;}
+.funCont ul.lList li.sort3-2{ width: 40px;}
+.funCont ul.lList li.sort3-3{ width: 80px;}
+.funCont ul.lList li.sort3-4{ width: 60px;}
+.funCont ul.lList li.sort4{ width: 85px;}
+.funCont ul.lList li.sort4-1{ width: 100px;}
+.funCont ul.lList li.sort5{ width: 120px;}
+.funCont ul.lList .star{padding-left: 8px}
+.funCont ul.lList p{ line-height: 44px;}
+.funCont ul.lList p.line2{ line-height: 22px;}
+.funCont ul.lList p.red{ color: #d00f1b;}
+.funCont ul.lList p.green{ color: #01b300;}
+.funCont ul.lList span{ font:12px/22px "微软雅黑"; color: #999999; display: block;}
+.funCont ul.lList li.sort1 a{width: 129px; padding-left: 10px; font: 14px/22px "微软雅黑"; color: #0d131a;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.funCont ul.lList li.sort1 a:hover{ color: #D00F1B;}
+.funCont ul.lList li.sort1 span{ padding-left: 15px; font:12px/22px "微软雅黑"; color: #999999; display: block;}
+.funCont ul.lList .lBtns{ width: 98px; margin: 0 auto; overflow: hidden; padding-top: 11px;}
+.funCont ul.lList .lBtns a{border:1px solid #C7000B; width: 43px; height: 22px; background: #ffffff; text-align: center; font: 12px/22px "微软雅黑"; color: #d00f1b; display: block; float: left; margin: 0px 2px;}
+.funCont ul.lList .lBtns a:hover{ background: #d00f1b; color: #FFFFFF;}
+.funCont ul.lList:hover{ position: relative; z-index: 99;}
+.funCont ul.lList:hover .lBtns a{ background: #C7000B; color: #FFFFFF;}
+.funCont ul.lList .lBtns a.disabled{border: none; background: #f2f2f2; color: #0d131a; cursor: not-allowed;}
+.funCont ul.lList .lBtns a.ke{border:1px solid #C7000B; background: #ffffff!important; color: #d00f1b!important;}
+.funCont ul.lList:hover .lBtns a.ke{ background: #C7000B!important; color: #FFFFFF!important;}
+.funCont ul.lList .lBtns a.noke{border: none; background: #f2f2f2!important; color: #221F1F!important; cursor: not-allowed;}
+.funCont .cBg{background: url(../images/fundList/fundList_bg.png); width: 1024px; height: 90px; display: block; position: absolute; top: -8px; left: -12px; z-index: 1;}
+.sortChange{ display: inline-block; padding-right: 10px; position: relative; cursor: pointer;}
+.sortChange i{ position: absolute; top: 0; right: 0px; display: inline-block; margin: 5px 0 0 5px;}
+.sortChange i.default{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/sort_default.png); width: 7px; height: 13px; display: inline-block;}
+.sortChange i.up{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/sort_up.png); width: 7px; height: 13px; display: inline-block;}
+.sortChange i.down{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/baoxian/images/2018/sort_down.png); width: 7px; height: 13px; display: inline-block;}
+.list1,.list2,.list3,.list4{ display: none;}
+.list1{ display: block;}
+/*高级删选*/
+.bottom_main{width: 100%;height: auto;clear: both}
+.bottom_main dl{overflow: hidden;height: 310px;padding:0 20px 0 20px }
+.bottom_main dd{position: relative;height: 40px;line-height: 40px }
+.bottom_main ul{height:40px;position: absolute;top:0;left: 100px;width: 87%;}
+.bottom_main li{float: left;padding-right: 20px;padding-left: 20px;position: relative;cursor: pointer;text-align: center;height: 40px}
+.bottom_main li p{text-align: center;height: 40px;line-height: 40px;color:#221f1f ;font-size:14px}
+.bottom_main .fund_part li,.bottom_main .fund_part2 li{border-bottom:1px solid #e6e6e6;width: auto;color: #999999 }
+.bottom_main .fund_part2 li.on p{color:#d00f1b }
+.bottom_main .fund_part2.tre li{border: none}
+.bottom_main .fund_part li p{width: auto;color: #999999 }
+.bottom_main .fund_part li:hover p{color: #221f1f }
+.bottom_main .fund_part li.now p{width: auto;color: #221f1f }
+.bottom_main .fund_part3 li:hover p{color:#d00f1b }
+.bottom_main .fund_part3 li.on p{color:#d00f1b }
+.bottom_main .fund_part li.now{border-bottom:0;border-top:1px solid #e6e6e6;border-right:1px solid #e6e6e6;border-left:1px solid #e6e6e6;width: auto;color: #221f1f}
+.hou-bot-line{width: 26.6%!important;}
+/*基金工具页面*/
+.bottom_main .jjgs{margin-top:40px}
+.bottom_main li .shenZ{position: absolute;width: 350px;height: auto;display: none;left: 0px}
+.bottom_main li.now .shenZ{display: block}
+.shenZ td{width: 94.6px;height: 32px;line-height: 32px;font-size: 14px;color: #221f1f}
+.shenZ td:hover a{color: #d00f1b}
+.shenZ td.red a{color: #d00f1b!important;}
+#flow-up{width:100%;border:1px solid #e5e5e5;position: absolute;left: -1px;border-top: 0;height: 55px}
+.flow-btn{position: relative;top:-3px;margin: 0 auto;width:79px ;height:28px ;background:#f2f2f2;border-left:1px solid #e5e5e5;border-right:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5; }
+.flow-btn p{text-align: center;font-size:14px;color: #221f1f;line-height: 28px;cursor: pointer }
+.funScreen .clearn_btn{width:110px;background:#c7000b;border: 1px solid #e5e5e5;height:28px;font-size: 14px;line-height: 28px;color: #fff;margin-right:-5px;float: right;cursor: pointer }
+.funScreen .search_a{padding: 20px 20px 0 20px;font-size: 14px;color: #221f1f;line-height: 2.8}
+.funScreen .clearn_btn p{text-align: center}
+/*基金工具页面*/
+.funTools{width: 1000px;height: 700px}
+.funT-l,.funT-r{width:493px;height: auto;border: 1px solid #e5e5e5;margin-bottom:40px; }
+.funT-icon{width:110px ;height:32px;margin-left: 22px}
+.funT-icon p{font:16px/32px  "微软雅黑";color: #ffffff;text-align: center }
+.funT-l .funT-icon{background: #c7000b}
+.funT-r .funT-icon{background: #ff6200}
+.funTools .tzlc {width: 456px;padding: 0 19px 0 19px}
+.funTools .tzlc .tab_t {width: 100%;height: 41px;border-bottom: 1px #e5e5e5 solid;}
+.funTools .tzlc .tab_t li{float: right;height: 40px;line-height: 40px;width: 75px;text-align: center;font-size: 14px;cursor: pointer;margin-left: 5px;color: #0d131a;}
+.funTools .funT-r .tzlc #tab_t li{float: right;height: 40px;line-height: 45px;width: 103px;text-align: center;font-size: 14px;cursor: pointer;margin-left: 5px;color: #0d131a;}
+.funTools .funT-l  .tab_t  li.on p{border-bottom: 3px #c7000b solid;}
+.funTools .funT-r  .tab_t  li.on p{border-bottom: 3px #ff6200 solid;}
+.funTools .funT-child table{width: 100%;font-size: 14px;}
+.funT-child table th{color:#999999;text-align: center;height:50px;line-height: 50px;font-size: 14px }
+.funT-child table th.th-2 p{padding-left: 0px}
+.funT-child table th.th-3 p{padding-left: 16px}
+.funT-child table th.th-4 {width: 85px}
+.funT-child table th.th-5 {width: 90px}
+.funT-child table td{color:#0d131a;text-align: center;height:50px;line-height: 50px }
+.funT-child table td:hover p{color:#d00f1b}
+.funT-child table td span{width:16px;height: 16px;display: block;line-height:16px;margin: 0 auto;background:#e5e5e5;font-size: 12px}
+.funT-child table td p{text-align: left;padding-left: 20px;font-size: 14px}
+.funT-child table td .num{color:#d00f1b;text-align: center;padding-left: 0 }
+.funT-child table td .span1{background:#c7000b;color: white }
+.funT-child table td .span2{background:#ff6200;color: white;font-size: 12px }
+.funT-child table td .span3{background:#ffa800;color: white }
+.funT-child table td a{width: 45px;height: 22px;display: block;background: #ffffff;line-height: 22px;margin: 0 auto;cursor: pointer;font-size: 12px;color: #c7000b;border: #c7000b solid 1px}
+.funT-child  table td a.disabled{width: 45px;height: 22px;display: block;background: #f2f2f2;line-height: 22px;margin: 0 auto;font-size: 12px;color: #0d131a;border: #ffffff solid 1px;cursor: not-allowed}
+.funT-child table td a:hover{background: #c7000b;color: white}
+.funT-child  table td a.disabled:hover{background: #f2f2f2;color: #0d131a;}
+.fund-search .funT-child table td a{width: 45px;height: 22px;display: block;background: #ffffff;line-height: 22px;margin: 0 auto;cursor: pointer;font-size: 12px;color: #c7000b;border: #ffa800 solid 1px}
+.funT-child .day-show{font-size:14px ;color:#999999;padding-left:344px;padding-top: 12px }
+
+/*新增样式20171013*/
+/*基金产品-基金比较*/
+.fund-contrast{ height:auto; font-family:微软雅黑;}
+.fund-contrast-select { width:100%; height:150px; }
+.fund-contrast-select .tips{ color: #999; font-size: 14px; line-height:24px; padding:10px; border-bottom:1px solid #EEE;}
+.fund-contrast-select .boxL{ margin:0; float:left; width:880px; height:105px; border-right:1px solid #EEE;}
+.fund-contrast-select .boxL .box1{ float:left; width:380px; margin:10px; }
+.fund-contrast-select .boxL .box2{ float:left; width:430px; margin:10px;}
+.fund-contrast-select .boxL .box3{ float:left; width:880px; clear:left; border-top:1px solid #EEE;}
+.fund-contrast-select .boxL ul{ width:100%; position: relative; }
+.fund-contrast-select .boxL ul li{ width:198px; height: 25px; line-height:25px;  margin:0 10px; border:1px solid #CCC; }
+.fund-contrast-select .boxL ul li *{ display:inline-block; text-align:center;}
+.fund-contrast-select .boxL ul li .text{ background:#FFF; color:#999; width:173px;}
+.fund-contrast-select .boxL ul li .text:hover{ color:#c7000b; }
+.fund-contrast-select .boxL ul li .clear{ background:#CCC; color:#FFF; width:25px; }
+.fund-contrast-select .boxL ul li .clear:hover{ background:#c7000b; }
+.fund-contrast-select .boxL button{background-color: #c7000b; color: #FFF; border:none; font-size:16px; height:25px; line-height:25px; margin-left:10px; cursor:pointer;}
+.fund-contrast-select .boxR{ margin:0; float:left; width:119px; height:105px; text-align:center;}
+.fund-contrast-select .boxR button.change{background-color: #c7000b; color: #FFF; border:none; font-size:16px; height:25px; width:75px; line-height:25px; margin-top:21px; cursor:pointer;}
+.fund-contrast-select .boxR button.clear{ background:none; border:none; color:#003ca0; font-size:16px; height:25px; line-height:25px; margin-top:22px; cursor:pointer; }
+
+.fund-contrast-table{ height:1170px; background:#CCC; }
+.fund-contrast-table>p{ background:#CCC; color:#FFF; padding:5px 10px;}
+.fund-contrast-table ul{ position: relative; float:left; display:block; width:200px;}
+.fund-contrast-table ul li{ position: relative; float:left; display:block; height:16px; line-height:16px; width:180px; margin:0px; padding:10px; border-top:1px solid #FFF;  border-bottom:1px solid #EEE; text-align:center;}
+.fund-contrast-table ul li.sort1{ border-top:1px solid #CCC; background:#f3f3f3; }
+.fund-contrast-table ul li.sort2{ }
+.fund-contrast-table ul li.TH{ height:48px; }
+.fund-contrast-table ul.lTit{} 
+.fund-contrast-table ul.lTit li{ }
+.fund-contrast-table ul.lList{ position:relative; left:0; z-index:1; transition:all ease 0.2s;}
+.fund-contrast-table ul.lList:hover{ -moz-box-shadow:0 10px 20px #efefef; -webkit-box-shadow:0 10px 20px #efefef; box-shadow:0 10px 20px #efefef; z-index:2; }
+.fund-contrast-table ul.lList li{ width:179px; border-left:1px solid #efefef; }
+.fund-contrast-table ul.lList li.sort1{ width:180px; border-left:none; }
+
+.fund-contrast-table ul.lList li .a1{ cursor:pointer; display:inline-block; color:#000; }
+.fund-contrast-table ul.lList li .a1:hover{ color:#c7000b; }
+.fund-contrast-table ul.lList li .a2{ cursor:pointer; padding-left:2px; display:inline-block; vertical-align:bottom; }
+.fund-contrast-table ul.lList li .btn{ margin:2px 5px; padding:2px 5px; border:1px solid #c7000b; background:#FFF; color:#c7000b; cursor:pointer; }
+.fund-contrast-table ul.lList li .btn:hover{ background:#c7000b; color:#FFF;}
+.fund-contrast-table ul.lList li .star{ padding-left:48px; margin-top:-10px;}
+
+.fund-contrast-graph{ height:430px;}
+.fund-contrast-graph .graphArea{ padding:25px;}
+.fund-contrast-graph .tips{ color: #999; text-align:center; font-size:14px;}
+
+/*新增样式20171025*/
+/*基金公告*/
+.information-all div.W1000{ width:1000px;}
+.information-all h1.W1000{ width:1000px;}
+.information-all h1.PB20{ padding-bottom:20px;}

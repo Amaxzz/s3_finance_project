@@ -1,0 +1,203 @@
+/*-----------------------------------------------------通用样式部分-------------------------------------------------------*/
+/*通用标题*/
+.nobleTit{ width: auto; height: 47px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/action_di.png) repeat-x left bottom; margin-bottom: 30px;}
+.nobleTit h3{ font-size: 24px; line-height: 40px; color: #0d131a; text-align: left;}
+.nobleTit h3 i{ width: 6px; height: 24px; background: #c7000b; float: left; display: block; margin: 8.5px 8px 8.5px 0;}
+.nobleTit h3 i.iRed{ background: #c7000b;}
+.nobleTit h3 i.iOrange{ background: #ff6200;}
+.nobleTit a{ float: right; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/more_2.png) no-repeat right center; padding-right: 32px; font-size: 14px; line-height: 40px; color: #0d131a;}
+.nobleTit a:hover{ color: #d00f1b;}
+/*通用列表*/
+.nobleList{ width: auto; height: auto;}
+.nobleList ul{ list-style: none;}
+.nobleList li{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/list_dian.png) no-repeat 0px 16px; padding-left: 12px; font-size: 16px; line-height: 38px; text-align: left;}
+.nobleList a{ color: #0d131a;}
+/*.nobleList span{font-size: 16px; line-height: 38px; color: #999999;}*/
+.nobleList h3{ font-weight: bolder; font-size: 18px;}
+.nobleList p{ font-size: 14px; line-height: 28px; color: #686868; border-bottom: 1px solid #e6e6e6; padding-bottom: 10px; margin-bottom: 10px;}
+.nobleList p a,
+.nobleList .red p a{ color: #686868;}
+.nobleList a:hover,
+.nobleList a.on,
+.nobleList .red a,
+.nobleList .red p a:hover{ color: #d00f1b;}
+/*通用轮播*/
+.nobleOwl{ width: 1010px; height: auto;}
+.nobleOwl .owl-item{ padding-top: 4px;}
+.nobleOwl .item{ width: 323px; height: 278px; border: 1px solid #e5e5e5; background: #FFFFFF; position: relative; display: block;}
+.nobleOwl .item .itemJiao{ position: absolute; top: -4px; right: -4px;}
+.nobleOwl .item .itemPic{ width: auto; height: 180px; margin-top: 10px; text-align: center;}
+.nobleOwl .item .itemPic img{ height: 100%; display: inline-block;}
+.nobleOwl .item .itemTxt,
+.nobleOwl .item .itemBtn{ padding: 5px 15px 10px; text-align: center;}
+.nobleOwl .item .itemTxt a{ font-size: 16px; line-height: 22px; color: #0d131a; margin-bottom: 15px;}
+.nobleOwl .item .itemTxt a:hover{ color: #d00f1b;}
+.nobleOwl .item .itemBtn a{ width: 110px; height: 26px; background: #ff6200; font-size: 14px; line-height: 26px; display: inline-block; color: #FFFFFF;}
+.nobleOwl .owl-pagination { display: none; }
+.nobleOwl .owl-buttons{ width: 1000px; position: relative;}
+.nobleOwl .owl-prev, .nobleOwl .owl-next { width:25px; height:50px; position: absolute; top: 0; margin-top: -165px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/btn_direction.jpg) no-repeat; text-indent: -999px; overflow: hidden; }
+.nobleOwl .owl-prev { left:0; background-position: left top;}
+.nobleOwl .owl-next { right:0; background-position: right top;}
+.nobleOwl .owl-prev:hover { background-position: 0px -50px;}
+.nobleOwl .owl-next:hover { background-position: -25px -50px;}
+.nobleOwl .owl-buttons .owl-prev.disabled{ background-position: left bottom; cursor: default;}
+.nobleOwl .owl-buttons .owl-next.disabled{ background-position: right bottom; cursor: default;}
+/*通用快捷菜单*/
+.nobleQuick{ width: auto; height: auto;}
+.nobleQuick ul{ list-style: none; margin-left: -13px; overflow: hidden;}
+.nobleQuick li{ width: 238px; height: 198px; background: #FFFFFF; border: 1px solid #e5e5e5; float: left; margin-left: 13px;}
+.nobleQuick .quickBox{ height: 158px; padding: 20px; text-align: left; position: relative;cursor:pointer;}
+.nobleQuick .quickBox h3{ position: relative; z-index: 2; font-size: 24px; line-height: 42px; color: #b09067;}
+.nobleQuick .quickBox p{ position: relative; z-index: 2; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/list_dian1.png) no-repeat left center; padding-left: 12px; font-size: 14px; line-height: 22px; color: #686868;}
+.nobleQuick .quickBox img{ width: 150px; height: 130px; position: absolute; right: 0; bottom: 0; transition: all 0.3s;}
+.nobleQuick li:hover .quickBox img{ width: 162px; height: 140px;}
+/*通用类型选择*/
+.nobleType{ width: auto; height: 29px; clear: both; overflow: hidden;}
+.nobleType a{ width: auto; min-width: 70px; height: 27px; font: 14px/27px "微软雅黑"; color: #999999; text-align: center; padding: 0 10px; border: 1px solid #e5e5e5; background: #ffffff; display: inline-block;}
+.nobleType a.cur,.nobleType a.cur:hover{ background: #d00f1b; border-color: #d00f1b; color: #FFFFFF;}
+.nobleType a:hover{ background: #f1f1f1;}
+/*通用刷新*/
+.nobleRefresh{ width: auto; height: auto; text-align: left; position: relative;}
+.nobleRefresh .refTime{ font-size: 14px; line-height: 29px; color: #999999; padding-right: 30px;}
+.nobleRefresh .refBtn{ cursor: pointer; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/icon_refresh.png) no-repeat center center; width: 26px; height: 26px;  position: absolute; top: 1px; right: 0;}
+.nobleRefresh .refBtn.cur{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/icon_refresh_on.png) no-repeat center center; 
+	-webkit-animation: refBtn 1s infinite linear; 
+	animation: refBtn 1s infinite linear;
+}
+.nobleRefresh .refTip{ position: absolute; right: 33px; top: 3px; display: none;}
+@keyframes refBtn {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+@-webkit-keyframes refBtn {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+/*通用表格*/
+.nobleTable{ width: auto; height: auto; clear: both; position: relative;}
+.nobleTable ul{ list-style: none; overflow: hidden;}
+.nobleTable li{ float: left; padding: 10px 0; font: 14px/20px "微软雅黑";}
+.nobleTable ul.lTit{ background: #f2f2f2; text-align: center;}
+.nobleTable ul.lTit li{ position: relative; box-sizing: border-box; min-height: 40px;}
+.nobleTable ul.lTit li.sort1{ text-align: left; width: 155px;}
+.nobleTable ul.lTit li.sort2{ width: 105px;}
+.nobleTable ul.lTit li.sort3{ width: 70px;}
+.nobleTable ul.lTit li.sort4{ width: 55px;}
+.nobleTable ul.lTit li.sort5{ width: 105px;}
+.nobleTable ul.lTit h3{ font: 14px/22px "微软雅黑"; color: #0d131a;}
+.nobleTable ul.lTit li.sort1 h3{ padding-left: 10px;}
+.nobleTable ul.lList{ background: #FFFFFF; height: 66px; overflow: hidden; border-bottom: 1px solid #e6e6e6; text-align: center;}
+.nobleTable ul.lList li{ box-sizing: border-box;}
+.nobleTable ul.lList li.sort1{ text-align: left; width: 155px;}
+.nobleTable ul.lList li.sort2{ width: 105px;}
+.nobleTable ul.lList li.sort3{ width: 70px;}
+.nobleTable ul.lList li.sort4{ width: 55px;}
+.nobleTable ul.lList li.sort5{ width: 105px;}
+.nobleTable ul.lList .star{padding-left: 8px}
+.nobleTable ul.lList p{ line-height: 44px;}
+.nobleTable ul.lList p.line2{ line-height: 22px;}
+.nobleTable ul.lList p.red{ color: #d00f1b;}
+.nobleTable ul.lList p.green{ color: #01b300;}
+.nobleTable ul.lList li.sort1 a{ padding-left: 10px; color: #0d131a;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.nobleTable ul.lList li.sort1 a:hover{ color: #D00F1B;}
+.nobleTable ul.lList .lIcon{ text-align: center; padding-top: 14px; display: block;}
+.nobleTable ul.lList .lIcon img{ display: inline-block;}
+.nobleTable ul.lList .lIcon img.i1{ display: inline-block;}
+.nobleTable ul.lList .lIcon img.i2{ display: none;}
+.nobleTable ul.lList .lIcon:hover img.i1{ display: none;}
+.nobleTable ul.lList .lIcon:hover img.i2{ display: inline-block;}
+.nobleTable ul.lList .lBtns{ width: 98px; margin: 0 auto; overflow: hidden; padding-top: 11px;}
+.nobleTable ul.lList .lBtns a{border:1px solid #d00f1b; width: 43px; height: 22px; background: #ffffff; text-align: center; font: 12px/22px "微软雅黑"; color: #d00f1b; display: inline-block; margin: 0px 2px;}
+.nobleTable ul.lList .lBtns a:hover{ background: #d00f1b; color: #FFFFFF;}
+.nobleTable ul.lList:hover{ position: relative; z-index: 99;}
+.nobleTable ul.lList:hover .lBtns a{ background: #d00f1b; color: #FFFFFF;}
+.nobleTable ul.lList .lBtns a.disabled{border: none; background: #f2f2f2; color: #0d131a; cursor: not-allowed;}
+.nobleTable .cBg{background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/nobleTable_bg.png); width: 1024px; height: 90px; display: block; position: absolute; top: -8px; left: -12px; z-index: 1;}
+/*通用快捷切换菜单*/
+.nobleFast{ overflow: hidden;}
+.nobleFast a{ height: auto; display: block; float: left; text-align: center; font-size: 14px; color: #0d131a;}
+.nobleFast a:hover{ color: #d00f1b;}
+.nobleFast img{ display: inline-block; margin-bottom: 7px;}
+.nobleFast a img.on{ display: inline-block;}
+.nobleFast a img.hover{ display: none;}
+.nobleFast a:hover img.on{ display: none;}
+.nobleFast a:hover img.hover{ display: inline-block;}
+/*通用产品类型*/
+.proFast{ text-align: center; overflow: hidden;}
+.proFast .fastHead{ width: 333px; height: 100px; background: #faad53; float: left;}
+.proFast .fastHead h3{ padding-top: 15px; font-size: 20px; line-height: 40px; color: #FFFFFF;}
+.proFast .fastHead a{ font-size: 14px; line-height: 22px; color: #FFFFFF; text-decoration: underline; opacity: 0.6; padding: 0px 15px;}
+.proFast .fastHead a:hover{ color: #d00f1b;}
+.proFast .hBg1{ background: #faad53;}
+.proFast .hBg2{ background: #f4a344;}
+.proFast .hBg3{ background: #eb8a31;}
+.proFast .hBg4{ background: #a7bc53;}
+.proFast .hBg5{ background: #9bb33b;}
+.proFast .hBg6{ background: #95b7d5;}
+.proFast .hBg7{ background: #74a5d0;}
+.proFast .hBg8{ background: #f58374;}
+.proFast .hBg9{ background: #f37d6e;}
+.proFast .hBg10{ background: #ec7465;}
+.proFast .hBg11{ background: #e76d5e;}
+.proFast .fastList{ width: 667px; height: 100px; float: right;}
+.proFast .fastList ul{ overflow: hidden; border-top: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5;}
+.proFast .fastList li{ width: 332px; height: 48.5px; float: left; font-size: 16px; line-height: 48.5px; border-bottom: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5;}
+.proFast .fastList li a{ color: #0d131a; position: relative;}
+.proFast .fastList li a:hover{ color: #d00f1b;}
+.proFast .fastList li a img{ position: absolute; top: -2px; right: -32px;}
+
+
+/*导航样式*/
+.navigation-up .navigation-v3 li{ width: 20%;}
+/*贵金属外层包裹*/
+.nobleMetal{ width: auto; height: auto;}
+/*-----------------------------------------------------贵金属首页样式-------------------------------------------------------*/
+/*贵金属头条*/
+.metalHot{ width: auto; height: auto; overflow: hidden; padding: 40px 0;}
+.metalHot .hotPic{ width: 400px; height: 260px; float: left;}
+.metalHot .hotList{ width: 570px; height: auto; float: right;}
+/*产品推荐*/
+.metalPro{ width: auto; height: auto; overflow: hidden; padding: 40px 0; background: #f2f2f2;}
+.metalPro .proLunbo{ width: auto; height: auto; margin-bottom: 20px;}
+.metalPro .proQuick{ width: auto; height: auto;}
+/*贵金属行情*/
+.metalMarket{ width: auto; height: auto; padding: 40px 0;}
+.metalMarket .marketSel{ overflow: hidden; margin-bottom: 12px;}
+.metalMarket .marketTip{ text-align: center; font-size: 14px; line-height: 48px; color: #999999;}
+/*工行看市and市场资讯*/
+.metalNews{ width: auto; height: auto; overflow: hidden; padding: 40px 0; background: #f2f2f2;}
+.metalNews .newsLeft{ width: 468px; height: auto; float: left;}
+.metalNews .newsRight{ width: 468px; height: auto; float: right;}
+.metalNews .newsLeft .nobleTit,
+.metalNews .newsRight .nobleTit{ margin-bottom: 15px;}
+/*贵金属学苑and贵金属投资者俱乐部*/
+.metalLearn{ width: auto; height: auto; overflow: hidden; padding: 40px 0;}
+.metalLearn .learnLeft{ width: 468px; height: auto; overflow: hidden; float: left;}
+.metalLearn .learnLeft .leftAd{ width: auto; height: auto; overflow: hidden; margin-left: -17px; border-bottom: 1px solid #e6e6e6; padding-bottom: 30px; margin-bottom: 20px;}
+.metalLearn .learnLeft .leftAd a{ width: 225px; height: 120px; display: block; float: left; margin-left: 17px;}
+.metalLearn .learnLeft .leftAd img{ width: 100%; height: 100%;}
+.metalLearn .learnRight{ width: 468px; height: auto; overflow: hidden; float: right;}
+.metalLearn .learnRight .rightAd{ width: auto; height: auto; overflow: hidden; border-bottom: 1px solid #e6e6e6; padding-bottom: 30px; margin-bottom: 20px;}
+.metalLearn .learnRight .rightAd a{ width: 468px; height: 120px; display: block;}
+.metalLearn .learnRight .rightAd img{ width: 100%; height: 100%;}
+.metalLearn .learnRight .rightFast{ width: auto; height: auto;}
+.metalLearn .learnRight .rightFast .fastTop{ text-align: left; margin-bottom: 20px;}
+.metalLearn .learnRight .rightFast .fastTop i{ width: 4px; height: 16px; display: inline-block; background: #c7000b; margin: -3px 7px -3px 0; line-height:16px;}
+.metalLearn .learnRight .rightFast .nobleFast{ margin-left: -45px;}
+.metalLearn .learnRight .rightFast .nobleFast a{ margin-left: 45px;}
+
+/*-----------------------------------------------------贵金属产品样式-------------------------------------------------------*/
+/*实物贵金属*/
+.matalReal{ overflow: hidden; padding: 30px 0 20px;}
+/*贵金属积存and账户贵金属and代理金交所产品and融资理财*/
+.metalType{ overflow: hidden;}
+.metalType .typeMain{ margin-bottom: 30px;}
+
+/*切换不同颜色的标题更多*/
+.metalPro .nobleTit a,
+.metalNews .nobleTit a{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/guijinshu/photo/2018/more.png) no-repeat right center;}
+
+
+
+
+

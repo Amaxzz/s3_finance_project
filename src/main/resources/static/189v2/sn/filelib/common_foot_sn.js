@@ -1,0 +1,1 @@
+document.writeln("\t\t  <iframe id=\"iframesearchtext\" src=\"/sn/iframe/foot/index.html\" name=\"txtBox\" frameBorder=0 scrolling=no width=\"100%\" height=\"410\"></iframe>")

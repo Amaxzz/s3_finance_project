@@ -1,0 +1,460 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0029)http://www.189.cn/sn/service/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="./index_files/ct189.js"></script>
+<script type="text/javascript" src="./index_files/sv.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/carousel.css">
+<link href="./index_files/common.css" rel="stylesheet" type="text/css">
+<link href="./index_files/headtop.css" rel="stylesheet" type="text/css">
+<link href="./index_files/footdown.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./index_files/js-jq.js"></script>
+<link href="./index_files/index_buffet.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./index_files/mootools.js"></script>
+<script type="text/javascript" src="./index_files/imageMenu.js"></script>
+<title>index</title>
+<meta content="自助服务频道是中国电信网上营业厅为用户提供的自助服务功能，本频道为用户提供缴费业务、话费查询、充值业务、流量业务等众多的电信自助服务，自助服务频道您的贴身服务专家" name="description">
+<meta content="充值缴费、交费助手充值，银行卡交费，银行卡直充，充值卡充值，购买充值卡、3G升4G，宽带固话装移修进度查询，交费助手，提醒服务，手机上网流量包，手机上网加餐包，短信套餐" name="keywords">
+<script>
+jQuery(function(){
+        $("#thisAdd li:first").addClass("thistitle");
+
+	var $curChannel = '自助服务';
+	var $list = $(".meun_down");
+	//console.log($curChannel);
+	if ($curChannel != "首页"){
+		$list.css("display","none");
+		$(".toptiocsa img").hover(function(){
+			$(this).css({
+				height:"45px",
+				width:"190px",
+				display:"block",
+				cursor:"pointer"
+			});
+			$list.show();
+		},function(){
+			$list.hide();
+		});
+		$(".meun_down ul li div").css({visibility:"hidden"});
+		$(".meun_down").hover(function(){
+			$(".meun_down ul li div").removeAttr("style");
+			$(this).show();
+		},function(){
+			$(this).hide();
+			$(".meun_down ul li div").css({visibility:"hidden"});
+		})
+	}else{
+		$list.css("display","block");
+	}
+	var cid = '110208';
+		$("#h"+cid).addClass("headmain_bg");
+		$(".toptiocs li").hover(function(){
+			$(this).addClass("headmain_bg").siblings().removeClass("headmain_bg");
+		},function(){
+			$("#h"+cid).addClass("headmain_bg").siblings().removeClass("headmain_bg");
+		})
+})
+</script>
+<style>
+    h3 {
+        font-weight:bold;
+    }
+#footer {
+    padding: 15px 0;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+#topcontrol {
+  color: #fff;
+  z-index: 99;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  background: #222;
+  position: relative;
+  right: 14px !important;
+  bottom: 11px !important;
+  border-radius: 3px !important;
+}
+
+#topcontrol:after {
+  /*top: -2px;*/
+  left: 8.5px;
+  content: "\f106";
+  position: absolute;
+  text-align: center;
+  font-family: FontAwesome;
+}
+
+#topcontrol:hover {
+    color: #fff;
+    background: #18ba9b;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+/* 侧栏导航 */
+.sideBox{padding:10px;height:220px;background:#fff;margin-bottom:10px;overflow:hidden;}
+.sideBox .hd{height:30px; line-height:30px; background:#f60; padding:0 10px;text-align:center;overflow:hidden;}
+.sideBox .hd .more{color:#fff;}
+.sideBox .hd h3 span{font-weight:bold; font-size:14px;color:#fff;}
+.sideBox .bd{padding:5px 0 0;}
+
+#sideMenu .bd li{margin-bottom:2px; height:30px; line-height:30px;text-align:center; overflow:hidden;}
+#sideMenu .bd li a{display:block;background:#EAE6DD;}
+#sideMenu .bd li a:hover{background:#D5CFBF;}
+
+/* 列表页 */
+#mainBox{margin-bottom:10px;padding:10px;background:#fff;overflow:hidden;}
+#mainBox .mHd{border-bottom:2px solid #09c;height:30px;line-height:30px;}
+#mainBox .mHd h3{display:initial;*display:inline;zoom:1;padding:0 15px;background:#09c;color:#fff;}
+#mainBox .mHd h3 span{color:#fff;font-size:14px;font-weight:bold;}
+#mainBox .path{float:right;}
+
+/* 位置导航 */
+.path{ height:30px; line-height:30px; padding-left:10px;}
+.path a,.path span{ margin:0 5px;}
+
+/* 文章列表 */
+.newsList{padding:10px;text-align:left;}
+.newsList li{background:url("../images/share/point.png") no-repeat 2px 14px; padding-left:10px;height:30px; line-height:30px;}
+.newsList li a{display:inline-block;*display:inline;zoom:1;font-size:14px;}
+.newsList li .date{float:right; color:#999;}
+.newsList li.split{margin-bottom:10px;padding-bottom:10px;border-bottom:1px dotted #ddd;height:0px;line-height:0px;overflow:hidden;}
+
+/* 通用带图片的信息列表_普通式 */
+.picList{padding:10px;text-align:left;}
+.picList li{margin:0 5px;height:190px;}
+
+h3.break {
+    font-size:16px;
+    display: block;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+h3.break>a {
+    text-decoration:none;
+}
+
+	</style>
+</head>
+<body>
+
+<div class="navbar-wrapper">
+      <div class="container">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			  <div class="container">
+				<div class="navbar-header">
+				  <a class="navbar-brand" href="index.html" style="font-size:32px;">千锋-创e金融平台</a>
+				</div>
+            <div id="navbar" class="navbar-collapse collapse" style="float:right;">
+              <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <i class="glyphicon glyphicon-user" th:text="${session.uName}"></i><span class="caret"></span>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="member1.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+                    <li class="divider"></li>
+                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+			  </div>
+			</nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active"  style="cursor:pointer;">
+          <img src="./img/timg1.jpg" alt="First slide">
+        </div>
+      </div>
+    </div><!-- /.carousel -->
+
+
+<div class="content">
+	<!--buffet-->
+		<div class="index_buffet mt30 w h">
+			
+			<!--buffet_two-->
+			<div class="buffet_two mt30 h400 w1200" id="container">				
+               	<div id="kwick">
+                    <ul class="kwicks">
+                        <li class="kwick opt1 tc" style="width: 126.629px;">
+                           <div class="box">
+                                <ul>
+                                    <li>
+                                        <img src="./index_files/c388b5ff-1a82-4e99-94e1-89094d270329.png" alt="理财"><div class="li_font">理财</div>
+                                    
+                                        <div class="dask da">
+											<a href="financialView"><img src="./index_files/c388b5ff-1a82-4e99-94e1-89094d270329.png" alt="理财"><div class="li_font">理财</div></a>
+                                            <div class="dask_p">  
+                                            <p><a href="/">专家专栏</a></p>
+                                            <p><a href="/">理财咨询</a></p>
+                                            <p><a href="/">信息披露</a></p>
+                                            <p><a href="/">收益公告</a></p>
+                                            <p><a href="/">理财学苑</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="kwick opt2 tc" style="width: 126.629px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                        <img src="./index_files/4af048a6-b6db-404c-822c-4c2a74dc7bea.png" alt="贵金属"><div class="li_font">贵金属</div>
+                                        
+                                        <div class="dask db">
+											<a href="preciousView"><img src="./index_files/4af048a6-b6db-404c-822c-4c2a74dc7bea.png" alt="贵金属"><div class="li_font">贵金属</div></a>
+											<div class="dask_p">    
+                                            <p><a href="/">贵金属头条</a></p>
+                                            <p><a href="/">贵金属行情</a></p>
+                                            <p><a href="/">交易提示</a></p>
+                                            <p><a href="/">宽带业务办理</a></p>
+                                            <p><a href="/">贵金属咨询</a></p>
+                                            <p><a href="/">贵金属学苑</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+                        <li class="kwick opt3 tc" style="width: 299.422px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                        <img src="./index_files/c1dce336-d3b3-4eee-80e5-55536be6fb79.png" alt="基金"><div class="li_font">基金</div>
+                                        
+                                        <div class="dask dc" style="top: 0px; opacity: 1;">
+											<a href="fundView"><img src="./index_files/c1dce336-d3b3-4eee-80e5-55536be6fb79.png" alt="基金"><div class="li_font">基金</div></a>
+
+											<div class="dask_p">    
+                                            <p><a href="/">基金超市</a></p>
+                                            <p><a href="/">基金评级</a></p>
+                                            <p><a href="/">基金咨询</a></p>
+                                            <p><a href="/">基金公告</a></p>
+                                            <p><a href="/">基金学苑</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+                        <li class="kwick opt5 tc" style="width: 126.076px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                       <img src="./index_files/6b750e0f-db03-40f4-802d-e96c876f184f.png" alt="外汇"><div class="li_font">外汇</div>
+                                        
+                                        <div class="dask de" style="top: -200px; opacity: 0;">
+											<a href="foreignView"><img src="./index_files/6b750e0f-db03-40f4-802d-e96c876f184f.png" alt="外汇"><div class="li_font">外汇</div></a>
+											<div class="dask_p">    
+                                            <p><a href="/">积分兑换</a></p>
+                                            <p><a href="/">积分商城</a></p>
+                                            <p><a href="/">外汇服务</a></p>
+                                            <p><a href="/">外汇牌价</a></p>
+                                            <p><a href="/">汇市咨询</a></p>
+                                            <p><a href="/">外汇学苑</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+						 <li class="kwick opt7 tc" style="width: 126.062px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                        <img src="./index_files/d851b2b3-2ec4-4a6e-91ba-46506aff0855.png" alt="保险"><div class="li_font">保险</div>
+                                        
+                                        <div class="dask dh" style="top: -200px; opacity: 0;">
+											<a href="insureView"><img src="./index_files/d851b2b3-2ec4-4a6e-91ba-46506aff0855.png" alt="保险"><div class="li_font">保险</div></a>
+											<div class="dask_p">    
+                                            <p><a href="/">在线保险</a></p>
+                                            <p><a href="/">保险咨询</a></p>
+                                            <p><a href="/">保险计划</a></p>
+                                            <p><a href="/">投保意向</a></p>
+                                            <p><a href="/">保险学苑</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+						<li class="kwick opt6 tc" style="width: 126.049px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                        <img src="./index_files/92e5a720-361c-45b4-a163-60342016e853.png" alt="我的服务"><div class="li_font">便民查询</div>
+                                        
+                                        <div class="dask df" style="top: -200px; opacity: 0;">
+											<a href="http://sn.189.cn/support/mobile/initCallerloc.action"><img src="./index_files/92e5a720-361c-45b4-a163-60342016e853.png" alt="我的服务"><div class="li_font">便民查询</div></a>
+											<div class="dask_p">    
+                                            <p><a href="http://sn.189.cn/service/install/index.action">装移修进度查询</a></p>
+                                            <p><a href="http://sn.189.cn/support/yetdh/initQueryNavigator.action">营业厅导航</a></p>
+                                            <p><a href="http://www.189.cn/dqmh/ssoLink.do?method=skip&amp;platNo=10027&amp;toStUrl=http://sn.189.cn/support/kd/lanSpeedCheck.action">宽带测速</a></p>
+                                            <p><a href="http://sn.189.cn/support/kd/lanResourceQuery.action">宽带资源查询</a></p>
+                                            <p><a href="http://sn.189.cn/support/puk/initPukCode.action">PUK查询</a></p>
+                                            <p><a href="http://sn.189.cn/service/opportunity/index.action">宽带订单查询</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+                        <li class="kwick opt8 tc" style="width: 126.338px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                        <img src="./index_files/b832f6eb-9002-4948-b756-85c7baec9166.png" alt="个性化服务"><div class="li_font">更多资讯</div>
+                                        
+                                        <div class="dask dg" style="top: -200px; opacity: 0;">
+											<img img="" src="./index_files/b832f6eb-9002-4948-b756-85c7baec9166.png" alt="个性化服务"><div class="li_font">更多资讯</div>
+											<div class="dask_p">    
+                                            <p><a href="http://sn.189.cn/support/download/">常用下载</a></p>
+                                            <p><a href="http://sn.189.cn/support/ywsyzl/">业务使用指南</a></p>
+                                            <p><a href="http://sn.189.cn/support/servguide/">用户服务指南</a></p>
+                                            <p><a href="http://zhidao.189.cn/forwardPageForAll.do?TYPE=firstPage&amp;version=3&amp;PROCODE=SN&amp;PRONAME=%E9%99%95%E8%A5%BF">10000知道</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+						<li class="kwick opt4 tc" style="width: 126.629px;">
+ 							<div class="box">
+                                <ul>
+                                    <li>
+                                    	
+                                       <img src="./index_files/42dcaf77-19ba-4628-b5cd-9254a0818f5b.png" alt="用户中心"><div class="li_font">用户中心</div>
+                                       
+                                        <div class="dask dd">
+											<a href="member"><img src="./index_files/42dcaf77-19ba-4628-b5cd-9254a0818f5b.png" alt="用户中心"><div class="li_font">用户中心</div></a>
+											<div class="dask_p">    
+                                            <p><a href="http://www.189.cn/dqmh/ssoLink.do?method=linkTo&amp;platNo=10027&amp;toStUrl=http://sn.189.cn/service/manage/myProducts.action">我的产品</a></p>
+                                            <p><a href="http://www.189.cn/dqmh/userCenter/optPwd/newPwdIndex.jsp">密码服务</a></p>
+                                            <p><a href="http://xjfw.189.cn/tykf-itr-services/modules/creditBusiness/indexPC.html">信用服务</a></p>
+                                            <p><a href="http://xjfw.189.cn/tykf-itr-services/modules/starService/medalWall/indexPC.html">星级服务</a></p>
+											</div>
+                                        </div>
+                                    </li>                                   
+                                </ul>
+                            </div>
+						</li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    var myMenu = new ImageMenu($$('#kwick .kwick'),{openWidth:300});
+                </script>	
+
+			</div>
+			<!--buffet_tre-->
+			<div class="buffet_tre mt30 w">				
+				<ul>					
+					<!--<li><a href="#"><img src="/image/189cnv2/service/images/4g_pc.png" class="fl" alt="" /><p><font>4G·服务</font></p><p>天翼4G，畅享极速上网体验！</p></a></li>-->			
+				</ul>
+			</div>
+		</div>
+</div>
+<script type="text/javascript" src="./index_files/js-jq.js"></script>
+<script>
+$(function () {
+	$(".box ul li").hover(
+		function () {
+			$(this).find(".dask").stop().delay(50).animate({"top":0,opacity:1},000)/*颜色透明度0.8，遮罩速度100/0*/
+		 },
+		function () {
+			$(this).find(".dask").stop().animate({"top":-200,opacity:0},000)
+		}
+	)
+})
+</script>
+<script type="text/javascript" src="./index_files/focus.js"></script>
+<style>
+.bottom_box { position: fixed; left: 0; bottom: 0; z-index: 1000; width: 100%; display: none;  background-image:url(/image/189cnv2/indexv2/images/bottom_bg_img.png); height:130px; }
+* html .bottom_box { position: absolute; left: expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||0)); top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); }
+.bottom { width:1200px; height: auto; margin: 0 auto; height:120px;  display:block; background-image:url(/image/189cnv2/indexv2/images/bottom_ad_img2.png); margin-top:10px; position:relative;}
+.btn_close { position: absolute; right: 250px; top: 40px; width: 33px; height: 56px; background: url(/image/189cnv2/indexv2/images/bottom_close_img.png) no-repeat;cursor: pointer; z-index:9999;}
+.mini { position: fixed; bottom:-10px; right:0px; cursor: pointer; z-index: 1000; display: none; }
+* html .mini { position: absolute; left: expression(eval(document.documentElement.scrollLeft+document.documentElement.clientWidth-this.offsetWidth)-(parseInt(this.currentStyle.marginLeft,10)||0)-(parseInt(this.currentStyle.marginRight,10)||20)); top: expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); }
+</style>
+
+  <!--底部悬浮-->
+  <div class="bottom_box" style="display: none;">
+      <a class="bottom" href="http://www.189.cn/products/S923.html?intaid=tanchuang02" target="_blank"></a>
+      <div class="btn_close">
+      </div>
+  </div>
+  <img class="mini" src="./index_files/btn_left_img.png" width="59" height="150" style="display: none;">
+  <script type="text/javascript">
+  	    	
+  $(function () {
+  	$.ajax({
+  		url:"/dqmh/flowrecommend.do",
+  		type:"get",
+  		dataType : "json",
+  		success:function(msg){
+  			//alert("msg.obj="+msg.obj);
+  			if(msg!=null&&msg.obj=="2"){
+  				$(".bottom_box").show();
+  				setTimeout(function () {
+              $(".bottom_box").slideDown("slow");
+          }, 200);
+
+          setTimeout(function () {
+              $(".bottom_box").slideUp("hide");
+              $(".mini").show(300);
+          }, 4000);
+
+  			}else{
+  				$(".bottom_box").hide();
+  				$(".mini").hide();
+  			}
+  		},error:function(){}});
+
+
+          $(".btn_close").click(function () {
+              $(".bottom_box").slideUp("hide");
+              $(".mini").show(300);
+          })
+          $(".mini").click(function () {
+              $(this).hide();
+              $(".bottom_box").slideDown("slow");
+          })
+      });
+
+  </script>
+</body>

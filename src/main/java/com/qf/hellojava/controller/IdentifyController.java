@@ -4,12 +4,10 @@ import com.qf.hellojava.pojo.User;
 import com.qf.hellojava.service.IIdentifyService;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
-import org.apache.ibatis.annotations.Param;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -104,7 +102,7 @@ public class IdentifyController {
         model.addAttribute("state",state);
         model.addAttribute("img",img);
         model.addAttribute("user",uName);
-        return "member";
+        return "myinfo";
     }
     @RequestMapping("/apply")
     public String apply(){

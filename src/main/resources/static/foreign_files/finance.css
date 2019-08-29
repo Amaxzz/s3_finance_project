@@ -1,0 +1,184 @@
+/*-----------------------------------------------------通用样式部分-------------------------------------------------------*/
+/*通用标题*/
+.pfTit{ width: auto; height: 47px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/action_di.png) repeat-x left bottom; margin-bottom: 30px;}
+.pfTit h3{ font-size: 24px; line-height: 40px; color: #0d131a; text-align: left;}
+.pfTit h3 i{ width: 6px; height: 24px; background: #c7000b; float: left; display: block; margin: 8.5px 8px 8.5px 0;}
+.pfTit h3 i.iRed{ background: #c7000b;}
+.pfTit h3 i.iOrange{ background: #ff6200;}
+.pfTit h3 i.iYellow{ background: #fdaf00;}
+.pfTit a{ float: right; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/more_2.png) no-repeat right center; padding-right: 32px; font-size: 14px; line-height: 40px; color: #0d131a;}
+.pfTit a:hover{ color: #d00f1b;}
+/*通用滚动菜单*/
+.pfQuick{ width:1035px; height:auto; margin-left:-17px; zoom: 1;}
+.pfQuick a { width:207px; float:left; height:100%; color:#0d131a; font-size:18px; text-align: center; }
+.pfQuick a span { width: auto; height: 70px; margin: 0px auto; display: block;}
+.pfQuick a img{ width: 60px; height: 60px; display: block; margin: 0 auto; transition: all 0.2s ease-in-out;}
+.pfQuick a:hover{ color: #C7000B;}
+.pfQuick a:hover img{ width: 68px; height: 68px;}
+.pfQuick .owl-pagination { display: none; }
+.pfQuick .owl-prev, .pfQuick .owl-next { width:15px; height:28px; position: absolute; top: 30px; background: url(../images/enterprise/topprev.png) no-repeat; text-indent: -999px; overflow: hidden; }
+.pfQuick .owl-prev { left:0; background-position: left top;}
+.pfQuick .owl-next { right:0; background-position: right top;}
+.pfQuick .owl-buttons .owl-prev.disabled{ background-position: left bottom; cursor: default;}
+.pfQuick .owl-buttons .owl-next.disabled{ background-position: right bottom; cursor: default;}
+/*通用个人产品左单块*/
+.pfSer1{ width: 250px; height: 362px; text-align: center;}
+.pfSer1 .serIcon{ padding-top: 50px; margin-bottom: 10px;}
+.pfSer1 .serIcon img{ display: inline-block;}
+.pfSer1 .serTxt{ font-size: 24px; line-height: 38px; color: #FFFFFF; margin-bottom: 90px;}
+.pfSer1 .serBtn{ text-align: center;}
+.pfSer1 .serBtn a{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/ser_left_btn.png); width: 97px; height: 26px; font-size: 16px; line-height: 26px; color: #FFFFFF; text-align: center; display: inline-block;}
+.pfSer1.bg1{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/ser_left_bg1.jpg);}
+.pfSer1.bg2{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/ser_left_bg2.jpg);}
+.pfSer1.bg3{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/ser_left_bg3.jpg);}
+/*通用个人产品右单块*/
+.pfSer2{ text-align: center; padding-top: 1px; position: relative;}
+.pfSer2 .serChild{ border: 1px solid #e5e5e5; text-align: left; overflow: hidden; width: auto; height: 180px; margin-top: -1px; position: relative;}
+.pfSer2 .serChild:hover{ z-index: 9;}
+.pfSer2 .serChild img{ width: 300px; height: 180px; position: absolute; top: 0; left: 0;}
+.pfSer2 .serChild h3{ padding-left: 310px; padding-top: 60px; font-size: 20px; line-height: 30px; color: #0d131a;}
+.pfSer2 .serChild p{ padding-left: 310px; padding-top: 10px; font-size: 16px; line-height: 22px; color: #686868;}
+.pfSer2 .serChild a.cBtn{ width: 75px; height: 26px; background: #ff6200; font-size: 14px; line-height: 26px; color: #FFFFFF; text-align: center; display: inline-block;
+	position: absolute;
+	top: 80px;
+	right: 30px;
+}
+.pfSer2 .serBg{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/ser_child_bg.png); width: 764px; height: 204px; position: absolute; z-index: 0; left: -10px; top: -9px;}
+/*通用个人产品单块*/
+.pfPro{ width: auto; height: 214px; padding-top: 40px; padding-left: 50px; text-align: left; position: relative;}
+.pfPro .proTit{ font-size: 24px; line-height: 36px; color: #0d131a; margin-bottom: 10px;}
+.pfPro .proTxt{ font-size: 16px; line-height: 28px; color: #686868; margin-bottom: 20px;}
+.pfPro .proTxt p{ padding-left: 0;}
+.pfPro .proBtn{ margin-bottom: 10px;}
+.pfPro .proBtn a{ background: #ff6200; color: #FFFFFF; width: 75px; height: 26px; font-size: 14px; line-height: 26px; text-align: center; display: inline-block; margin-right: 15px;}
+.pfPro .proLink{ text-align: left; font-size: 14px; line-height: 22px; color: #686868;}
+.pfPro .proLink a,.pfPro .proLink span{ color: #686868;}
+.pfPro .proLink span{ margin: 0 5px;}
+.pfPro .proLink a:hover{ color: #C7000B;}
+.pfPro .proImg{ width: 150px; height: 150px; float: right; padding-right: 35px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.pfPro .proImg img{ width: 100%; height: 100%; display: block;}
+.pfPro:hover .proImg{ padding-right: 50px;}
+/*通用贵宾专享单块*/
+.pfVip{ width: 325px; height: 338px; border: 1px solid #E5E5E5; text-align: center;}
+.pfVip img{ width: 325px; height: 210px;}
+.pfVip h3{ padding: 15px 30px; font-size: 18px; line-height: 28px; color: #0d131a; border-top: 1px solid #E5E5E5;}
+.pfVip p{ overflow: hidden; padding: 0; font-size: 16px; line-height: 28px; text-align: left;}
+.pfVip p a{ width: 109px; float: left; display: block; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/list_dian.png) no-repeat left center; padding-left: 12px; color: #0d131a; margin:0 20px;}
+.pfVip a:hover{ color: #C7000B;}
+/*通用盒子模型*/
+.pfBox{ border: 1px solid #E5E5E5; background: #FFFFFF; padding: 15px 24px;}
+.pfBox .bTit{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/head_line1.png) no-repeat left center; padding-left: 12px; width: auto; height: 40px; font-size: 18px; line-height: 40px; color: #0d131a; text-align: left;}
+.pfBox .bImgs{ text-align: left;}
+.pfBox .bImgs ul{ margin-left: -20px; zoom: 1; overflow: hidden;}
+.pfBox .bImgs li{ width: 296px; height: auto; float: left; margin-left: 20px;}
+.pfBox .bImgs img{ width: 294px; height: 138px; border: 1px solid #E5E5E5; margin-bottom: 10px;}
+.pfBox .bImgs p{ padding: 15px 0; font-size: 16px; line-height: 24px; color: #0d131a;}
+.pfBox .bImgs li a:hover p{ color: #C7000B;}
+.pfBox .bList{ text-align: left;}
+.pfBox .bList ul{ border-top: 1px solid #E5E5E5; padding: 10px 0;}
+.pfBox .bList li{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/list_dian.png) no-repeat left center; padding-left: 12px; font-size: 16px; line-height: 32px;}
+/*通用热门服务单块*/
+.pfHot{ width: auto; height: auto; text-align: center;}
+.pfHot .hotImg{ width: auto; height: 120px; padding-top: 40px; text-align: center;}
+.pfHot .hotImg img{ display: inline-block; width: auto; height: 100px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.pfHot:hover .hotImg img{ width: auto; height: 110px;}
+.pfHot .hotTit{ font-size: 24px; line-height: 32px; color: #0d131a; text-align: center;}
+.pfHot .hotTit p{ font-size: 18px; color: #999999;}
+.pfHot .hotTxt{ padding: 10px 0; display: inline-block; *width: 170px; *margin: 0 auto; text-align: left;}
+.pfHot .hotTxt p{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/waihui/images/2018/list_dian1.png) no-repeat left center; padding-left: 12px; font-size: 16px; line-height: 28px; color: #686868;}
+.pfHot .hotBtn{ text-align: center; margin-bottom: 30px;}
+.pfHot .hotBtn a{ width: 180px; height: 38px; background: #ff6200; display: inline-block; font-size: 18px; line-height: 38px; color: #FFFFFF; text-align: center;}
+/*通用服务与功能单块*/
+.proFast{ text-align: center; overflow: hidden;}
+.proFast .fastHead{ text-align: left; width: 331px; height: 239px; border: 1px solid #E5E5E5; float: left; position: relative;}
+.proFast .fastHead .headImg{ position: absolute; top: 39px; right: 0px;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+}
+.proFast .fastHead .headImg img{ display: inline-block;}
+.proFast .fastHead:hover .headImg{ right: 15px;}
+.proFast .fastHead .headTxt{ padding: 40px 0 20px 40px; font-size: 24px; line-height: 38px; color: #FFFFFF; position: relative; z-index: 9;}
+.proFast .fastHead .headTxt h3{ font-size: 24px; line-height: 32px; color: #0d131a; margin-bottom: 10px;}
+.proFast .fastHead .headTxt p{ font-size: 16px; line-height: 24px; color: #0d131a;}
+.proFast .fastHead .headBtn{ padding: 0 0 0 40px;}
+.proFast .fastHead .headBtn a{ background: #ff6200; width: 75px; height: 26px; font-size: 14px; line-height: 26px; color: #FFFFFF; text-align: center; display: inline-block;}
+.proFast .fastList{ width: 667px; height: 241px; float: right;}
+.proFast .fastList ul{ overflow: hidden; border-top: 1px solid #e5e5e5; border-left: 1px solid #e5e5e5;}
+.proFast .fastList li{ width: 332px; height: 79px; float: left; font-size: 16px; line-height: 79px; border-bottom: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5;}
+.proFast .fastList li a{ color: #0d131a; position: relative;}
+.proFast .fastList li a:hover{ color: #d00f1b;}
+.proFast .fastList li a img{ position: absolute; top: -2px; *top: 22px; right: -32px;}
+
+/*-----------------------------------------------------网站样式部分-------------------------------------------------------*/
+/*导航样式*/
+.navigation-up .navigation-v3 li{ width: 20%;}
+.navigation-up .navigation-v3 li h2 a{ padding: 0 15px;}
+/*个人金融频道外层包裹*/
+.pfMain{ width: auto; height: auto;}
+/*-----------------------------------------------------个人金融频道首页样式-------------------------------------------------------*/
+/*快捷滚动*/
+.mainQuick{ width: auto; height: auto; padding: 40px 0; background: #f2f2f2; border-top: 1px solid #e5e5e5;}
+/*个人产品*/
+.mainPro{ width: auto; height: auto; padding: 30px 0 10px;}
+.mainPro .proSer{ text-align: left;}
+.mainPro .proSer .serBox{ margin-bottom: 30px;}
+.mainPro .proSer .serBox .boxLeft{ width: 250px; height: 362px; float: left;}
+.mainPro .proSer .serBox .boxRight{ width: 742px; height: 362px; float: right;}
+/*热门服务*/
+.mainSer{ width: auto; height: auto; padding: 30px 0; background: #f2f2f2;}
+.mainSer .serList{ overflow: hidden; background: #FFFFFF; border: 1px solid #e5e5e5;}
+.mainSer .serList ul{ list-style: none; margin-left: -1px; zoom: 1; margin-top: -1px;}
+.mainSer .serList li{ width: 498px; height: 264px; float: left; border-left: 1px solid #e5e5e5; border-top: 1px solid #e5e5e5;}
+/*贵宾专享*/
+.mainVip{ width: auto; height: auto; padding: 30px 0;}
+.mainVip .vipList{ overflow: hidden;}
+.mainVip .vipList ul{ margin-left: -9.5px; zoom: 1;}
+.mainVip .vipList li{ width: 327px; height: auto; float: left; margin-left: 9.5px;}
+/*精彩推荐&优惠活动&知识学苑*/
+.mainColle{ overflow: hidden; width: auto; height: auto; padding: 30px 0; background: #f2f2f2;}
+.mainColle .colleLeft{ width: 663px; height: auto; float: left;}
+.mainColle .colleLeft .pfBox{ height: 268px;}
+.mainColle .colleRight{ width: 325px; height: auto; float: right;}
+.mainColle .colleRight .pfBox{ height: 111px;}
+/*-----------------------------------------------------个人金融频道产品服务样式-------------------------------------------------------*/
+/*热门服务*/
+.mainHot{ width: auto; height: auto; padding: 30px 0;}
+.mainHot .hotCont{ overflow: hidden; border: 1px solid #E5E5E5; border-right: 0px;}
+.mainHot .hotCont .pfHot{ width: 332px; height: 315px; float: left; border-right: 1px solid #E5E5E5;}
+/*产品服务*/
+.mainServer{ width: auto; height: auto; padding: 30px 0;}
+.mainServer .serverCont{ width: auto;}
+.mainServer .serverCont .proFast{ margin-bottom: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

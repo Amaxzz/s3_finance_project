@@ -1,0 +1,133 @@
+﻿@charset "utf-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, address {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    font-family:"微软雅黑"!important;
+}
+a{text-decoration:none}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: inherit;
+}
+fieldset, img {
+    border:0;
+    display:block;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+li {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input:focus { border:0}
+html{
+    width:100%;
+    height:100%;
+}
+body{
+    padding: 0;
+    margin: 0 auto;
+    background: #ffffff;
+}
+.l{float: left}
+.r{float: right}
+.clear{ clear:both}
+.font_14{font-size: 14px}
+.font_18{font-size: 18px}
+.w-center-icbc{min-width: 1000px;margin:auto;max-width: 1000px}
+
+
+
+/*导航*/
+.nav-icbc{width: 100%;background-color:#c7000b }
+.nav-icbc.on{position: fixed;top:0;left: 0;z-index: 3}
+#navBox-icbc{
+    position: relative;
+
+    width: 1000px;
+}
+#navBox-icbc #forClear{ width:1000px;height:130px;}
+#navBox-icbc ul.navList{
+    position: relative;
+    left: -30px;
+    display: block;
+    margin:0 auto;
+    width:1012px;
+    height: 45px;
+}
+.head-v3-icbc{position:relative;z-index:100;min-width:1000px;top: 0px;width: 100%;background-color: #c7000b}
+.nav-icbc.on .head-v3-icbc{position: fixed;top:0;left: 50%;margin-left: -501px;width: 1000px}
+.head-v3-icbc .navigation-inner-icbc{margin:0 auto;width:1000px;position:relative}
+
+.navigation-up-icbc .navigation-v3-icbc{margin:0 auto;float:left;}
+.navigation-up-icbc .navigation-v3-icbc ul{float:left;width: 1000px}
+.navigation-up-icbc .navigation-v3-icbc li{float:left;font:normal 18px/45px "微软雅黑";color:#ffffff;width: 16.6%;margin-top: 1px;cursor: pointer;}
+.navigation-up-icbc .navigation-v3-icbc li h2{text-align: center;font-weight:normal;padding:0;margin-top:-1px;text-align: center}
+.navigation-up-icbc .navigation-v3-icbc li h2 a{padding:0 25px;color:#ffffff;display:inline-block;height:45px;font-family:"微软雅黑"}
+.navigation-up-icbc .navigation-v3-icbc li span{position:absolute;top:18px;background: url("/Portal_Resources/IcbcHome/images/shu.png") no-repeat;display: inline-block;width: 2px;height: 17px}
+.navigation-down-icbc{position:absolute;top:45px;left:-6px;width:1012px}
+.nav-icbc.on .navigation-down-icbc{}
+.navigation-down-icbc .nav-down-menu-icbc{width:1012px;margin:0;position:absolute;top:0px;}
+.navigation-down-icbc .nav-down-menu-icbc .navigation-down-inner-icbc{margin:auto;width:1012px;position:relative}
+.navigation-down-icbc .nav-down-menu-icbc dl{float:left;margin:18px 80px 18px 0}
+
+
+/*.navigation-down .menu-1 dl{margin:20px 80px 25px 0}*/
+/*.navigation-down .menu-1 dt{font:normal 16px "微软雅黑";color:#61789e;padding-bottom:10px;border-bottom:1px solid #61789e;margin-bottom:10px}*/
+/*.navigation-down .menu-1 dd a{color:#fff;font:normal 14px/30px "微软雅黑"}*/
+/*.navigation-down .menu-1 dd a:hover{color:#60aff6}*/
+/*.navigation-down .menu-2 dd a,.navigation-down .menu-3 dd a{color:#fff;font:normal 16px "微软雅黑"}*/
+.down-inner-main-icbc{background: url("../images/background/nav_bgT.png") center top repeat-y;height: auto;width: 100%}
+.down-inner-di-icbc{background: url("../images/background/nav_bgD.png") no-repeat;height:15px;width: 100%}
+.down-main-sh-icbc{padding: 10px 25px 19px 25px }
+.down-main-sh-icbc th{text-align: center;font-size: 16px;border-bottom: 1px solid #e5e5e5;padding-bottom:10px;padding-top: 14px}
+.down-main-sh-icbc td{width: 135px;height:53px;font-size: 14px;}
+.down-main-sh-icbc td p{cursor: pointer;position: relative }
+.down-main-sh-icbc td p.on{color:#d00f1b }
+#ck .down-main-sh-icbc td{width: 135px;height:44px;font-size: 14px }
+#xy .down-main-sh-icbc td{width: 135px;height:44px;font-size: 14px }
+#tz .down-main-sh-icbc td{width: 135px;height:38px;font-size: 14px }
+.down-main-sh-icbc tr td:first-child span{width: 3px;height: 13px;display: inline-block;background-color:#c7000b;float: left;margin-top: 3px;margin-right: 7px}
+.down-main-sh-icbc tr td:first-child{color: #d00f1b;padding-left: 5px}
+.down-main-sh-icbc tr td:nth-child(4){border-left: 1px solid #e5e5e5;padding-left: 30px}
+
+
+
+.down-main-img-icbc{width:218px ;height:265px ;margin-top: 45px}
+.down-main-img-icbc .xian{width: 100%;height: 1px;background-color:#e5e5e5;float: right}
+.down-main-img-icbc .main-img{width: 180px;height: 265px;overflow: hidden;margin-top:15px ;margin-right: 14px;cursor: pointer}
+.down-main-di-icbc{height: 35px;background-color: #e5e5e5;width: 1000px;margin-left: 6px}
+.down-main-di-icbc li{float: left;color:#999999;font-size:14px;height: 35px;line-height: 35px;position: relative;left: 26px;margin-right: 40px;cursor: pointer}
+.down-main-di-icbc p{padding-left: 18px}
+.down-main-di-icbc p.on{color:#d00f1b }
+.tanh{background: url("/Portal_Resources/IcbcHome/images/icon/nav_tanH.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0 }
+.wenh{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenH.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenJY{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenJY.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenXX{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenXX.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenGS{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenGS.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenjS{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenjS.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenQi{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenQi.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenFZ{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenFZ.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenGR{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenGR.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.wenSD{background: url("/Portal_Resources/IcbcHome/images/icon/nav_wenSD.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.diandian{height: 6px;width:6px;display:inline-block;position: absolute;left: 5px;top:15px;background:#999999 }
+.fenh{background: url("/Portal_Resources/IcbcHome/images/icon/nav_fenH.png") no-repeat center center;height: 35px;width:15px;display:inline-block;position: absolute;left: 0  }
+.liw{background: url("/Portal_Resources/IcbcHome/images/icon/nav_liW.png") no-repeat center center;height: 35px;width:18px;display:inline-block;position: absolute;left:-8px  }
+.down-inner-main-icbc td img{position: absolute;top:-10px;left: 40px}
+
