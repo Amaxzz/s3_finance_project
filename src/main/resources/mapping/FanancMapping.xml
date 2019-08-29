@@ -17,4 +17,6 @@
         select * from financing where classss=#{fanacClassss}
     </select>
 
+
+
 </mapper>
