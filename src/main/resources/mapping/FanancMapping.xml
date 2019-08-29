@@ -16,4 +16,6 @@
     <select id="getFanac" parameterType="int">
         select * from financing where classss=#{fanacClassss}
     </select>
+
+
 </mapper>
