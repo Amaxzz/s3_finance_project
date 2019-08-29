@@ -8,4 +8,8 @@ import java.util.List;
 @Mapper
 public interface IFanancMapper {
     public List<Fananc> getFananc(int classss);
+
+    public List<Integer> findAllFinanc();
+    public List<Integer> findFanancByUid();
+
 }
