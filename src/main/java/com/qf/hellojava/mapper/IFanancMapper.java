@@ -12,4 +12,6 @@ public interface IFanancMapper {
     public List<Integer> findAllFinanc();
     public List<Integer> findFanancByUid();
 
+    public List<Fananc> getFanacByUid(int userId);
+
 }

@@ -21,6 +21,8 @@ public class ViewController {
     public String indexView() {
         return "index";
     }
+    @RequestMapping("infoview")
+    public String infoView(){ return "info";}
 
     @RequestMapping("mainview")
     public String mainView() {

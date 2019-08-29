@@ -62,10 +62,10 @@
                 <li class="dropdown">
                     <i class="glyphicon glyphicon-user" th:text="${session.uName}"></i><span class="caret"></span>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="member1.html"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
                     <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
                     <li class="divider"></li>
-                    <li><a href="index.html"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                    <li><a href="indexview"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
                   </ul>
                 </li>
               </ul>
@@ -83,7 +83,7 @@
                     <div class="thumbnail" style="    border-radius: 0px;">
                         <img th:src="${img}" style="height: 300px;width: 200px;" class="img-thumbnail" alt="">
                         <div class="caption" style="text-align:center;">
-                            <h3 th:text="${user}">
+                            <h3 th:text="${user.userName}">
                             </h3>
                             <span class="label label-danger" style="cursor:pointer;" onclick="window.location.href='apply'" th:text="${state}"></span>
                         </div>
@@ -91,7 +91,7 @@
 				</div>
 			</div>
 			<div class="list-group">
-				<div class="list-group-item" style="cursor:pointer;" onclick="window.location.href='member'">
+				<div class="list-group-item" style="cursor:pointer;" onclick="window.location.href='infoview'">
 					创e金融<span class="badge"><i class="glyphicon glyphicon-chevron-right"></i></span>
 				</div>
 			</div>
@@ -127,7 +127,9 @@
                                               </thead>
                                               <tbody>
                                                 <tr>
-                                                  <td style="vertical-align:middle;">¥**.**</td>
+                                                  <td style="vertical-align:middle;" >
+                                                      ¥<span th:text="${user.userMoney}"></span>
+                                                  </td>
                                                   <td style="vertical-align:middle;"><a href="#">查看</a></td>
                                                   <td style="vertical-align:middle;">
                                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -162,7 +164,9 @@
                                                 <tr>
                                                   <td style="vertical-align:middle;">¥**.**</td>
 												  <td style="vertical-align:middle;">¥5000.00</td>
-												  <td style="vertical-align:middle;">¥10000.00</td>
+												  <td style="vertical-align:middle;">
+                                                      ¥<span th:text="${user.userLoad}"></span>
+                                                  </td>
                                                   <td style="vertical-align:middle;"><a href="#">查看</a></td> 
                                                   <td style="vertical-align:middle;">
                                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
@@ -194,11 +198,13 @@
                                                 </tr>
                                               </thead>
                                               <tbody>
-                                                <tr>
-                                                  <td style="vertical-align:middle;">xxx理财</td>
-												  <td style="vertical-align:middle;">¥5000.00</td>
-												  <td style="vertical-align:middle;">2.65</td>
-                                                  <td style="vertical-align:middle;">365</td> 
+                                                <tr th:each="f:${fananclist}">
+                                                  <td style="vertical-align:middle;" th:text="${f.fanacName}"></td>
+												  <td style="vertical-align:middle;">
+                                                      ¥<span th:text="${f.fanacMoney}"></span>
+                                                  </td>
+												  <td style="vertical-align:middle;" th:text="${f.fanacRates*100}"></td>
+                                                  <td style="vertical-align:middle;" th:text="${f.fanacCycle}"></td>
                                                   <td style="vertical-align:middle;">
                                                     <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
 														  <button id="show" type="button" class="btn btn-default">显示</button><br/>	
@@ -218,23 +224,28 @@
                   <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 				  <form class="form-horizontal">
 					  <div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+						<label for="input1" class="col-sm-2 control-label">用户名</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" id="input1" >
+						  <input type="text" class="form-control" id="input1" th:value="${user.userName}">
+						</div>
+					  </div>
+                      <div class="form-group">
+                          <label for="input4" class="col-sm-2 control-label">真实姓名</label>
+                          <div class="col-sm-10">
+                              <input type="text" class="form-control" id="input4" th:value="${user.nickName}">
+                          </div>
+                      </div>
+					  <div class="form-group">
+						<label for="input2" class="col-sm-2 control-label">联系电话</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="input2" th:value="${user.userTel}">
 						</div>
 					  </div>
 					  
 					  <div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">联系电话</label>
+						<label for="input3" class="col-sm-2 control-label">邮箱地址</label>
 						<div class="col-sm-10">
-						  <input type="text" class="form-control" id="input2">
-						</div>
-					  </div>
-					  
-					  <div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">邮箱地址</label>
-						<div class="col-sm-10">
-						  <input type="text" class="form-control" id="inpu3">
+						  <input type="text" class="form-control" id="input3" th:value="${user.userEmail}">
 						</div>
 					  </div>
 					  

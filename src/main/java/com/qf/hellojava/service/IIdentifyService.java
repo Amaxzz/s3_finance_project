@@ -13,5 +13,4 @@ public interface IIdentifyService {
     public User loadUserByName(String userName);
     public int addRealUser(User realUser);
     public int updateLoad(int UserId,Double load);
-
 }
