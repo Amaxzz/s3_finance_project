@@ -18,6 +18,9 @@
     </select>
 
 
+
+
+
     <select id="findAllFinanc" resultType="int" >
         select count(cid) from financing group by classss
     </select>
