@@ -7,5 +7,7 @@ public class asaaa {
     private String name;
     private String sss;
     private String ww;
+    private int qq;
+    private String aa;
     private int pp;
 }
