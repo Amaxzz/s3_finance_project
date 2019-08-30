@@ -9,4 +9,5 @@ public class Account {
     private int accId;
     private String accTime;
     private  String accDetailed;
+    private int classss;
 }

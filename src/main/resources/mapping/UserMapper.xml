@@ -15,12 +15,13 @@
         <result column="money" property="userMoney"></result>
         <result column="uload" property="userLoad"></result>
         <result column="img" property="userImg"></result>
+        <result column="daikuan" property="daikuan"></result>
    </resultMap>
     <select id="findUserByUserName" resultMap="userResult" parameterType="string">
         select * from tb_users where uname=#{userName}
     </select>
     <insert id="loadReg" parameterType="user">
-        insert into tb_users (uid,uname,upwd,status,creattime) values (#{userId},#{userName},(#{userPwd}),#{userStatus},#{createTime})
+        insert into tb_users (uid,uname,upwd,status,creattime,daikuan,uload,money) values (#{userId},#{userName},(#{userPwd}),#{userStatus},#{createTime},#{daikuan},#{userLoad},#{userMoney} )
     </insert>
     <select id="loadUser" resultType="user" parameterType="user">
         select * from tb_users where uname=#{userName} and upwd=md5(#{userPwd})

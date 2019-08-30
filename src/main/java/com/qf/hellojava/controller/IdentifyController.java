@@ -85,8 +85,8 @@ public class IdentifyController {
     public String member(Model model){
         String uName=(String) session.getAttribute("uName");
         User user=identifyService.loadUserByName(uName);
+        session.setAttribute("user",user);
         List<Fananc> fanancList=fanacService.getFanacByUid(user.getUserId());
-        System.out.println(user+"88888888888");
         String state="未实名认证";
         String img="img/services-box1.jpg";
 
@@ -95,15 +95,15 @@ public class IdentifyController {
                 state = "未实名认证";
             } else if (user.getUserStatus() == 1) {
                 state = "已实名待审核";
+            } else if (user.getUserStatus() == 2) {
                 state = "实名认证成功";
+            }
             }else if (user.getUserStatus()==3){
-                state ="实名认证失败";
+                state ="实名认证失败,请重试";
             }
             if(user.getUserImg()!=null) {
                 img = user.getUserImg();
-            }       } else if (user.getUserStatus() == 2) {
-
-        }
+            }
         model.addAttribute("state",state);
         model.addAttribute("img",img);
         model.addAttribute("user",user);
@@ -129,7 +129,6 @@ public class IdentifyController {
     public String uploadImg(MultipartFile img, HttpServletRequest request){
         String path=request.getServletContext().getRealPath("/upload");
         File upfile=new File(path);
-        System.out.println("99999999999999999999999999999999999999");
         if (img!=null) {
             if (!upfile.exists()) {
                 upfile.mkdirs();

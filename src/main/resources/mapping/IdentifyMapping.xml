@@ -15,13 +15,14 @@
         <result column="money" property="userMoney"></result>
         <result column="uload" property="userLoad"></result>
         <result column="img" property="userImg"></result>
+        <result column="daikuan" property="daikuan"></result>
     </resultMap>
 
     <select id="loadAllIdentify" resultMap="userResult">
         select * from tb_users where status=1
     </select>
     <update id="identifyYes" parameterType="int">
-        update tb_users set status=2 where uid=#{uid}
+        update tb_users set status=2,uload=10000 where uid=#{uid}
     </update>
     <update id="identifyNo" parameterType="int">
         update tb_users set status=3 where uid=#{uid}

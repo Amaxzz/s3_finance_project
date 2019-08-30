@@ -18,4 +18,5 @@ public class User {
     private String userImg;
     private double userMoney;
     private double userLoad;
+    private double daikuan;
 }

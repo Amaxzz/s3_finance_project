@@ -143,6 +143,9 @@ public class UserController {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
         String time = dateFormat.format( now );
         user.setCreateTime(time);
+        user.setUserLoad(0);
+        user.setUserMoney(0);
+        user.setDaikuan(0);
         boolean bool=userService.loadReg(user);
         return bool?"redirect:loginview":"error";
     }

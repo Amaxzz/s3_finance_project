@@ -108,11 +108,9 @@
         // }
         $('#email11').click(function () {
             var email=$('#exampleInputEmail1').val();
-            alert(email);
             $.post("emailHander",{"email":email},function (data) {
-                alert(data);
                 if (data=="ok"){
-                    alert("验证码获取成功");
+                    alert("验证码获取中,请稍等");
                 }
             })
         });

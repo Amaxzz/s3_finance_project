@@ -6,11 +6,21 @@
         <id column="uid" property="accId"/>
         <result column="acctime" property="accTime"/>
         <result column="detailed" property="accDetailed"/>
+        <result column="classss" property="classss"/>
     </resultMap>
     <select id="loadAccountByUid" resultMap="AccountMap" parameterType="int">
-        select * from account where uid=#{uid}
+        select * from account where uid=#{uid} and classss=1
+    </select>
+    <select id="loadUloadByUid" resultMap="AccountMap" parameterType="int">
+        select * from account where uid=#{uid} and classss=2
     </select>
     <insert id="addAccountByUid" parameterType="account">
-        insert into account values (#{accId},#{accDetailed},#{accTime})
+        insert into account values (#{accId},#{accDetailed},#{accTime},#{classss})
     </insert>
+    <update id="updateMoneyByUid" >
+        update tb_users set money=#{money} where uid=#{userId}
+    </update>
+    <update id="updateUserByUid" parameterType="user">
+        update tb_users set daikuan=#{daikuan},uload=#{userLoad},money=#{userMoney} where uid=#{userId}
+    </update>
 </mapper>
