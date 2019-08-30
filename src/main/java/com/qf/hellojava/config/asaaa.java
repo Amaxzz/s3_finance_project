@@ -9,4 +9,5 @@ public class asaaa {
     private String ww;
     private int qq;
     private String aa;
+    public String uu;
 }
