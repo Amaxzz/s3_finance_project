@@ -13,9 +13,10 @@
         <result column="createTime" property="createTime"/>
         <result column="money" property="fanacMoney"/>
     </resultMap>
-    <select id="getFananc" parameterType="int">
+    <select id="getFananc" parameterType="int" resultMap="FanancMap">
         select * from financing where classss=#{fanacClassss}
     </select>
+
 
     <select id="findAllFinanc" resultType="int" >
     select count(cid) from financing group by classss
