@@ -11,5 +11,5 @@ public class asaaa {
     private String aa;
     private int pp;
     private String uu;
-    public String uu;
+    public String u;
 }
