@@ -13,7 +13,7 @@
         <result column="createTime" property="createTime"/>
         <result column="money" property="fanacMoney"/>
     </resultMap>
-    <select id="getFanac" parameterType="int">
+    <select id="getFananc" parameterType="int">
         select * from financing where classss=#{fanacClassss}
     </select>
 
