@@ -49,6 +49,13 @@ public class FanacService implements IFanacService {
 
     }
 
+    @Override
+    public List<Fananc> getFanacByUid(int userId) {
+
+        return fanancMapper.getFanacByUid(userId);
+    }
+
+
     public List<String> loadStringList(){
         List<String> stringList=new ArrayList<>();
         stringList.add(0,"速盈");
@@ -58,6 +65,6 @@ public class FanacService implements IFanacService {
         stringList.add(4,"结售汇");
 
         return stringList;
-
     }
+
 }

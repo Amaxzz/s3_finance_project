@@ -11,4 +11,5 @@ public interface IFanacService {
 
     public List<JsonClass> findAllFinanc();
     public Map<Integer,List>  findFanancByUid();
+    public List<Fananc> getFanacByUid(int userId);
 }

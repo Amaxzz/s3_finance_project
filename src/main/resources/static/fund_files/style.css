@@ -1,0 +1,171 @@
+TD {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+INPUT {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+BODY {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+SELECT {
+	FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+.input {
+	BORDER-RIGHT: #b3b3b3 1px solid; BORDER-TOP: #b3b3b3 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #b3b3b3 1px solid; BORDER-BOTTOM: #b3b3b3 1px solid; BACKGROUND-COLOR: #ededed
+}
+.text {
+	COLOR: #333333; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.text:link {
+	COLOR: #333333; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.text:visited {
+	COLOR: #333333; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.text:active {
+	COLOR: #bc0021; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+A.text:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+.menu {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:hover {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.more {
+	COLOR: #bc0021; TEXT-DECORATION: none
+}
+A.more:link {
+	COLOR: #bc0021; TEXT-DECORATION: none
+}
+A.more:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.text_underline {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline:link {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline:visited {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline:active {
+	COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.text_underline14 {
+	FONT-SIZE: 14px;COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline14:link {
+	FONT-SIZE: 14px;COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline14:visited {
+	FONT-SIZE: 14px;COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline14:active {
+	FONT-SIZE: 14px;COLOR: #333333; TEXT-DECORATION: underline
+}
+A.text_underline14:hover {
+	FONT-SIZE: 14px;COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.text_underlinefund {
+	COLOR: #003399; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;cursor: pointer
+}
+A.text_underlinefund:link {
+	COLOR: #003399; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+A.text_underlinefund:visited {
+	COLOR: #003399; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+A.text_underlinefund:active {
+	COLOR: #003399; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+A.text_underlinefund:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+.text_underlinemore {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+A.text_underlinemore:link {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+A.text_underlinemore:visited {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+A.text_underlinemore:active {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+A.text_underlinemore:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.textmin {
+	COLOR: #999999; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.textmin:link {
+	COLOR: #999999; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.textmin:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline;LINE-HEIGHT: 20px;
+}
+A.textmin:active {
+	COLOR: #bc0021; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+A.textmin:visited {
+	COLOR: #999999; TEXT-DECORATION: none;LINE-HEIGHT: 20px;
+}
+.text_bluefund {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A.text_bluefund:link {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A.text_bluefund:visited {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A.text_bluefund:active {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A.text_bluefund:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.text_underlinestudy {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+A.text_underlinestudy:link {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+A.text_underlinestudy:visited {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+A.text_underlinestudy:active {
+	COLOR: #660000; TEXT-DECORATION: none
+}
+A.text_underlinestudy:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.menuunderline {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.menuunderline:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.menuunderline:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}
+.text2 {
+	COLOR: #000000; LINE-HEIGHT: 18px; TEXT-DECORATION: none
+}
+A.text2:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A.text2:hover {
+	COLOR: #bc0021; TEXT-DECORATION: underline
+}

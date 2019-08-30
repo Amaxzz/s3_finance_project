@@ -1,6 +1,5 @@
 package com.qf.hellojava.controller;
 
-import com.qf.hellojava.pojo.Role;
 import com.qf.hellojava.pojo.User;
 import com.qf.hellojava.service.IUserService;
 import org.apache.shiro.SecurityUtils;
@@ -54,7 +53,7 @@ public class UserController {
                 if (status>5) {
                     return "main";
                 } else {
-                    return "redirect:member";
+                    return "info";
                 }
             }
         } catch (AuthenticationException e) {
@@ -72,7 +71,7 @@ public class UserController {
             if (result.equals("admin")) {
                 return "main";
             } else {
-                return "member";
+                return "info";
             }
         }else {
             return "error";

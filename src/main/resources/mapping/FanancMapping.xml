@@ -13,19 +13,17 @@
         <result column="createTime" property="createTime"/>
         <result column="money" property="fanacMoney"/>
     </resultMap>
-    <select id="getFananc" parameterType="int" resultMap="FanancMap">
+    <select id="getFanac" parameterType="int">
         select * from financing where classss=#{fanacClassss}
     </select>
 
-
-
-
-
     <select id="findAllFinanc" resultType="int" >
-        select count(cid) from financing group by classss
+    select count(cid) from financing group by classss
     </select>
     <select id="findFanancByUid" resultType="int">
-        select count(uid) from tb_uid_cid group by classss
+    select count(uid) from tb_uid_cid group by classss
     </select>
-
+    <select id="getFanacByUid" resultMap="FanancMap" parameterType="int">
+        select * from financing where cid in (select cid from tb_uid_cid where uid=#{userId})
+    </select>
 </mapper>

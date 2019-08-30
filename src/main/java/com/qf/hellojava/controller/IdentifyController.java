@@ -1,15 +1,15 @@
 package com.qf.hellojava.controller;
 
+import com.qf.hellojava.pojo.Fananc;
 import com.qf.hellojava.pojo.User;
+import com.qf.hellojava.service.IFanacService;
 import com.qf.hellojava.service.IIdentifyService;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.HtmlEmail;
-import org.apache.ibatis.annotations.Param;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,6 +30,8 @@ public class IdentifyController {
 
     @Autowired
     private IIdentifyService identifyService;
+    @Autowired
+    private IFanacService fanacService;
     @Autowired
     private HttpSession session;
     @RequiresPermissions(value = {"业务审核"})
@@ -83,6 +85,7 @@ public class IdentifyController {
     public String member(Model model){
         String uName=(String) session.getAttribute("uName");
         User user=identifyService.loadUserByName(uName);
+        List<Fananc> fanancList=fanacService.getFanacByUid(user.getUserId());
         System.out.println(user+"88888888888");
         String state="未实名认证";
         String img="img/services-box1.jpg";
@@ -92,19 +95,20 @@ public class IdentifyController {
                 state = "未实名认证";
             } else if (user.getUserStatus() == 1) {
                 state = "已实名待审核";
-            } else if (user.getUserStatus() == 2) {
                 state = "实名认证成功";
             }else if (user.getUserStatus()==3){
                 state ="实名认证失败";
             }
             if(user.getUserImg()!=null) {
                 img = user.getUserImg();
-            }
+            }       } else if (user.getUserStatus() == 2) {
+
         }
         model.addAttribute("state",state);
         model.addAttribute("img",img);
-        model.addAttribute("user",uName);
-        return "member";
+        model.addAttribute("user",user);
+        model.addAttribute("fananclist",fanancList);
+        return "myinfo";
     }
     @RequestMapping("/apply")
     public String apply(){

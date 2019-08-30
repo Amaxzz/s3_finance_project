@@ -21,6 +21,8 @@ public class ViewController {
     public String indexView() {
         return "index";
     }
+    @RequestMapping("infoview")
+    public String infoView(){ return "info";}
 
     @RequestMapping("mainview")
     public String mainView() {
@@ -66,6 +68,28 @@ public class ViewController {
     @RequestMapping("money_tjview")
     public String money_tjView(){ return "money_tj";}
 
+    //理财业务
+    @RequestMapping("financialView")
+    public String financialView(){
+        return "financial";
+    }
+    @RequestMapping("foreignView")
+    public String foreignView(){
+        return "foreign";
+    }
+    @RequestMapping("fundView")
+    public String fundView(){
+        return "fund";
+    }
+    @RequestMapping("insureView")
+    public String insureView(){
+        System.out.println("========================================");
+        return "insure";
+    }
+    @RequestMapping("preciousView")
+    public String preciousView(){
+        return "precious";
+    }
 
     @RequestMapping("auth_advview")
     public String auth_advView() {

@@ -1,0 +1,211 @@
+/*-----------------------------------------------------通用样式部分-------------------------------------------------------*/
+/*通用标题*/
+.maneyTit{ width: auto; height: 47px; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/action_di.png) repeat-x left bottom; margin-bottom: 30px;}
+.maneyTit h3{ font-size: 24px; line-height: 40px; color: #0d131a; text-align: left;}
+.maneyTit h3 span{ width: 6px; height: 24px; background: #c7000b; float: left; display: block; margin: 8.5px 8px 8.5px 0;}
+.maneyTit h3 span.iRed{ background: #c7000b;}
+.maneyTit h3 span.iOrange{ background: #ff6200;}
+.maneyTit a{ float: right; background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/more_2.png) no-repeat right center; padding-right: 32px; font-size: 14px; line-height: 40px; color: #0d131a;}
+.maneyTit a:hover{ color: #d00f1b;}
+/*明星推荐*/
+.proQuick_t{ width: 1000px; height: auto;margin-bottom: 20px}
+.proQuick_t ul{ list-style: none; margin-left: -13px;width: 120%}
+.proQuick_t li{float: left;}
+.proQuick_t li .proQuick_t_box{width:323px;border:1px solid #e5e5e5;height:368px;margin-left: 12px;position: relative}
+.proQuick_t_box .boxJiao{ position: absolute; top: -4px; right: -4px;}
+.proQuick_t_box dl{padding-top: 35px}
+.proQuick_t_box dd{text-align: center;padding-bottom: 15px}
+.proQuick_t_box dd p{font-size: 14px;color: #999999;line-height: 2}
+.proQuick_t_box dd h2{font-size: 28px;color:#ff6200}
+.proQuick_t_box dd h2 span{font-size: 45px}
+.proQuick_t_box dd h4{font-size: 16px;color: #0d131a}
+.proQuick_t_box:hover dd h4{font-size: 16px;color: #d00f1b}
+.proQuick_t_box dd .btn{width: 180px;height: 38px;line-height: 38px;background:#ff6200;color: #ffffff;font-size: 18px;display: inline-block;margin-top: 30px;margin-bottom: 10px; cursor:pointer; }
+.maneyPro{ width: auto; height: auto; overflow: hidden; padding: 40px 0; background: #ffffff;}
+.maneyPro .maneyQuick{ width: auto; height: auto;}
+/*理财产品查询*/
+.maneySel{ width: auto; height: auto;background:#f2f2f2; overflow: hidden; padding: 30px 0; }
+.maneySel_main{padding-left:15px; }
+.maneySel_main dd{height: 40px;line-height: 40px;position: relative;font-weight: bolder;font-size:14px }
+.maneySel_main dd ul{position: absolute;top:0;left: 98px}
+.maneySel_main dd li{float: left;margin-right: 10px;text-align: left;color:#0d131a;width:80px;font-size: 14px;cursor: pointer;font-weight: normal; }
+.maneySel_main dd li.l1{margin-right:0px;width: 50px}
+.maneySel_main dd li.on{color:#d00f1b;}
+.maneySel_main dd li:hover{color:#d00f1b;}
+.maneySel_main dd.last{margin-top: 20px}
+.maneySel_main dd.last ul{margin-top: 10px}
+.maneySel_main dd.last li{width: auto;background: white;padding:0 10px 0 10px;height: 25px;line-height: 25px }
+.maneySel_main .search_main {width:350px;padding-left: 96px;padding-top: 10px }
+.maneySel_main .search_main .text{width: 184px;height: 29px;line-height: 29px;background: white}
+.maneySel_main .search_main a.submit{width:42px ;height:30px;line-height: 30px;background:#c7000b;color: white;text-align: center;font-size:14px;float: left  }
+.maneySel_main .search_main a.chZ{margin-left: 10px;text-align: center;background: #C7000B;color:#ffffff;width:110px ;height:30px;line-height: 30px;font-size:14px  }
+/*专家专栏*/
+.special{width: auto; height: auto; overflow: hidden; padding: 30px 0;}
+.special_box .l h1{color: #0d131a;font-size: 18px;height: 40px;line-height:1;font-weight: bolder;cursor: pointer}
+.special_box .l h1:hover{color:#d00f1b }
+.special_box dd{width:624px }
+.special_box dd.d1{padding-bottom:30px;margin-bottom:30px;border-bottom: 1px solid #e6e6e6 }
+.special_more{position: relative;}
+.special_text{position: absolute;left:206px;top:0;width:415px;font-size:16px;color: #686868;text-align: justify }
+.special_text p a{color: #686868;cursor: pointer;font-size: 16px}
+.special_text p a:hover{color:#d00f1b;}
+.special_more img{cursor: pointer}
+.special_footer{width:415px;position: absolute;left: 206px;bottom: 0;color:#999999;font-size: 14px }
+.special_footer i{font-style: normal;padding-left: 12px}
+.special_footer a{position: absolute;right: 0;display: inline-block;width: 30px;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/shear.png") no-repeat left center;padding-left: 20px;color: #999999}
+.special_footer a:hover{color:#d00f1b;}
+.special_box .r{width: 327px}
+.special_box .r ul{margin-left: -15px;width: 110%}
+.special_box .r ul{margin-left: -15px}
+.special_box .r li{float: left;width: 156px;height: auto;margin-left: 15px;margin-bottom: 15px;}
+.special_box .r li {text-align: center}
+.special_box .r li p{font-size: 14px;color:#999999;line-height:1}
+.special_box .r li h1{font-size: 16px;color:#0d131a;line-height: 2 }
+.special_box .r li h1:hover{color: #d00f1b }
+/*理财资讯*/
+.maney-message{width: 100%;background:#f2f2f2;height:285px}
+.maney-message .action_T_head{height:70px;position: relative}
+.maney-message .action_Y_di{position: absolute;top: 60px!important;}
+.maney-message .w-center{height:320px}
+.maney-message #texttBox{width: 470px;left: 0px!important;top:0px}
+.maney-message .action_M_main.r dl{left: 50px!important;}
+.maney-me-list{width: 1000px}
+.maney-message .action_M_main i{height: 40px;color:#999999;font-size: 16px;font-style:normal;position: absolute;right: 0px;top:0}
+.maney-message .action_M_main.r{left: 64px!important;}
+/*信息披露*/
+.disclose{width: auto; height: auto; overflow: hidden; padding: 30px 0;}
+.disclose .tzlc{width: 470px;top:0px}
+.disclose .tab_t{width: 100%;height: 37px;margin-bottom: 8px;border-bottom:1px solid #e5e5e5 }
+.disclose .tab_t li{
+    padding:0 10px 0 10px;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    width:auto;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #0d131a;}
+.disclose .tab_t li.on {
+    border-bottom: 3px #c7000b solid;
+}
+.disclose .section_lr .tab_t li.on p {
+    border-bottom: 0 #c7000b solid;
+}
+.disclose .l.ll #texttBox dd h1{line-height:38px!important;}
+.fund-me-list #texttBox dd{height: 40px}
+.fund-me-list #texttBox dd h1{height: 40px;line-height: 40px!important;}
+.fund-me-list #texttBox dl em{top:18px}
+.disclose .action_M_main dd{position: relative}
+.disclose .action_M_main em {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #c7000b;
+    position: absolute;
+    top: 18px;}
+.disclose .action_M_main h1 {
+    font-size: 16px;
+    color: #0d131a;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 14px;}
+.disclose .action_M_main a h1{
+    color: #0D131A;
+}
+.disclose .action_M_main i{font-style: normal;position: absolute;right: 0;color:#999999;top:0 }
+.disclose .action_M_main a:hover i{color:#999999;}
+.disclose .action_M_main a:hover h1{
+    color: #d00f1b;
+}
+.disclose .l.ll #texttBox{left: 0px!important;}
+.disclose .r.rr .action_M_main{top:8px!important;left: 1px}
+.disclose .creft-more{margin-top: 10px}
+.disclose .action_M_main{padding-left: 0px}
+.disclose .tzlc li{float: left;margin-right:14px;line-height: 2 }
+.disclose .search_main {width:217px;padding-top: 0px;padding-right: 0;margin-left: -5px }
+.disclose .search_main .text{width: 186px;height: 28px;line-height: 28px;background: white}
+.disclose .search_main a.chZ{width:29px ;height:30px;line-height: 30px}
+
+.disclose .search_main.inL {width:151px;padding-top: 0px;margin-left: -15px }
+.disclose .search_main.inL .text{width: 120px;height: 28px;line-height: 28px;background: white}
+.disclose .search_main.inL a.chZ{width:29px ;height:30px;line-height: 30px}
+
+
+
+
+.disclose .biao{margin-top:2px;width: 102%}
+.disclose .lie{cursor: pointer;width: 230px;height: 62px;border-bottom:5px solid #ffffff;border-right:5px solid #ffffff;background:url("//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/maney_btn_l.png") no-repeat;color: white;text-align: center}
+/*通用快捷菜单*/
+.maneyQuick{ width: auto; height: auto;}
+.maneyQuick ul{ list-style: none; margin-left: -13px;width: 120%}
+.maneyQuick li{ width: 238px; height: 198px; background: #FFFFFF; border: 1px solid #e5e5e5; float: left; margin-left: 13px;overflow: hidden;position: relative;}
+.maneyQuick .quickBox{ height: 158px; padding: 15px; text-align: center; }
+.maneyQuick .quickBox h3{ position: relative; z-index: 2; font-size: 22px; line-height: 42px; color: #b09067;}
+.maneyQuick .quickBox img{ width: 190px; height: 120px; position: absolute; left:50%;margin-left: -90px; bottom: 0px; transition: all 0.3s;}
+.maneyQuick li:hover .quickBox img{ width: 200px; height: 130px;}
+/*切换不同颜色的标题更多*/
+.maneySel .maneyTit a{ background: url(//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/more.png) no-repeat right center;}
+.action_Y_text .more{top:-24px}
+.disclose .maneyTit{margin-bottom:10px}
+/*-----------------------------------------------------专家专栏-------------------------------------------------------*/
+/*专家专栏*/
+.specialInfo{ width: auto; height: auto;padding-top:40px;padding-bottom:70px }
+.specialInfo p{font-size: 16px;color: #686868}
+.specialInfo a{color: #686868}
+.specialInfo a:hover{color: #D00F1B}
+.Info_l{width:626px;position: relative}
+.Infotop{border-bottom: 1px solid #e6e6e6;padding-bottom:30px;height: 450px }
+.Infotop_kv{position: relative;width:625px ;height:318px;overflow: hidden;cursor: pointer}
+.Infotop_text{position: absolute;bottom: 0;left: 0;height:45px;line-height: 45px;width: 100%;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/bg_black.png") repeat;z-index: 2 }
+.Infotop_text h1 img{display: inline-block;position: absolute;top:8px;left: 20px}
+.Infotop_text h1{padding-left:125px ;font-size:20px ;color:#ffffff;line-height: 45px;height: 45px;position: relative }
+.Infotop_main{padding-top:18px }
+.Infotop_main p{line-height: 1.5;text-indent:30px;text-align: justify}
+.Infotop_footer{font-size: 14px;color: #999999;padding-top:15px }
+.Infotop_footer i{font-style: normal;padding-left:10px }
+.Infotop_footer a{font-size: 14px;display: inline-block;width: 30px;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/shear.png") no-repeat left center;padding-left: 20px;color: #999999;float: right}
+.InfoCenter h1{color: #0d131a;font-size: 18px;height: 40px;line-height: 2;font-weight: bold}
+.InfoCenter h1:hover{color: #D00F1B;}
+.special_text p{text-indent: 25px;line-height: 1.5}
+.InfoCenter dd{width: 100%;padding-bottom:35px;border-bottom: 1px solid #e6e6e6;padding-top: 20px  }
+.InfoCenter dd.d1{padding-bottom:35px;margin-bottom:35px;border-bottom: 1px solid #e6e6e6;}
+.InfoCenter  a{font-size: 14px;color: #999999}
+.InfoFooter{height: 32px;width: 100%;background: #f2f2f2;position: absolute;bottom: -31px;}
+.InfoFooter p{text-align: center;line-height: 32px;cursor: pointer}
+.Info_r{width:323px;position: relative;}
+.Info_r .specialHeard{border:1px solid #e6e6e6 }
+
+.information-other2 .maneyTit,.information-other3 .maneyTit,.specialHeard .maneyTit{background: none;margin:8px 9px 0 9px ;border-bottom:1px solid #e6e6e6 ;height: 40px}
+.information-other2 .maneyTit h3,.information-other3 .maneyTit h3,.specialHeard .maneyTit h3{font-size:18px;padding-left: 10px;padding-right: 10px }
+.information-other2 .maneyTit h3 i,.information-other3 .maneyTit h3 i,.specialHeard .maneyTit h3 i{height:16px;width:4px;margin-top: 12.5px }
+.information-other2 .maneyTit a,.information-other3 .maneyTit a,.specialHeard .maneyTit a{margin-right: 12px}
+.information-other3{cursor:auto!important; ;}
+
+
+.Heardbox{text-align: center}
+.Heardbox ul{margin-left: 18px;margin-top: 20px}
+.Heardbox li{float: left;margin-right: 10px;margin-bottom: 14px;cursor: pointer}
+.Heardbox img{width: 135px;height: 115px}
+.Heardbox p{font-size:14px;color: #999999 }
+
+.Heardbox h1{padding-top:5px;color: #0d131a}
+.Heardbox h1:hover{padding-top:5px;color: #d00f1b}
+.information-other2{width: 100%;height: auto;border: 1px solid #e5e5e5;margin-top: 20px;padding-bottom: 20px}
+.txt_more{border-bottom: 1px solid #e6e6e6;margin-left: 9px;width: 306px;height: 55px}
+.txt_more h1 {display: inline-block;position: relative;font-size:18px ;color:#0d131a;padding-left:24px;padding-bottom:10px;margin-top: 20px}
+.txt_more h1 span{position: absolute;top:5px;left:12px;width: 4px;height: 16px;background: #c7000b;display: block}
+.txt_more .more-btn{top:23px;right: 10px;float: right;display: inline-block;font-size:14px;color: #0d131a;position: relative;width:65px ;height:18px;line-height: 18px;cursor: pointer}
+.txt_more .more-btn a{width: 60px;height: 18px;display: inline-block;position: absolute;right: 0;top:0;background: url("//v.icbc.com.cn/userfiles/Resources/ICBC/licai/2018/more_2.png") no-repeat right ;}
+.information-other2  .txt_main dl dd {margin-top: 15px;position: relative}
+.information-other2 .txt_main dl dd h1{text-align: justify;position: relative;font-size: 14px!important;color: #0d131a;padding-left:14px;left:20px ;width:268px;line-height:1.8  }
+.information-other2 .txt_main dl dd h1:hover a{color:#d00f1b  }
+.information-other2  .txt_main dl dd h1 span{width: 6px;height:6px ;background: #c7000b;display: block;position: absolute;left: 0;top:10px;}
+.information-other2  .txt_main dl dd i{font-style: normal;position: absolute;top:27px;right: 20px;font-size:14px;color: #999999 }
+.information-other2  .txt_main a{color:#0d131a }
+.information-other3{width: 100%;height: 245px;border: 1px solid #e5e5e5;margin-top: 20px}
+.information-other3  .txt_more{border: none;}
+.information-other3  .txt_more_img{width:303px ;height:180px;overflow: hidden;border: 1px solid #e5e5e5;margin:0 9px 0 9px  }
+.information-other1,.information-other2,.information-other3{cursor: pointer}
