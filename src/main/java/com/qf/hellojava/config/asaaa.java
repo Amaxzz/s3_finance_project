@@ -10,4 +10,5 @@ public class asaaa {
     private int qq;
     private String aa;
     private int pp;
+    private String uu;
 }
