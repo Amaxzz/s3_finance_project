@@ -53,6 +53,7 @@ public class IdentifyController {
         identifyService.identifyNo(userId);
         return "redirect:loadAllIdentify";
     }
+    @RequiresPermissions(value = {"业务审核"})
     @RequestMapping("/loadUserByLike")
     public String loadUserByLike(String likehtml, Model model, String main,
                                  @RequestParam(required = false,defaultValue = "1")int page,
@@ -196,6 +197,7 @@ public class IdentifyController {
             int a=random.nextInt(10);
             code=code+a;
         }
+        System.out.println(code+"验证码");
         session.setAttribute("code",code);
         String emailContext="验证码："+code+"如果不是您本人操作请勿理睬";
         //邮件发送的类(Commons-email 核心的类)

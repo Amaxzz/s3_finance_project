@@ -1,5 +1,6 @@
 package com.qf.hellojava.controller;
 
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,7 @@ public class ViewController {
     public String roleView() {
         return "role";
     }
-
+@RequiresPermissions(value = {"权限管理"})
     @RequestMapping("permissionview")
     public String permissionView() {
         return "permission";
@@ -65,6 +66,7 @@ public class ViewController {
     //财务管理
     @RequestMapping("money_bbview")
     public String money_bbView(){ return "money_bb";}
+    @RequiresPermissions(value = {"财务分析"})
     @RequestMapping("money_tjview")
     public String money_tjView(){ return "money_tj";}
 

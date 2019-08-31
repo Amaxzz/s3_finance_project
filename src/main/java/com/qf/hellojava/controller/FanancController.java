@@ -3,7 +3,9 @@ package com.qf.hellojava.controller;
 import com.qf.hellojava.pojo.Fananc;
 import com.qf.hellojava.pojo.JsonClass;
 import com.qf.hellojava.service.IFanacService;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +18,6 @@ import java.util.Map;
 public class FanancController {
     @Autowired
     IFanacService fanacService;
-
     @RequestMapping("fanac")
     public String fanac (int classss, Model model){
         List<Fananc> fanancList=fanacService.getFanac(classss);
@@ -36,10 +37,6 @@ public class FanancController {
     public List<JsonClass> findAllFinanc1(){
         List<JsonClass> allFananc=fanacService.findAllFinanc();
         return allFananc;
-    }
-    @RequestMapping("/echarta")
-    public String echarta(){
-        return "echarta";
     }
     @ResponseBody
     @RequestMapping("/findFanancByUid")

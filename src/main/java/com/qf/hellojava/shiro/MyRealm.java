@@ -35,6 +35,7 @@ public class MyRealm extends AuthorizingRealm {
             List<Permission> permList = permissionService.findPermByUserName(loginName);
             //权限去重
             Set<String> perms =new HashSet<>();
+            System.out.println("1111111111111"+permList);
             for(Permission perm:permList){
                 String menu_url=perm.getPermName();
                 perms.add(menu_url);

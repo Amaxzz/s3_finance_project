@@ -51,32 +51,38 @@
     </style>
 </head>
 <body>
-<div class="navbar-wrapper">
-    <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html" style="font-size:32px;">千锋-创e金融平台</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse" style="float:right;">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <i class="glyphicon glyphicon-user" th:text="${session.uName}"></i><span
-                                class="caret"></span>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#"><i class="glyphicon glyphicon-scale"></i> 会员中心</a></li>
-                                <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
-                                <li class="divider"></li>
-                                <li><a href="indexview"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div><a class="navbar-brand" style="font-size:32px;" href="#">金融e平台</a></div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li style="padding-top:8px;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-success dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user" th:text="${session.uName}"></i><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="baiduview"><i class="glyphicon glyphicon-cog"></i> 个人设置</a></li>
+                            <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 消息</a></li>
+                            <li class="divider"></li>
+                            <li><a href="indexview"><i class="glyphicon glyphicon-off"></i> 退出系统</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li style="margin-left:10px;padding-top:8px;">
+                    <button type="button" class="btn btn-default btn-danger">
+                        <span class="glyphicon glyphicon-question-sign"></span> 帮助
+                    </button>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="查询">
+            </form>
+        </div>
     </div>
-</div>
+</nav>
 <div class="container">
     <div class="row clearfix">
         <div class="col-sm-3 col-md-3 column">
@@ -358,7 +364,7 @@
         var daikuan=$('#daikuan1').val();
         var load=$('#load1').val();
         var moneys=$('#moneys1').val();
-        $.post("updateLoadMoeny",{"money":money,"userId":userId,"saveOrCut":true,"moneys":moneys,"daikuan":daikuan,"load":load},function (data) {
+        $.post("updateLoadMoeny",{"money":money,"userId":userId,"saveOrCut":false,"moneys":moneys,"daikuan":daikuan,"load":load},function (data) {
             if (data[1] == "fault") {
                 alert("余额不足")
             } else {
